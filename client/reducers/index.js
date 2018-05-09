@@ -5,8 +5,8 @@
 import {combineReducers} from 'redux'
 
 //indoor tools
-import posts from './posts'
+import weather from './weather'
 
 export default combineReducers({
-  posts
+  weather
 })

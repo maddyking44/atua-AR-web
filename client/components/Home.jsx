@@ -1,18 +1,16 @@
 import React from 'react'
-import { connect as buildWifiContainer } from 'react-redux'
+import { connect } from 'react-redux'
 
-const Home = ({posts}) => (
-  <div>
-  <ul>
-  {posts.map(({id, title})  => (
-    <li key={id}>{title}</li>
-  ))}
-  </ul>
+const Home = ({weather}) => (
+    <div>
+    {weather}
     </div>
   )
 
-const mapStateToProps = ({posts}) => ({posts})
+const mapStateToProps = (state) => {
+  return {
+    weather: state.weather
+  }
+}
 
-const wifiContainer = buildWifiContainer(mapStateToProps)
-const wifiComponent = wifiContainer(Home)
-export default wifiComponent
+export default connect(mapStateToProps)(Home)
