@@ -1,7 +1,12 @@
+//This takes all our reducers and reduces them into a single value (the state) which is then
+//exported to be stored(in the store on our index.js page)
+
+//outdoor tools
 import {combineReducers} from 'redux'
 
-// import example from './example'
+//indoor tools
+import posts from './posts'
 
 export default combineReducers({
-  // example
+  posts
 })
