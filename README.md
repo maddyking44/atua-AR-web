@@ -1,6 +1,6 @@
-# Web App for ATUA_AR
+# Web App for AR_ATUA
 
-Haere Mai! Welcome to the Github home for ATUA_AR's Web App division.
+Haere Mai! Welcome to the Github home for AR_ATUA's Web App division.
 
 This is part of an EDA final project by Ben, Zach, Anthony, Maddy and Laura.
 
