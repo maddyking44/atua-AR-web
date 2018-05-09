@@ -5,7 +5,15 @@ Haere Mai! Welcome to the Github home for AR_ATUA's Web App division.
 This is part of an EDA final project by Ben, Zach, Anthony, Maddy and Laura.
 
 ## Our Kaupapa / Vision
-
+- Remind people of spiritual realms present in the everyday, by creating a new way of seeing the world.
+- Our app displays and embodies our values from the bottom to the top.  A holistic approach to web development.
+- We do everything meaningfully and with purpose.
+- Our project helps people, and we can be proud of it.
+- Te Ao Māori through visualization.
+- We make life more magical.
+- Make New Zealand less racist through shared cultural experience.
+- combine maori culture with tech
+- Always aim for inclusivity.
 
 
 # User Stories
