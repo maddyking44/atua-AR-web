@@ -50,6 +50,19 @@ This is part of an EDA final project by Ben, Zach, Anthony, Maddy and Laura.
 * I want the scope of the project outlined here
 * I want this page to be bilingual
 
+### Translatable Text
+
+* As a visitor, when I view any of our information pages I see the text in Maori first.
+* As a reader of this text, when I hover my mouse over any paragraph it transforms into translated english.
+* As a reader of this text, when I hover over the next paragraph, the previous paragraph translates back into Maori.
+
+* As a writer for the site, I have an ability to submit the Maori and English together, and know the translatable hover action will happen on the rendered page.
+* As a writer, I have a clear understanding of which body of text will translate into which other body of text, so I have control of the translation.  In other words, the translation is not being done word by word but selected text by selected text with that selected text decided by the author.
+
+#### Stretch:
+* As a writer, I have a simple web interface to add new content and can decide it's title, the Maori, and the English.
+* As a writer, I can decide the exact lines of text that are translated--so I can do sentence by sentence instead of paragraph by paragraph.
+ 
 ### The Story of Tawhirimatea
 
 #### MVP:
