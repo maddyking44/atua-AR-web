@@ -1,14 +1,25 @@
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 import Home from './Home'
+import { connect } from 'react-redux'
 
-const App = () => (
-  <Router>
-    <div className='app-container section'>
+import {getPosts} from '../actions/posts'
+
+class App extends React.Component {
+  componentWillMount() {
+    this.props.dispatch(getPosts())
+  }
+
+  render() {
+    return (
+      <Router>
+      <div className='app-container section'>
       <h1>Dog</h1>
       <Route exact path="/" component={Home} />
-    </div>
-  </Router>
-)
+      </div>
+      </Router>
+    )
+  }
+}
 
-export default App
+export default connect()(App)
