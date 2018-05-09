@@ -1,11 +1,43 @@
-# A starter webpack project for React, Redux, Express and Knex
+# Web App for ATUA_AR
 
-This is a rad base for starting a new full-stack project, or just as reference for how to do things the Harrison way.
+Haere Mai! Welcome to the Github home for ATUA_AR's Web App division.
 
-* Fork this repo to your github
-* Rename your repo according to the app you're building
-* Clone your forked repo down
-* Run the following commands in your terminal
+This is part of an EDA final project by Ben, Zach, Anthony, Maddy and Laura.
+
+### Our Kaupapa / Vision
+
+# MVP User Stories
+
+### Home/Landing Page
+
+* I want to see a landing page with a visualisation that changes depending on data received from a local weather API.
+* I want the visualisation to live update
+* I want a title at the top of the landing page that reads the name of the project
+* I want to have a hidden nav bar that appears on mouse over.
+* I want to use the nav bar to explore more about the project: I can click on nav items and have those items render on the page.
+* I want to see all the text in Te Reo Maori and English (hereafter referred to as bilingual)
+
+### About/Kaupapa
+* I want an About page that explains what the ATUA_AR project is
+* I want this page to be bilingual
+
+### The Story of Tawhirimatea
+* I want a page which tells the story of Tawhirimatea
+* I want this page to be bilingual
+
+
+### Contributions
+* I want a page where I can see how I can contribute to this project
+* I want to see ways to contact the people involved
+* I want a link to the source code/github repo
+* I want this page to be bilingual  
+
+### Process
+* I want a page that documents the story of the project itself
+* I want to see images as well as text
+* I want this page to be bilingual
+
+
 
 ```sh
 npm install
