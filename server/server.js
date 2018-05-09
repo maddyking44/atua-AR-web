@@ -1,4 +1,4 @@
-//This file fires up our server, connects it to our front-end, and directs url requests to their proper route functions.
+//This fires up our server, connects it to our front-end, and directs url requests to their proper route functions.
 
 
 const path = require('path')
