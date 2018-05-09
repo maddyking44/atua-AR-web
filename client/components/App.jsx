@@ -1,3 +1,7 @@
+//Our starting component that sprouts inside the index.html div and which all other branches of
+//components form.
+//
+//
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 import Home from './Home'
