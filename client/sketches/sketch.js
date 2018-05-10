@@ -16,7 +16,7 @@ export default function sketch (p) {
       p.createCanvas(p.windowWidth/2, p.windowHeight/2)
 
       //initialize our particle system
-      ps = new ParticleSystem(p,0,p.createVector(p.width / 2, p.height - 60),particle_texture);
+      ps = new ParticleSystem(p,0,p.createVector(p.width / 2, p.height / 2),particle_texture);
   }
 
   p.draw = () => {
@@ -35,7 +35,7 @@ export default function sketch (p) {
       }
 
       // Draw an arrow representing the wind force
-      drawVector(p, wind, p.createVector(p.width/2,50,0),500);
+      //drawVector(p, wind, p.createVector(p.width/2,50,0),500);
   }
 }
 
@@ -43,19 +43,19 @@ export default function sketch (p) {
 /**
  *  This function draws an arrow showing the direction our "wind" is blowing.
  */
-function drawVector(p,v,loc,scale){
-    p.push();
-    var arrowsize = 4;
-    p.translate(loc.x,loc.y);
-    p.stroke(255);
-    p.rotate(v.heading());
-
-    var len = v.mag() * scale;
-    p.line(0,0,len,0);
-    p.line(len,0,len-arrowsize,+arrowsize/2);
-    p.line(len,0,len-arrowsize,-arrowsize/2);
-    p.pop();
-}
+// function drawVector(p,v,loc,scale){
+//     p.push();
+//     var arrowsize = 4;
+//     p.translate(loc.x,loc.y);
+//     p.stroke(255);
+//     p.rotate(v.heading());
+//
+//     var len = v.mag() * scale;
+//     p.line(0,0,len,0);
+//     p.line(len,0,len-arrowsize,+arrowsize/2);
+//     p.line(len,0,len-arrowsize,-arrowsize/2);
+//     p.pop();
+// }
 //========= PARTICLE SYSTEM ===========
 
 /*
