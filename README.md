@@ -84,3 +84,53 @@ This is part of an EDA final project by Ben, Zach, Anthony, Maddy and Laura.
 * I want a page that documents the story of the project itself
 * I want to see images as well as text
 * I want this page to be bilingual
+
+## Our Data Model
+
+Each text listed above is held in a database, and we can write new texts to push to that Db for a new page in the future.  
+
+A text is structured as so:
+
+### Option 1
+_I will just use lorum ipsum, as we are not ready for actual text._
+
+```
+{"id": 1,
+ "name": "Contributions", //this would be our internal name for the text.
+ "te_reo":{
+   "title": 'lorum ipsum',
+   "paragraphs": [
+     {"sentences": [
+       "te_reo sentence 1",
+       "te_reo sentence 2",
+       "te_reo sentence 3"
+       ]
+     },
+     {"sentences": [
+       "te_reo sentence 1b",,
+       "te_reo sentence 2b",
+       "te_reo sentence 3b"
+       ]
+     }
+   ]
+ }
+ "english":{
+   "title": 'english lorum ipsum',
+   "paragraphs": [
+     {"sentences": [
+       "english sentence 1",
+       "english sentence 2",
+       "english sentence 3"
+       ]
+     },
+     {"sentences": [
+       "english sentence 1b",,
+       "english sentence 2b",
+       "english sentence 3b"
+       ]
+     }
+   ]
+ }
+       
+     
+ 
