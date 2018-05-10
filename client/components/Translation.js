@@ -1,21 +1,24 @@
 import React from 'react'
-import { connect as buildWifiContainer } from 'react-redux'
+import { connect } from 'react-redux'
 
 var Translation = ({posts}) => (
-  <div>
-  <h2>Congratulations, you have made it to the Translations Component!</h2>
-  <ul>
-  {posts.map(({id, title}) => (
-    <li key={id}>{title}</li>
-  )
-  )}
-  </ul>
-  </div>
+  <section id='article'>
+    <h2><span className='sentence'><span className='te-reo'>Kia Ora</span><span className='english'>Hello!</span></span></h2>
+    <p className='paragraph'>
+      <span className='sentence'>
+	<span className='te-reo'>kia ora!</span>
+	<span className='english'>hello!</span>
+      </span>
+      <span className='sentence'>
+      <span className='te-reo'>Mā te whakaaro nui e hanga te whare; mā te mātauranga e whakaū</span>
+      <span className='english'>Big ideas create the house; knowledge maintains it.</span>
+      </span>
+    </p>
+  </section>
 )
 
 const mapStateToProps = ({posts}) => ({posts})
 
-const wifiContainer = buildWifiContainer(mapStateToProps)
-const wifiComponent = wifiContainer(Translation)
+export default connect(mapStateToProps)(Translation)
 
-export default wifiComponent
+
