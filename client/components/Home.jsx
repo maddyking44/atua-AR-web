@@ -4,12 +4,13 @@ import { connect } from 'react-redux'
 class Home extends React.Component {
 
   render() {
+    let weather = this.props.weather
     return (
     <div>
-      <div>Current Weather status: {this.props.weather.weather}</div>
-      <div>Wind Direction: {this.props.weather.wind_dir}</div>
-      <div>Wind Speed in kph: {this.props.weather.wind_kph}</div>
-      <img src={this.props.weather.icon_url}/>
+      <div>Current Weather status: {weather.weather}</div>
+      <div>Wind Direction: {weather.wind_dir}</div>
+      <div>Wind Speed in kph: {weather.wind_kph}</div>
+      <img src={weather.icon_url}/>
     </div>
     )
   }
