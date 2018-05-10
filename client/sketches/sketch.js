@@ -24,7 +24,7 @@ export default function sketch (p) {
 
         //set the direction of the wind
       var dx = p.map(p.mouseX,0,p.width,-0.2, 0.2);
-      var wind = p.createVector(dx, -0.1);
+      var wind = p.createVector(dx, 0);
 
       //pass the wind as a parameter of applyForce function declared below
       ps.applyForce(wind);
