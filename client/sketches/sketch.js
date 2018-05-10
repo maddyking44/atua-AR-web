@@ -13,7 +13,7 @@ export default function sketch (p) {
 
   p.setup = () => {
         //set the canvas size
-      p.createCanvas(p.windowWidth, p.windowHeight)
+      p.createCanvas(p.windowWidth/2, p.windowHeight/2)
 
       //initialize our particle system
       ps = new ParticleSystem(p,0,p.createVector(p.width / 2, p.height - 60),particle_texture);
