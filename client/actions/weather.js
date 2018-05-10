@@ -30,7 +30,6 @@ export function getWeather(weather) {
     return request
     .get('/api/v1/weather')
     .then(res => {
-      console.log(res.body)
       dispatch(receiveWeather(res.body))
     })
   }

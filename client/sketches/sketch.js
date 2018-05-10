@@ -8,25 +8,26 @@ export default function sketch (p) {
   var ps = null;
 
   p.preload = () => {
-      particle_texture = p.loadImage("particle_texture.png");
+      particle_texture = p.loadImage("/assets/images/particle_texture.png");
   }
 
   p.setup = () => {
         //set the canvas size
-      p.createCanvas(p.windowWidth/2, p.windowHeight/2)
+      p.createCanvas(p.windowWidth, p.windowHeight)
 
       //initialize our particle system
       ps = new ParticleSystem(p,0,p.createVector(p.width / 2, p.height - 60),particle_texture);
   }
 
   p.draw = () => {
-      p.background('#223A5E');
+    //removed background - add it back with p.background('#color')
 
         //set the direction of the wind
       var dx = p.map(p.mouseX,0,p.width,-0.2, 0.2);
       var wind = p.createVector(dx, 0);
 
       //pass the wind as a parameter of applyForce function declared below
+      p.clear()
       ps.applyForce(wind);
       ps.run();
       for (var i = 0; i < 2; i++) {
@@ -98,7 +99,7 @@ ParticleSystem.prototype.run = function() {
     }
 }
 
-/**
+/*
  * Method to add a force vector to all particles currently in the system
  * @param dir a p5.Vector describing the direction of the force.
  */
