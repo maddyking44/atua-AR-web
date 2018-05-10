@@ -1,11 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-const Home = ({weather}) => (
+class Home extends React.Component {
+
+  render() {
+    return (
     <div>
-    {weather}
+      {this.props.weather.wind_dir}
     </div>
-  )
+    )
+  }
+
+}
 
 const mapStateToProps = (state) => {
   return {
