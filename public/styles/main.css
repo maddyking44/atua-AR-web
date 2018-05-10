@@ -1,33 +1,70 @@
+@font-face{
+  font-family: gen;
+  src: url('../assets/fonts/Gen-Light.otf');
+}
+
 body {
   background-color: peachpuff;
+  color: indigo;
+  font-family: gen;
+  font-size: 22px;
+}
+
+#article{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .paragraph {
+  line-height: 1.5em;
 }
 
 .sentence{
   margin-left: 0.25em;
-  color: indigo;
+  color: transparent;
+  animation:  fog-settles 4s forwards;
+}
+
+.paragraph .sentence:first-child{
+  margin-left: 0;
+}
+
+/*
+.sentence:hover {
+  animation-name: fade-out;
+  animation-duration: 4s;
+}
+*/
+
+.sentence .te-reo{
+  display: inline;
 }
 
 .sentence:hover .te-reo{
   display: none;
-  opacity: 0;
+  color: purple;
 }
 
-.sentence .te-reo{
-  color: red;
-  display: inline;
+.sentence:hover:after .te-reo{
+  color: transparent;
+  animation: fog-settles 2s forwards;
+  text-shadow: 0 0 25px rgba(0,0,0,5);
 }
 
 .sentence .english{
-  color: green;
   display: none;
-  opacity: 0;
 }
 
 .sentence:hover .english{
+  color: transparent;
   display: inline;
-  opacity: 1;
+  animation: fog-settles 3s forwards;
+  text-shadow: 0 0 25px rgba(0,0,0,5);
 }
+
+@keyframes fog-settles {
+  to {color: indigo; text-shadow: none;}
+}
+
 
