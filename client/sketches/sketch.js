@@ -12,20 +12,21 @@ export default function sketch (p) {
   }
 
   p.setup = () => {
-
-      //set the canvas size
-      p.createCanvas(640,360);
+        //set the canvas size
+      p.createCanvas(p.windowWidth/2, p.windowHeight/2)
 
       //initialize our particle system
       ps = new ParticleSystem(p,0,p.createVector(p.width / 2, p.height - 60),particle_texture);
   }
 
   p.draw = () => {
-      p.background(0);
+      p.background('#223A5E');
 
-      var dx = p.map(p.mouseX,0,p.width,-0.2,0.2);
-      var wind = p.createVector(dx,0);
+        //set the direction of the wind
+      var dx = p.map(p.mouseX,0,p.width,-0.2, 0.2);
+      var wind = p.createVector(dx, -0.1);
 
+      //pass the wind as a parameter of applyForce function declared below
       ps.applyForce(wind);
       ps.run();
       for (var i = 0; i < 2; i++) {
@@ -56,7 +57,7 @@ function drawVector(p,v,loc,scale){
 }
 //========= PARTICLE SYSTEM ===========
 
-/**
+/*
  * A basic particle system class
  * @param num the number of particles
  * @param v the origin of the particle system
