@@ -9,7 +9,7 @@ export const requestWeather = () => {
   }
 }
 
-export const receiveWeather = () => {
+export const receiveWeather = (weather) => {
   return {
     type: RECEIVE_WEATHER,
     weather
@@ -30,6 +30,7 @@ export function getWeather(weather) {
     return request
     .get('/api/v1/weather')
     .then(res => {
+      console.log(res.body)
       dispatch(receiveWeather(res.body))
     })
   }
