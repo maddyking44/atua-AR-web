@@ -1,6 +1,5 @@
 export default function sketch (p) {
-
-
+  var wind = ''
   // texture for the particle
   var particle_texture = null;
 
@@ -8,32 +7,62 @@ export default function sketch (p) {
   var ps = null;
 
   p.preload = () => {
-      particle_texture = p.loadImage("particle_texture.png");
+      particle_texture = p.loadImage("/assets/images/particle_texture.png");
   }
 
   p.setup = () => {
-
-      //set the canvas size
-      p.createCanvas(640,360);
+        //set the canvas size
+      p.createCanvas(p.windowWidth/2, p.windowHeight/2)
 
       //initialize our particle system
-      ps = new ParticleSystem(p,0,p.createVector(p.width / 2, p.height - 60),particle_texture);
+      ps = new ParticleSystem(p,0,p.createVector(p.width / 2, p.height / 2),particle_texture);
   }
 
+  p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
+    if (props.wind){
+      wind = props.wind
+    }
+      };
+
   p.draw = () => {
-      p.background(0);
+    //createVector is translating a set of variables into coordinates that p5 can understand, and can be passed into other functions to affect animation.
+    var north = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height-p.height, 0, p.height, -0.2, 0.2))
+    var south = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height, 0, p.height, -0.2, 0.2))
+    var east = p.createVector(p.map(p.width, 0, p.width, -0.2, 0.2), p.map(p.height/2, 0, p.height, -0.2, 0.2))
+    var west = p.createVector(p.map(p.width - p.width, 0, p.width, -0.2, 0.2), p.map(p.height/2, 0, p.height, -0.2, 0.2))
 
-      var dx = p.map(p.mouseX,0,p.width,-0.2,0.2);
-      var wind = p.createVector(dx,0);
+    var northEast = p.createVector(p.map(p.width- (p.width/8), 0, p.width, -0.2, 0.2), p.map(p.height/8, 0, p.height, -0.2, 0.2))
+    var southEast = p.createVector(p.map(p.width- (p.width/8), 0, p.width, -0.2, 0.2), p.map(p.height - (p.height/8), 0, p.height, -0.2, 0.2))
+    var northWest = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height/8, 0, p.height, -0.2, 0.2))
+    var southWest = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height - (p.height/8), 0, p.height, -0.2, 0.2))
+      //pass the wind as a parameter of applyForce function declared below
+      p.clear()
 
-      ps.applyForce(wind);
+      if (wind == "N" || wind == "North"){
+        ps.applyForce(north)
+      } else if (wind == 'W' || wind == 'West'){
+        ps.applyForce(west)
+      } else if (wind == 'E' || wind == 'East'){
+        ps.applyForce(east)
+      }else if (wind == 'S' || wind == 'South'){
+        ps.applyForce(south)
+      } else if (wind == 'NW' || wind == "NNW"){
+        ps.applyForce(northWest)
+      } else if (wind == 'NE' || wind == "NNE"){
+        ps.applyForce(northEast)
+      }else if (wind == 'SW' || wind == "SSW"){
+        ps.applyForce(southWest)
+    }else if (wind == 'SE' || wind == "SSE"){
+      ps.applyForce(southEast)
+    }
+
       ps.run();
       for (var i = 0; i < 2; i++) {
           ps.addParticle(p);
       }
 
       // Draw an arrow representing the wind force
-      drawVector(p, wind, p.createVector(p.width/2,50,0),500);
+      //drawVector(p, wind, p.createVector(p.width/2,50,0),500);
   }
 }
 
@@ -41,22 +70,22 @@ export default function sketch (p) {
 /**
  *  This function draws an arrow showing the direction our "wind" is blowing.
  */
-function drawVector(p,v,loc,scale){
-    p.push();
-    var arrowsize = 4;
-    p.translate(loc.x,loc.y);
-    p.stroke(255);
-    p.rotate(v.heading());
-
-    var len = v.mag() * scale;
-    p.line(0,0,len,0);
-    p.line(len,0,len-arrowsize,+arrowsize/2);
-    p.line(len,0,len-arrowsize,-arrowsize/2);
-    p.pop();
-}
+// function drawVector(p,v,loc,scale){
+//     p.push();
+//     var arrowsize = 4;
+//     p.translate(loc.x,loc.y);
+//     p.stroke(255);
+//     p.rotate(v.heading());
+//
+//     var len = v.mag() * scale;
+//     p.line(0,0,len,0);
+//     p.line(len,0,len-arrowsize,+arrowsize/2);
+//     p.line(len,0,len-arrowsize,-arrowsize/2);
+//     p.pop();
+// }
 //========= PARTICLE SYSTEM ===========
 
-/**
+/*
  * A basic particle system class
  * @param num the number of particles
  * @param v the origin of the particle system
@@ -97,7 +126,7 @@ ParticleSystem.prototype.run = function() {
     }
 }
 
-/**
+/*
  * Method to add a force vector to all particles currently in the system
  * @param dir a p5.Vector describing the direction of the force.
  */

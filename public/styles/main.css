@@ -1,11 +1,18 @@
+
 @font-face{
   font-family: gen;
   src: url('../assets/fonts/Gen-Light.otf');
 }
 
+
+
 body {
-  background-color: peachpuff;
-  color: indigo;
+  background-color: black;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
   font-family: gen;
   font-size: 22px;
 }
@@ -61,5 +68,3 @@ body {
 @keyframes fog-settles_eng {
   to {color: #4b484d; text-shadow: none;}
 }
-
-

@@ -19,11 +19,14 @@ class App extends React.Component {
   }
 
   render() {
+          let wind = this.props.weather.wind_dir
+          console.log({wind})
     return (
+
       <Router>
       <div className='app-container section'>
       <h1>Dog</h1>
-      <P5Wrapper sketch={sketch}/>
+      <P5Wrapper wind={wind}sketch={sketch}/>
       <Route exact path="/" component={Home} />
       <Route exact path="/translation" component={Translation} />
       </div>
@@ -32,4 +35,9 @@ class App extends React.Component {
   }
 }
 
-export default connect()(App)
+const mapStateToProps = (state) => {
+  return {
+    weather: state.weather
+  }
+}
+export default connect(mapStateToProps)(App)
