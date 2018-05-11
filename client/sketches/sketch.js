@@ -21,7 +21,7 @@ export default function sketch (p) {
 
   p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
       wind = props.wind
-      velocity = props.velocity * 5
+      velocity = props.velocity * 2
       };
 
   p.draw = () => {
