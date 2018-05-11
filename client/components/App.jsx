@@ -20,13 +20,13 @@ class App extends React.Component {
 
   render() {
           let wind = this.props.weather.wind_dir
-          console.log({wind})
+          let velocity = this.props.weather.wind_kph
     return (
 
       <Router>
       <div className='app-container section'>
       <h1>Dog</h1>
-      <P5Wrapper wind={wind}sketch={sketch}/>
+      <P5Wrapper wind={wind} velocity={velocity} sketch={sketch}/>
       <Route exact path="/" component={Home} />
       <Route exact path="/translation" component={Translation} />
       </div>

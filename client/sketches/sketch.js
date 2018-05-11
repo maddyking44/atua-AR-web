@@ -1,5 +1,6 @@
 export default function sketch (p) {
   var wind = ''
+  var velocity = 0
   // texture for the particle
   var particle_texture = null;
 
@@ -19,12 +20,12 @@ export default function sketch (p) {
   }
 
   p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
-    if (props.wind){
       wind = props.wind
-    }
+      velocity = props.velocity * 5
       };
 
   p.draw = () => {
+    console.log({velocity})
     //createVector is translating a set of variables into coordinates that p5 can understand, and can be passed into other functions to affect animation.
     var north = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height-p.height, 0, p.height, -0.2, 0.2))
     var south = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height, 0, p.height, -0.2, 0.2))
@@ -48,7 +49,7 @@ export default function sketch (p) {
         ps.applyForce(south)
       } else if (wind == 'NW' || wind == "NNW"){
         ps.applyForce(northWest)
-      } else if (wind == 'NE' || wind == "NNE"){
+      } else if (wind == 'NE' || wind == "NNE" || wind == "ENE"){
         ps.applyForce(northEast)
       }else if (wind == 'SW' || wind == "SSW"){
         ps.applyForce(southWest)
@@ -58,31 +59,11 @@ export default function sketch (p) {
 
       ps.run();
       for (var i = 0; i < 2; i++) {
-          ps.addParticle(p);
+          ps.addParticle(p, velocity);
       }
-
-      // Draw an arrow representing the wind force
-      //drawVector(p, wind, p.createVector(p.width/2,50,0),500);
   }
 }
 
-
-/**
- *  This function draws an arrow showing the direction our "wind" is blowing.
- */
-// function drawVector(p,v,loc,scale){
-//     p.push();
-//     var arrowsize = 4;
-//     p.translate(loc.x,loc.y);
-//     p.stroke(255);
-//     p.rotate(v.heading());
-//
-//     var len = v.mag() * scale;
-//     p.line(0,0,len,0);
-//     p.line(len,0,len-arrowsize,+arrowsize/2);
-//     p.line(len,0,len-arrowsize,-arrowsize/2);
-//     p.pop();
-// }
 //========= PARTICLE SYSTEM ===========
 
 /*
@@ -141,25 +122,25 @@ ParticleSystem.prototype.applyForce = function(dir) {
  * Adds a new particle to the system at the origin of the system and with
  * the originally set texture.
  */
-ParticleSystem.prototype.addParticle = function(p) {
-    this.particles.push(new Particle(p,this.origin,this.img));
+ParticleSystem.prototype.addParticle = function(p, lifespan) {
+    this.particles.push(new Particle(p,this.origin,this.img, lifespan));
 }
 
 //========= PARTICLE  ===========
 /**
  *  A simple Particle class, renders the particle as an image
  */
-var Particle = function (p, pos, img_) {
+var Particle = function (p, pos, img_, lifespan) {
     this.p = p
 
     this.loc = pos.copy();
 
-    var vx = p.randomGaussian() * 0.3;
-    var vy = p.randomGaussian() * 0.3 - 1.0;
+    var vx = p.randomGaussian() * 0.6;
+    var vy = p.randomGaussian() * 0.3 - 1;
 
     this.vel = p.createVector(vx,vy);
     this.acc = p.createVector();
-    this.lifespan = 100.0;
+    this.lifespan = lifespan;
     this.texture = img_;
 }
 
