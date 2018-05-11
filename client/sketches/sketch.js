@@ -19,16 +19,27 @@ export default function sketch (p) {
       ps = new ParticleSystem(p,0,p.createVector(p.width / 2, p.height / 2),particle_texture);
   }
 
-  p.draw = () => {
-    //removed background - add it back with p.background('#color')
+  p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
 
-        //set the direction of the wind
-      var dx = p.map(p.mouseX,0,p.width,-0.2, 0.2);
-      var wind = p.createVector(dx, 0);
+  };
+
+  p.draw = () => {
+
+      //createVector is translating a set of variables into coordinates that p5 can understand, and can be passed into other functions to affect animation.
+      var north = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height-p.height, 0, p.height, -0.2, 0.2))
+      var south = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height, 0, p.height, -0.2, 0.2))
+      var east = p.createVector(p.map(p.width, 0, p.width, -0.2, 0.2), p.map(p.height/2, 0, p.height, -0.2, 0.2))
+      var west = p.createVector(p.map(p.width - p.width, 0, p.width, -0.2, 0.2), p.map(p.height/2, 0, p.height, -0.2, 0.2))
+
+      var northEast = p.createVector(p.map(p.width- (p.width/8), 0, p.width, -0.2, 0.2), p.map(p.height/8, 0, p.height, -0.2, 0.2))
+      var southEast = p.createVector(p.map(p.width- (p.width/8), 0, p.width, -0.2, 0.2), p.map(p.height - (p.height/8), 0, p.height, -0.2, 0.2))
+      var northWest = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height/8, 0, p.height, -0.2, 0.2))
+      var southWest = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height - (p.height/8), 0, p.height, -0.2, 0.2))
+      //var wind = p.createVector(dx, dy);
 
       //pass the wind as a parameter of applyForce function declared below
       p.clear()
-      ps.applyForce(wind);
+      ps.applyForce(southWest);
       ps.run();
       for (var i = 0; i < 2; i++) {
           ps.addParticle(p);
