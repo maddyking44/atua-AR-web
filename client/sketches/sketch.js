@@ -37,10 +37,24 @@ export default function sketch (p) {
     var southWest = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height - (p.height/8), 0, p.height, -0.2, 0.2))
       //pass the wind as a parameter of applyForce function declared below
       p.clear()
-      if (wind == 'NW'){
-        ps.applyForce(northWest);
-      } else
-      ps.applyForce(south)
+
+      if (wind == "N" || wind == "North"){
+        ps.applyForce(north)
+      } else if (wind == 'W' || wind == 'West'){
+        ps.applyForce(west)
+      } else if (wind == 'E' || wind == 'East'){
+        ps.applyForce(east)
+      }else if (wind == 'S' || wind == 'South'){
+        ps.applyForce(south)
+      } else if (wind == 'NW' || wind == "NNW"){
+        ps.applyForce(northWest)
+      } else if (wind == 'NE' || wind == "NNE"){
+        ps.applyForce(northEast)
+      }else if (wind == 'SW' || wind == "SSW"){
+        ps.applyForce(southWest)
+    }else if (wind == 'SE' || wind == "SSE"){
+      ps.applyForce(southEast)
+    }
 
       ps.run();
       for (var i = 0; i < 2; i++) {
