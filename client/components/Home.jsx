@@ -2,8 +2,28 @@ import React from 'react'
 import { connect } from 'react-redux'
 import P5Wrapper from 'react-p5-wrapper'
 import sketch from '../sketches/sketch'
+import { CSSTransitionGroup } from 'react-transition-group'
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      menuVisible: false,
+    }
+    this.openNav = this.openNav.bind(this)
+    this.closeNav = this.closeNav.bind(this)
+  }
+  openNav() {
+    this.setState({
+      menuVisible: true
+    })
+  }
+
+  closeNav() {
+    this.setState({
+      menuVisible: false
+    })
+  }
 
   render() {
     let wind = this.props.weather.wind_dir
@@ -21,13 +41,12 @@ class Home extends React.Component {
       <div className='animation'>
         <P5Wrapper wind={wind} velocity={velocity} sketch={sketch}/>
       </div>
-      <div className="navbar" id="myNavbar">
-          <a href="#home">Home</a>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
-          <a href="javascript:void(0);" class="icon">&#9776;</a>
-      </div>
+      <div className='open' onClick={this.openNav}>﹖</div>
+      <CSSTransitionGroup transitionName='nav' transitionEnterTimeout={500} transitionLeaveTimeOut={300}>
+      {this.state.menuVisible && <div className="navbar" id="myNavbar" >
+          <a href="javascript:void(0);" onClick={this.closeNav}  >&times;</a>
+        </div>}
+      </CSSTransitionGroup>
     </div>
     )
   }

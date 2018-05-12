@@ -13,14 +13,14 @@ export default function sketch (p) {
 
   p.setup = () => {
         //set the canvas size
-      p.createCanvas(p.windowWidth/2, p.windowHeight/2)
+      p.createCanvas(p.windowWidth, p.windowHeight)
 
       //initialize our particle system
       ps = new ParticleSystem(p,0,p.createVector(p.width / 2, p.height / 2),particle_texture);
   }
 
   p.windowResized = () => {
-  p.resizeCanvas(p.windowWidth/2, p.windowHeight/2);
+  p.resizeCanvas(p.windowWidth, p.windowHeight);
 }
   p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
       wind = props.wind
@@ -28,7 +28,7 @@ export default function sketch (p) {
       };
 
   p.draw = () => {
-    p.background('#800000')
+    //p.background('#800000')
     //console.log({velocity})
     //createVector is translating a set of variables into coordinates that p5 can understand, and can be passed into other functions to affect animation.
     var north = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height-p.height, 0, p.height, -0.2, 0.2))
@@ -41,7 +41,7 @@ export default function sketch (p) {
     var northWest = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height/8, 0, p.height, -0.2, 0.2))
     var southWest = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height - (p.height/8), 0, p.height, -0.2, 0.2))
 
-      //p.clear()
+      p.clear()
       //pass the wind as a parameter of applyForce function declared below
       if (wind == "N" || wind == "North"){
         ps.applyForce(north)
