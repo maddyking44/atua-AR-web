@@ -44,6 +44,15 @@ body {
   bottom: 0;
 }
 
+.navbar .close {
+  position: absolute;
+  right: 10px;
+  font-size: 36px;
+  color: white;
+  text-decoration: none;
+  margin-top: 0px;
+}
+
 .hvr-grow {
     display: inline-block;
     vertical-align: middle;

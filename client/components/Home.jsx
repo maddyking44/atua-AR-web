@@ -44,7 +44,7 @@ class Home extends React.Component {
       <div className='open' onClick={this.openNav}>﹖</div>
       <CSSTransitionGroup transitionName='nav' transitionEnterTimeout={500} transitionLeaveTimeOut={300}>
       {this.state.menuVisible && <div className="navbar" id="myNavbar" >
-          <a href="javascript:void(0);" onClick={this.closeNav}  >&times;</a>
+          <a href="javascript:void(0);" className='close' onClick={this.closeNav}  >&times;</a>
         </div>}
       </CSSTransitionGroup>
     </div>
