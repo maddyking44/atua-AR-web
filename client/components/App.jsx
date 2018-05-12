@@ -23,7 +23,6 @@ class App extends React.Component {
 
       <Router>
       <div className='app-container section'>
-      <h1>Dog</h1>
       <Route exact path="/" component={Home} />
       <Route exact path="/translation" component={Translation} />
       </div>

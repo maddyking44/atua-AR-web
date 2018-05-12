@@ -11,11 +11,23 @@ class Home extends React.Component {
     let weather = this.props.weather
     return (
     <div>
-    <P5Wrapper wind={wind} velocity={velocity} sketch={sketch}/>
-      <div>Current Weather status: {weather.weather}</div>
-      <div>Wind Direction: {weather.wind_dir}</div>
-      <div>Wind Speed in kph: {weather.wind_kph}</div>
-      <img src={weather.icon_url}/>
+      <div className='head-banner'>
+        <div>
+          <div>AR_ATUA</div>
+          <div>Wind Direction: {weather.wind_dir}</div>
+          <div>Wind Speed in kph: {weather.wind_kph}</div>
+        </div>
+      </div>
+      <div className='animation'>
+        <P5Wrapper wind={wind} velocity={velocity} sketch={sketch}/>
+      </div>
+      <div className="navbar" id="myNavbar">
+          <a href="#home">Home</a>
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+          <a href="javascript:void(0);" class="icon">&#9776;</a>
+      </div>
     </div>
     )
   }
