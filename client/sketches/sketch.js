@@ -57,7 +57,7 @@ export default function sketch (p) {
         ps.applyForce(northEast)
       }else if (wind == 'SW' || wind == "SSW"){
         ps.applyForce(southWest)
-    }else if (wind == 'SE' || wind == "SSE"){
+    }else if (wind == 'SE' || wind == "SSE" || wind == "ESE"){
       ps.applyForce(southEast)
     }
 

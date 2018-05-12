@@ -9,9 +9,11 @@ class Home extends React.Component {
     super(props)
     this.state = {
       menuVisible: false,
+      menuFlipped: false
     }
     this.openNav = this.openNav.bind(this)
     this.closeNav = this.closeNav.bind(this)
+    this.flipNav = this.flipNav.bind(this)
   }
   openNav() {
     this.setState({
@@ -22,6 +24,12 @@ class Home extends React.Component {
   closeNav() {
     this.setState({
       menuVisible: false
+    })
+  }
+
+  flipNav() {
+    this.setState({
+      menuFlipped: !this.state.menuFlipped
     })
   }
 
@@ -42,9 +50,11 @@ class Home extends React.Component {
         <P5Wrapper wind={wind} velocity={velocity} sketch={sketch}/>
       </div>
       <div className='open' onClick={this.openNav}>﹖</div>
-      <CSSTransitionGroup transitionName='nav' transitionEnterTimeout={500} transitionLeaveTimeOut={300}>
+      <CSSTransitionGroup transitionName='nav' transitionEnterTimeout={500} transitionLeaveTimeout={300}>
       {this.state.menuVisible && <div className="navbar" id="myNavbar" >
           <a href="javascript:void(0);" className='close' onClick={this.closeNav}  >&times;</a>
+          {this.state.menuFlipped != true && <a href="javascript:void(0);" className='learn-more' onClick={this.flipNav}>Learn More</a>}
+          {this.state.menuFlipped && <a href="javascript:void(0);" className='learn-more' onClick={this.flipNav}>success!</a>}
         </div>}
       </CSSTransitionGroup>
     </div>

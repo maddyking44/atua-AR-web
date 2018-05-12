@@ -50,7 +50,13 @@ body {
   font-size: 36px;
   color: white;
   text-decoration: none;
-  margin-top: 0px;
+}
+
+.navbar .learn-more {
+  font-size: 36px;
+  color: white;
+  text-decoration: none;
+
 }
 
 .hvr-grow {
