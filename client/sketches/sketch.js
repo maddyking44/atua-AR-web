@@ -1,6 +1,6 @@
 export default function sketch (p) {
   var wind = ''
-  var velocity = 0
+  var velocity = 100
   // texture for the particle
   var particle_texture = null;
 
@@ -13,7 +13,7 @@ export default function sketch (p) {
 
   p.setup = () => {
         //set the canvas size
-      p.createCanvas(p.windowWidth/2, p.windowHeight/2)
+      p.createCanvas(p.windowWidth, p.windowHeight)
 
       //initialize our particle system
       ps = new ParticleSystem(p,0,p.createVector(p.width / 2, p.height / 2),particle_texture);
@@ -21,11 +21,11 @@ export default function sketch (p) {
 
   p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
       wind = props.wind
-      velocity = props.velocity * 2
+      //velocity = props.velocity * 10
       };
 
   p.draw = () => {
-    console.log({velocity})
+    //console.log({velocity})
     //createVector is translating a set of variables into coordinates that p5 can understand, and can be passed into other functions to affect animation.
     var north = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height-p.height, 0, p.height, -0.2, 0.2))
     var south = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height, 0, p.height, -0.2, 0.2))
@@ -36,9 +36,9 @@ export default function sketch (p) {
     var southEast = p.createVector(p.map(p.width- (p.width/8), 0, p.width, -0.2, 0.2), p.map(p.height - (p.height/8), 0, p.height, -0.2, 0.2))
     var northWest = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height/8, 0, p.height, -0.2, 0.2))
     var southWest = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height - (p.height/8), 0, p.height, -0.2, 0.2))
-      //pass the wind as a parameter of applyForce function declared below
-      p.clear()
 
+      p.clear()
+      //pass the wind as a parameter of applyForce function declared below
       if (wind == "N" || wind == "North"){
         ps.applyForce(north)
       } else if (wind == 'W' || wind == 'West'){
