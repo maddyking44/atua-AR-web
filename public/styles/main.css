@@ -33,6 +33,11 @@ body {
   justify-content: space-evenly;
 }
 
+.fade-in {
+  color:transparent;
+  animation:  fog-settles 4s forwards;
+}
+
 .title {
   margin: 5px;
 }
@@ -54,7 +59,6 @@ body {
 
 .navbar .learn-more {
   font-size: 36px;
-  color: white;
   text-decoration: none;
 
 }
@@ -149,7 +153,7 @@ body {
 }
 
 @keyframes fog-settles {
-  to {color: indigo; text-shadow: none;}
+  to {color: white; text-shadow: none;}
 }
 @keyframes fog-settles_eng {
   to {color: #4b484d; text-shadow: none;}
