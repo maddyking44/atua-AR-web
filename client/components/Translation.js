@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {getTexts} from '../actions/texts'
 
+
 const Translation = ({texts}) => {
       return (
         
@@ -11,6 +12,7 @@ const Translation = ({texts}) => {
 
     )
 }
+
 
 
 const mapStateToProps = (state) => {
