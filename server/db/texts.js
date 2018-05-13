@@ -5,6 +5,7 @@
 const db = require('./connection')
 
 module.exports = {
-  getTexts: () => db('texts')
+  getTexts: () => db('texts'),
+  getTextByURL: (url) => db('texts').select().where('url',url).first()
 }
 
