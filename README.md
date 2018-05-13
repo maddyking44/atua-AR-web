@@ -43,6 +43,11 @@ This is part of an EDA final project by Ben, Zach, Anthony, Maddy and Laura.
 * [ ] I want to have Maori language learning features related to the weather data
 * [ ] I want to see a sentence related to Tawhirimatea's current mood / the associated weather
 
+### Thank You Page
+
+#### MVP:
+* [ ] I want a page with a list of people we wish to thank in the making of this project
+
 ### About/Kaupapa Page
 
 #### MVP:
