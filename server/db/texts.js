@@ -5,6 +5,6 @@
 const db = require('./connection')
 
 module.exports = {
-  getPosts: () => db('posts')
+  getTexts: () => db('texts')
 }
 

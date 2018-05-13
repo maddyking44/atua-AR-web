@@ -1,8 +1,7 @@
-var initialState = require('../texts.json')
-
-function textsReducer (state=initialState, action) {
+function textsReducer (state=[], action) {
   switch (action.type) {
-    case 'GET_TEXTS':
+    case 'RECEIVE_TEXTS':
+      console.log({reducerTexts: action.texts})
       return action.texts
     default:
       return state

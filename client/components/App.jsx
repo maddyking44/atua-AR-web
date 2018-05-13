@@ -7,13 +7,13 @@ import { connect } from 'react-redux'
 
 import Home from './Home'
 import Translation from './Translation'
-import {getPosts} from '../actions/posts'
+import {getTexts} from '../actions/texts'
 import {getWeather} from '../actions/weather'
 
 
 class App extends React.Component {
   componentWillMount() {
-    this.props.dispatch(getPosts())
+    this.props.dispatch(getTexts())
     this.props.dispatch(getWeather())
   }
 

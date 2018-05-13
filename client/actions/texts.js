@@ -5,22 +5,22 @@ import request from 'superagent'
 
 //When getPosts is called, make a request to /api/posts then take the return of that and dispatch it
 //to our receivePosts action-creator
-export function getPosts () {
+export function getTexts () {
   return dispatch => {
     request
-      .get('/api/v1/posts')
+      .get('/api/v1/texts')
       .then(res => {
-	dispatch(receivePosts(res.body))
+	dispatch(receiveTexts(res.body))
       })
   }
 }
 
 //Take our posts given by getPosts and attach them to our action form that we send to the
 //reducer--kinda like an attachment to an email.
-export function receivePosts (posts) {
+export function receiveTexts (texts) {
   return {
-      type: 'RECEIVE_POSTS',
-      posts
+      type: 'RECEIVE_TEXTS',
+      texts
   }
 }
 

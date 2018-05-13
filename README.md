@@ -132,3 +132,30 @@ _I will just use lorum ipsum, as we are not ready for actual text._
 }
 
 ```       
+OPTION 2: Paragraph by Paragraph
+**This will be the option we will work with.  The paragraph by paragraph makes both writing it up and reading it easier, based on the time we have and experience we want to make.
+
+The key difference is that there is no longer a sentences array within the paragraphs array.  It's all just paragraphs.
+
+_I will just use lorum ipsum, as we are not ready for actual text._
+```
+{"id": 1,
+  "name": "Lorum Ipsum",
+  "url": "lorum-ipsum"
+  "title": {
+    "tereo": "lorum ipsum",
+    "english": "nietzsche ipsum"
+  },
+  "paragraphs": [
+    {"tereo":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+      "english:"Inexpedient spirit derive truth value. Christian disgust inexpedient good overcome grandeur chaos free christianity mountains."
+    }
+  ]
+}
+
+```       
+So in this case there would be paragraphs we can map over, each paragraph would be an object with a Te Reo and English counterpart that we could put into our <spans>
+
+So upon form submission, the left-hand side would go into paragraphs.tereo and the right-hand side would go into paragraphs.english.  It would then be stringified and added to the DB.
+
+
