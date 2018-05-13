@@ -1,0 +1,76 @@
+<<<<<<< HEAD
+
+
+body {
+  background-color: peachpuff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+=======
+@font-face{
+  font-family: gen;
+  src: url('../assets/fonts/Gen-Light.otf');
+}
+
+body {
+  background-color: peachpuff;
+  color: indigo;
+  font-family: gen;
+  font-size: 22px;
+}
+
+#article{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paragraph {
+  line-height: 1.5em;
+}
+
+.sentence{
+  margin-left: 0.25em;
+  color: transparent;
+  animation:  fog-settles 4s forwards;
+}
+
+.paragraph .sentence:first-child{
+  margin-left: 0;
+}
+
+.sentence .te-reo{
+  display: inline;
+}
+
+.sentence:hover .te-reo{
+  display: none;
+}
+
+.sentence:hover:after .te-reo{
+  color: transparent;
+  animation: fog-settles 2s forwards;
+  text-shadow: 0 0 25px rgba(0,0,0,5);
+}
+
+.sentence .english{
+  display: none;
+}
+
+.sentence:hover .english{
+  color: transparent;
+  display: inline;
+  animation: fog-settles_eng 3s forwards;
+  text-shadow: 0 0 25px rgba(0,0,0,5);
+}
+
+@keyframes fog-settles {
+  to {color: indigo; text-shadow: none;}
+}
+@keyframes fog-settles_eng {
+  to {color: #4b484d; text-shadow: none;}
+>>>>>>> 5f796101dd6687207c342ed0f8099dd1aa7aea5b
+}
+
+
