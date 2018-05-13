@@ -15,6 +15,9 @@ module.exports = {
     connection: {
       filename: ':memory:'
     },
+    seeds:{
+      directory: './test/server/seeds'
+    },
     useNullAsDefault: true
   },
 

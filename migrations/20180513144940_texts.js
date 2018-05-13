@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
       table.increments('id')
       table.string('name')
       table.string('url')
-      table.string('title')
+      table.binary('title')
       table.string('author')
       table.string('translator')
       table.string('paragraphs')
