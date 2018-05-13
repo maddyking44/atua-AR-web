@@ -34,6 +34,7 @@ class Home extends React.Component {
   }
 
   render() {
+    console.log(this.props.weather)
     let wind = this.props.weather.wind_dir
     let velocity = this.props.weather.wind_kph
     let weather = this.props.weather
@@ -57,7 +58,7 @@ class Home extends React.Component {
       {this.state.menuVisible && <div className="navbar" id="myNavbar" >
           <a href="javascript:void(0);" className='close' onClick={this.closeNav}  >&times;</a>
           {this.state.menuFlipped != true && <a href="javascript:void(0);" className='learn-more fade-in' onClick={this.flipNav}>Learn More</a>}
-          {this.state.menuFlipped && <a href="javascript:void(0);" onClick={this.flipNav} className='learn-more fade-in'>Nav Bar Item goes here</a>}
+          {this.state.menuFlipped && <a href="javascript:void(0);" onClick={this.flipNav} className='learn-more fade-in'>{}</a>}
         </div>}
       </CSSTransitionGroup>
     </div>

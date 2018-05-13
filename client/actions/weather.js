@@ -24,7 +24,7 @@ export const showError = (errorMessage) => {
 }
 
 // api calls
-export function getWeather(weather) {
+export function getWeather() {
   return (dispatch) => {
     dispatch(requestWeather())
     return request

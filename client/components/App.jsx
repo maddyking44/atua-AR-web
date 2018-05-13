@@ -4,21 +4,19 @@
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 import { connect } from 'react-redux'
-
+import {getTexts} from '../actions/texts'
 import Home from './Home'
 import Translation from './Translation'
-import {getTexts} from '../actions/texts'
 import {getWeather} from '../actions/weather'
 
 
 class App extends React.Component {
-  componentWillMount() {
-    this.props.dispatch(getTexts())
+  componentDidMount() {
     this.props.dispatch(getWeather())
+    this.props.dispatch(getTexts())
   }
 
   render() {
-
     return (
 
       <Router>
@@ -31,9 +29,5 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    weather: state.weather
-  }
-}
-export default connect(mapStateToProps)(App)
+
+export default connect()(App)
