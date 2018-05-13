@@ -13,7 +13,7 @@ server.use(cors('*')) //figure out what this does.
 
 server.use(express.static(path.join(__dirname, '../public')))//this connects the server to the front-end, by connecting this server to the index.html file in our public folder.
 
-server.use('/api/v1/posts', require('./routes/posts'))//we are using /v1 as our api is likely to change.
+server.use('/api/v1/texts', require('./routes/texts'))//we are using /v1 as our api is likely to change.
 server.use('/api/v1/weather', weatherRoutes)
 
 module.exports = server

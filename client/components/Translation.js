@@ -1,9 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-var Translation = ({texts}) => (
+var Translation = (props) => (
   <section id='article'>
-  <h2><span className='sentence'><span className='te-reo'>{texts.title.tereo}</span><span className='english'>{texts.title.english}</span></span></h2>
+  {console.log({theTitle: props})}
+  <h2><span className='sentence'><span className='te-reo'>{props.texts.title.tereo}</span><span className='english'>{texts.title.english}</span></span></h2>
   {texts.paragraphs.map(paragraph => {
     return (
       <p>
@@ -22,8 +23,11 @@ var Translation = ({texts}) => (
 
 )
 
-const mapStateToProps = ({texts}) => ({texts})
-
+const mapStateToProps = (state) => {
+  return {
+    cookie: state.texts
+  }
+}
 export default connect(mapStateToProps)(Translation)
 
 {/*
