@@ -6,11 +6,9 @@ import {combineReducers} from 'redux'
 
 //indoor tools
 import weather from './weather'
-import posts from './posts'
 import texts from './texts'
 
 export default combineReducers({
-  posts,
   weather,
   texts
 })
