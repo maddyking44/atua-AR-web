@@ -1,34 +1,35 @@
-import {getGreetings, receiveGreetings} from '../../client/actions/greetings'
+import {getTexts, receiveTexts} from '../../client/actions/texts'
 import nock from 'nock'
 
-test('Receive Greetings action creator', () => {
-  const fakeGreetings = [
+test('Receive Texts action creator', () => {
+  const fakeTexts = [
     'Hello',
     'Howdy'
   ]
 
   const expected = {
-    type: 'RECEIVE_GREETINGS',
-    greetings: fakeGreetings
+    type: 'RECEIVE_TEXTS',
+    texts: fakeTexts
   }
 
-  const actual = receiveGreetings(fakeGreetings)
+  const actual = receiveTexts(fakeTexts)
 
   expect(actual).toEqual(expected)
 })
 
-test('getGreetings will dispatch an action on success', () => {
-  const fakeGreetings = [
+test('getTexts will dispatch an action on success', () => {
+  const fakeTexts = [
     'Hello',
-    'Greetings'
+    'Texts'
   ]
+
   const scope = nock('http://localhost:80')
-    .get('/api/greetings')
-    .reply(200, fakeGreetings);
+    .get('/api/v1/texts')
+    .reply(200, fakeTexts);
 
   const expectedAction = {
-    type: 'RECEIVE_GREETINGS',
-    greetings: fakeGreetings
+    type: 'RECEIVE_TEXTS',
+    texts: fakeTexts
   }
 
   const dispatch = jest.fn()
@@ -37,15 +38,15 @@ test('getGreetings will dispatch an action on success', () => {
       scope.done()
     })
 
-  getGreetings()(dispatch)
+  getTexts()(dispatch)
 
 })
 
-test('getGreetings error', () => {
+test('getTexts error', () => {
   const scope = nock('http://localhost:80')
-    .get('/api/greetings')
+    .get('/api/v1/texts')
     .reply(404);
 
-  const actual = getGreetings()()
+  const actual = getTexts()()
   expect(actual).toBe(undefined)
 })

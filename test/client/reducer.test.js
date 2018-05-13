@@ -1,26 +1,26 @@
-import greetingsReducer from '../../client/reducers/greetings'
+import textsReducer from '../../client/reducers/texts'
 
 test('Reducer Initial State', () => {
   const expected = []
 
-  const actual = greetingsReducer(undefined, {})
+  const actual = textsReducer(undefined, {})
 
   expect(actual).toEqual(expected)
 })
 
-test('RECEIVE_GREETINGS', () => {
-  const fakeGreetings = [
+test('RECEIVE_TEXTS', () => {
+  const fakeTexts = [
     'Hello',
     'Howdy'
   ]
-  const expected = [...fakeGreetings]
+  const expected = [...fakeTexts]
 
   const action = {
-    type: 'RECEIVE_GREETINGS',
-    greetings: fakeGreetings
+    type: 'RECEIVE_TEXTS',
+    texts: fakeTexts
   }
 
-  const actual = greetingsReducer(undefined, action)
+  const actual = textsReducer(undefined, action)
 
   expect(actual).toEqual(expected)
 })
