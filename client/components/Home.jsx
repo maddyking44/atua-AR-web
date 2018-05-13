@@ -46,15 +46,18 @@ class Home extends React.Component {
           <div>Wind Speed in kph: {weather.wind_kph}</div>
         </div>
       </div>
-      <div className='animation'>
-        <P5Wrapper wind={wind} velocity={velocity} sketch={sketch}/>
+      <div className='container'>
+        <div className='animation'>
+          <P5Wrapper wind={wind} velocity={velocity} sketch={sketch}/>
+        </div>
+        <div className='weather-text fade-in'>Kei te pēhea te āhua o te rangi?</div>
       </div>
       <div className='open fade-in' onClick={this.openNav}>﹖</div>
       <CSSTransitionGroup transitionName='nav' transitionEnterTimeout={500} transitionLeaveTimeout={300}>
       {this.state.menuVisible && <div className="navbar" id="myNavbar" >
           <a href="javascript:void(0);" className='close' onClick={this.closeNav}  >&times;</a>
           {this.state.menuFlipped != true && <a href="javascript:void(0);" className='learn-more fade-in' onClick={this.flipNav}>Learn More</a>}
-          {this.state.menuFlipped && <a href="javascript:void(0);" onClick={this.flipNav} className='learn-more fade-in'>success!</a>}
+          {this.state.menuFlipped && <a href="javascript:void(0);" onClick={this.flipNav} className='learn-more fade-in'>Nav Bar Item goes here</a>}
         </div>}
       </CSSTransitionGroup>
     </div>

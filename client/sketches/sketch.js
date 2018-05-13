@@ -1,6 +1,6 @@
 export default function sketch (p) {
   var wind = ''
-  var velocity = 200
+  var velocity = 50
   // texture for the particle
   var particle_texture = null;
 
