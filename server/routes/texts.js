@@ -21,5 +21,13 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/:url', (req, res) => {
+  textsDb.getTextByURL(req.params.url)
+    .then(text => {
+      console.log(text)
+      return res.json(text)
+    })
+})
+
 module.exports = router
 
