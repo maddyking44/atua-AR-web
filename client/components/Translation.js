@@ -1,37 +1,45 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import {getTexts} from '../actions/texts'
 
-var Translation = (props) => (
-  <section id='article'>
-  {console.log({props})}
-  <h2><span className='sentence'><span className='te-reo'>{props.texts.title.tereo}</span><span className='english'>{texts.title.english}</span></span></h2>
-  {texts.paragraphs.map(paragraph => {
-    return (
-      <p>
-      {paragraph.sentences.map(sentence => {
-	return (
-	  <span className='sentence'>
-	  <span className='te-reo'>{sentence.tereo}</span>
-	  <span className='english'>{sentence.english}</span>
-	  </span>
-	)})
-      }
-      </p>
-      )})
-  }
-  </section>
 
-)
+const Translation = ({texts}) => {
+      return (
+        
+        <section id='article'>
+        <h2><span className='sentence'><span className='te-reo'>{texts.length > 0 && texts[0].name}</span><span className='english'>{texts.length > 0 && texts[0].title.english}</span></span></h2>
+        </section>
+
+    )
+}
+
+
 
 const mapStateToProps = (state) => {
-  console.log({state: state})
   return {
-    poop: state.texts
+    texts: state.texts
   }
 }
+
 export default connect(mapStateToProps)(Translation)
 
-{/*
+/*
+
+{this.props.texts.length > 0 && this.props.texts[0].paragraphs.map(paragraph => {
+  return (
+    <p>
+    {paragraph.sentences.map(sentence => {
+return (
+  <span className='sentence'>
+  <span className='te-reo'>{sentence.tereo}</span>
+  <span className='english'>{sentence.english}</span>
+  </span>
+)})
+    }
+    </p>
+    )})
+}
+
   <p className='paragraph'>
   <span className='sentence'>
   <span className='te-reo'>kia ora!</span>
@@ -42,6 +50,4 @@ export default connect(mapStateToProps)(Translation)
   <span className='english'>Big ideas create the house; knowledge maintains it.</span>
   </span>
   </p>
-*/}
-
-
+*/

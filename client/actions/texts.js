@@ -23,4 +23,3 @@ export function receiveTexts (texts) {
       texts
   }
 }
-
