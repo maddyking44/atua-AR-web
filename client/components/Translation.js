@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 var Translation = (props) => (
   <section id='article'>
-  {console.log({theTitle: props})}
+  {console.log({props})}
   <h2><span className='sentence'><span className='te-reo'>{props.texts.title.tereo}</span><span className='english'>{texts.title.english}</span></span></h2>
   {texts.paragraphs.map(paragraph => {
     return (
@@ -24,8 +24,9 @@ var Translation = (props) => (
 )
 
 const mapStateToProps = (state) => {
+  console.log({state: state})
   return {
-    cookie: state.texts
+    poop: state.texts
   }
 }
 export default connect(mapStateToProps)(Translation)
