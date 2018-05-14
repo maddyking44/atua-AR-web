@@ -5,6 +5,7 @@ import { CSSTransitionGroup } from 'react-transition-group'
 import Nav from './Nav'
 import WindInfo from './WindInfo'
 import Atua from './Atua'
+import Text from './Text'
 
 class Home extends React.Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class Home extends React.Component {
       <div className='head-banner fade-in'>
         <WindInfo />
       </div>
+        <Text />
       <div className='container'>
         <Atua />
       </div>

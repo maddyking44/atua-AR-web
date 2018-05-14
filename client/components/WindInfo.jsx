@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 function WindInfo ({weather}) {
-  console.log({windinfoweather: weather})
   return (
     <div>
       <div>AR_ATUA</div>

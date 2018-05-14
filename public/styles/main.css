@@ -215,6 +215,16 @@ Navbar Styling
   transition: opacity 300ms ease-in;
 }
 
+/*
+Text Box
+*/
+
+.text-box{
+  background-color: peachpuff;
+  color: indigo;
+  z-index: 2;
+}
+
 
 @keyframes fog-settles {
   to {color: white; text-shadow: none;}
