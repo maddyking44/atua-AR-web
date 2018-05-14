@@ -11,11 +11,13 @@ class Home extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      menuVisible: false
+      menuVisible: false,
+      current_text: props.current_text
         }
     this.openNav = this.openNav.bind(this)
     this.closeNav = this.closeNav.bind(this)
-  }
+  } 
+
 
   openNav() {
     this.setState({
@@ -35,7 +37,7 @@ class Home extends React.Component {
       <div className='head-banner fade-in'>
         <WindInfo />
       </div>
-        <Text />
+      {this.state.current_text.name && <Text />}
       <div className='container'>
         <Atua />
       </div>
@@ -54,7 +56,8 @@ class Home extends React.Component {
 }
 
 var mapStateToProps = (state) => {
-  return {}
+  return {
+    current_text: state.current_text}
 }
 
 export default connect(mapStateToProps)(Home)

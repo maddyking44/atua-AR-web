@@ -1,4 +1,4 @@
-function navReducer (state = false, action) {
+export function navFlipReducer (state = false, action) {
   switch (action.type) {
     case 'FLIP_NAV':
       return action.navVisible
@@ -7,4 +7,15 @@ function navReducer (state = false, action) {
   }
 }
 
-export default navReducer
+export function navMenuReducer (state = false, action) {
+  switch (action.type) {
+    case 'OPEN_NAV':
+      return action.navOpen
+    case 'CLOSE_NAV':
+      return action.navClose
+    default:
+      return state
+  }
+}
+
+//export default navReducer
