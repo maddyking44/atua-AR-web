@@ -17,7 +17,13 @@ router.get('/', (req, res) => {
   textsDb.getTexts()
     .then(texts => {
       console.log(texts)
-      return res.json(texts)
+      var textObject = texts.map(text => {
+        text.title = JSON.parse(text.title)
+        text.short_title = JSON.parse(text.short_title)
+        text.paragraphs = JSON.parse(text.paragraphs)
+        return text
+      })
+      return res.json(textObject)
     })
 })
 
@@ -30,4 +36,3 @@ router.get('/:url', (req, res) => {
 })
 
 module.exports = router
-
