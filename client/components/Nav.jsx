@@ -4,7 +4,6 @@ import {flipNav} from '../actions/nav'
 import {getTextByURL} from '../actions/text'
 
 const Nav = (props)=> {
-  console.log(props.dispatch)
   return (
     <div>
     <a href="javascript:void(0);" className='close' onClick={props.closeNav}>&times;</a>
@@ -13,7 +12,7 @@ const Nav = (props)=> {
        {props.texts.map(text => {
       return (
 	  <li key={text.id}>
-	       <a className='text' title='link to thing fix later' href='#' onClick={props.dispatch(getTextByURL('legend'))}>
+	       <a className='text' title='link to thing fix later' href='#' onClick={() => props.dispatch(getTextByURL('legend'))}>
 		 <span className='te-reo'>{text.short_title.tereo}</span>
 		 <span className='english'>{text.short_title.english}</span>
 	       </a>

@@ -6,6 +6,7 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 import { connect } from 'react-redux'
 import {getTexts} from '../actions/texts'
 import Home from './Home'
+import Home2 from './Home2'
 import Translation from './Translation'
 import {getWeather} from '../actions/weather'
 import About from './About'
@@ -22,6 +23,7 @@ class App extends React.Component {
       <Router>
       <div className='app-container section'>
       <Route exact path="/" component={Home} />
+      <Route exact path="/home2" component={Home2} />
       <Route exact path="/translation" component={Translation} />
       <Route exact path="/about" component={About}/>
       </div>
