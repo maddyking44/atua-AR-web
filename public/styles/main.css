@@ -129,7 +129,7 @@ body {
   line-height: 1.5em;
 }
 
-.sentence{
+.text{
   margin-left: 0.25em;
   color: transparent;
   animation:  fog-settles 4s forwards;
@@ -139,25 +139,25 @@ body {
   margin-left: 0;
 }
 
-.sentence .te-reo{
+.text .te-reo{
   display: inline;
 }
 
-.sentence:hover .te-reo{
+.text:hover .te-reo{
   display: none;
 }
 
-.sentence:hover:after .te-reo{
+.text:hover:after .te-reo{
   color: transparent;
   animation: fog-settles 2s forwards;
   text-shadow: 0 0 25px rgba(0,0,0,5);
 }
 
-.sentence .english{
+.text .english{
   display: none;
 }
 
-.sentence:hover .english{
+.text:hover .english{
   color: transparent;
   display: inline;
   animation: fog-settles_eng 3s forwards;
