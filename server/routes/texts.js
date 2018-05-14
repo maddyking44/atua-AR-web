@@ -16,7 +16,6 @@ router.use(express.json())
 router.get('/', (req, res) => {
   textsDb.getTexts()
     .then(texts => {
-      console.log(texts)
       return res.json(texts)
     })
 })
@@ -24,7 +23,6 @@ router.get('/', (req, res) => {
 router.get('/:url', (req, res) => {
   textsDb.getTextByURL(req.params.url)
     .then(text => {
-      console.log(text)
       return res.json(text)
     })
 })

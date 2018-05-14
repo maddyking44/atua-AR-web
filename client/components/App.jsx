@@ -8,7 +8,7 @@ import {getTexts} from '../actions/texts'
 import Home from './Home'
 import Translation from './Translation'
 import {getWeather} from '../actions/weather'
-
+import About from './About'
 
 class App extends React.Component {
   componentDidMount() {
@@ -23,6 +23,7 @@ class App extends React.Component {
       <div className='app-container section'>
       <Route exact path="/" component={Home} />
       <Route exact path="/translation" component={Translation} />
+      <Route exact path="/about" component={About}/>
       </div>
       </Router>
     )
