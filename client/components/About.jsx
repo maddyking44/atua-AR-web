@@ -5,19 +5,14 @@ import {getTextByURL} from '../actions/text'
 
 // needs to be de-bugged. Something to do with the async call potentially?
 class About extends React.Component {
-  componentDidMount(){
+  componentWillMount(props){
     this.props.dispatch(getTextByURL('about'))
+    console.log({props})
   }
   render() {
-console.log(this.props.text)
     return (
       <div>
-      <h1 className='text'><span className='te-reo'>{text.title.tereo}</span><span className='english'>{text.title.english}</span></h1>
-      <section id='content'>
-        {text.paragraphs.map(paragraph => {
-          return <p className='text'><span className='te-reo'>{paragraph.tereo}</span><span className='english'>{paragraph.english}</span></p>
-        })}
-        </section>
+      <h1>ABOUT PAGE HARD CODED</h1>
       </div>
     )
   }
@@ -29,5 +24,12 @@ const mapStateToProps = (state) => {
   }
 }
 
-
+///
+// <h1 className='text'><span className='te-reo'>{text.title.tereo}</span><span className='english'>{text.title.english}</span></h1>
+  //    <section id='content'>
+   //     {text.paragraphs.map(paragraph => {
+    //      return <p className='text'><span className='te-reo'>{paragraph.tereo}</span><span className='english'>{paragraph.english}</span></p>
+     //   })}
+      //  </section>
+//
 export default connect(mapStateToProps)(About)

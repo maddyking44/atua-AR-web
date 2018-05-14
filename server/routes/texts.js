@@ -16,23 +16,16 @@ router.use(express.json())
 router.get('/', (req, res) => {
   textsDb.getTexts()
     .then(texts => {
-      console.log(texts)
-      var textObject = texts.map(text => {
-        text.title = JSON.parse(text.title)
-        text.short_title = JSON.parse(text.short_title)
-        text.paragraphs = JSON.parse(text.paragraphs)
-        return text
-      })
-      return res.json(textObject)
+      return res.json(texts)
     })
 })
 
 router.get('/:url', (req, res) => {
   textsDb.getTextByURL(req.params.url)
     .then(text => {
-      console.log(text)
       return res.json(text)
     })
 })
 
 module.exports = router
+

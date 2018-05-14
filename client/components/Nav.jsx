@@ -9,11 +9,12 @@ const Nav = (props)=> {
     {props.navVisible != true && <a href="javascript:void(0);" className='learn-more fade-in' onClick={()=>props.dispatch(flipNav(true))}>Learn More</a>}
     {props.navVisible && <ul id='navItems'>
        {props.texts.map(text => {
+	 console.log(text)
       return (
 	  <li key={text.id}>
 	       <a className='text' title='link to thing fix later' href={`#/${text.url}`}>
-		 <span className='te-reo'>{text.title.tereo}</span>
-		 <span className='english'>{text.title.english}</span>
+		 <span className='te-reo'>{text.short_title.tereo}</span>
+		 <span className='english'>{text.short_title.english}</span>
 	       </a>
 	     </li>
       )
