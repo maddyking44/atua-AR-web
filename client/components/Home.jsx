@@ -4,6 +4,7 @@ import P5Wrapper from 'react-p5-wrapper'
 import sketch from '../sketches/sketch'
 import { CSSTransitionGroup } from 'react-transition-group'
 import Nav from './Nav'
+import WindInfo from './WindInfo'
 
 class Home extends React.Component {
   constructor(props) {
@@ -26,8 +27,6 @@ class Home extends React.Component {
     })
   }
 
-
-
   render() {
     console.log(this.props.weather)
     let wind = this.props.weather.wind_dir
@@ -36,11 +35,7 @@ class Home extends React.Component {
     return (
     <div>
       <div className='head-banner fade-in'>
-        <div>
-          <div>AR_ATUA</div>
-          <div>Wind Direction: {weather.wind_dir}</div>
-          <div>Wind Speed in kph: {weather.wind_kph}</div>
-        </div>
+        <WindInfo />
       </div>
       <div className='container'>
         <div className='animation'>
@@ -48,15 +43,14 @@ class Home extends React.Component {
         </div>
         <div className='weather-text fade-in'>Kei te pēhea te āhua o te rangi?</div>
       </div>
-
+     
       <div className='open fade-in' onClick={this.openNav}>﹖</div>
       <CSSTransitionGroup transitionName='nav' transitionEnterTimeout={500} transitionLeaveTimeout={300}>
-
       {this.state.menuVisible &&
         <div className="navbar" id="myNavbar" >
           <Nav closeNav={this.closeNav}/>
-        </div>}
-
+        </div>
+      }
       </CSSTransitionGroup>
     </div>
     )
