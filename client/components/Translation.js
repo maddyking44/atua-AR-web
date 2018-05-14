@@ -1,13 +1,12 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {getTexts} from '../actions/texts'
 
 
 const Translation = ({texts}) => {
       return (
-        
+
         <section id='article'>
-        <h2><span className='sentence'><span className='te-reo'>{texts.length > 0 && texts[0].name}</span><span className='english'>{texts.length > 0 && texts[0].title.english}</span></span></h2>
+        <h2><span className='sentence'><span className='te-reo'>{texts.map(text => <p>{text.name}</p>)}</span><span className='english'>{texts.length > 0 && texts[0].title.english}</span></span></h2>
         </section>
 
     )
