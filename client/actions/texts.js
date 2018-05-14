@@ -14,27 +14,12 @@ export function getTexts () {
       })
   }
 }
-export function getTextByURL (url) {
-  return dispatch => {
-    request
-      .get('/api/v1/texts'+'/'+url)
-      .then(res => {
-	dispatch(receiveText(res.body))
-      })
-  }
-}
+
 //Take our posts given by getPosts and attach them to our action form that we send to the
 //reducer--kinda like an attachment to an email.
 export function receiveTexts (texts) {
   return {
       type: 'RECEIVE_TEXTS',
       texts
-  }
-}
-
-export function receiveText (text) {
-  return {
-      type: 'RECEIVE_TEXT',
-      text
   }
 }
