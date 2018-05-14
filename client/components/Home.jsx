@@ -33,7 +33,7 @@ class Home extends React.Component {
 
   render() {
     return (
-    <div>
+    <div className='home'>
       <div className='head-banner fade-in'>
         <WindInfo />
       </div>
