@@ -16,7 +16,13 @@ router.use(express.json())
 router.get('/', (req, res) => {
   textsDb.getTexts()
     .then(texts => {
-      return res.json(texts)
+      var textObject = texts.map(text => {
+      text.short_title = JSON.parse(text.short_title)
+      text.title = JSON.parse(text.title)
+      text.paragraphs= JSON.parse(text.paragraphs)
+      return text
+      })
+      return res.json(textObject)
     })
 })
 
