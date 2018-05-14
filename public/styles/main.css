@@ -1,7 +1,7 @@
 
 @font-face{
-  font-family: pier;
-  src: url('../assets/fonts/PierSans-Light.otf');
+  font-family: slim-joe;
+  src: url('../assets/fonts/Slim-Joe.otf');
 }
 
 @font-face{
@@ -11,24 +11,59 @@
 
 
 @font-face{
-  font-family: ikaros-light;
-  src: url('../assets/fonts/Ikaros-Light.otf');
+  font-family: raleway;
+  src: url('../assets/fonts/Raleway-Thin.otf');
 }
 
 body {
-  background-color: black;
-  color: white;
-  font-family: ikaros-light;
-  font-size: 22px;
   margin: 0;
   padding: 0;
+}
+
+body .home {
+  color: white;
+  font-family: raleway;
+  font-size: 22px;
   width: 100vw;
   height: 100vh;
+  top: 0;
+  position:absolute;
   background-image: url("/assets/images/Untitled-1.svg");
   background-size: cover;
   overflow: hidden;
 }
 
+body .opening {
+  background-color: black;
+  color: white;
+  font-family: slim-joe;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: absolute;
+}
+
+.ancient {
+  right: 0;
+  position:absolute;
+}
+
+.together {
+  color: peachpuff;
+  bottom:0;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.enter-site {
+  font-size: 4em;
+}
 #article{
   width: 80%;
   margin-left: auto;
@@ -165,7 +200,7 @@ body {
 Navbar Styling
 */
 
-.navbar { 
+.navbar {
   width: 100%;
   min-height: 50px;/*am not placing a fixed height, so it is can be more thin and only as large as it needs.*/
   position: fixed;

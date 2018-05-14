@@ -9,10 +9,12 @@ import weather from './weather'
 import texts from './texts'
 import navVisible from './nav'
 import current_text from './text'
+import destination from './opening'
 
 export default combineReducers({
   weather,
   texts,
   navVisible,
-  current_text
+  current_text,
+  destination
 })
