@@ -51,6 +51,7 @@
     "nock": "^9.2.5",
     "pg": "^6.2.3",
     "react": "^15.6.2",
+    "react-css-stagger": "^0.0.8",
     "react-dom": "^15.5.4",
     "react-p5-wrapper": "^0.0.4",
     "react-redux": "^5.0.5",

@@ -322,6 +322,25 @@ Text Box
   z-index: 2;
 }
 
+.fadeIn-enter {
+  opacity: 0;
+  transition: 0.5s ease-in-out all;
+}
+
+.fadeIn-enter.fadeIn-enter-active {
+  opacity: 1;
+}
+
+.fadeIn-leave {
+  opacity: 1;
+  /* height: 150px; */
+}
+
+.fadeIn-leave.fadeIn-leave-active {
+  opacity: 0;
+  transition: opacity 100ms ease-in;
+  /* height: 0px; */
+}
 
 @keyframes pulse2 {
  0% {

@@ -5608,6 +5608,12 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-css-stagger@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/react-css-stagger/-/react-css-stagger-0.0.8.tgz#8d3876f6293874c08e472bccf01f3040a453b840"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-dom@^15.5.4:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
