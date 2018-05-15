@@ -23,7 +23,7 @@ const Home = (props) => {
         </CSSTransitionGroup>
       </div>
       <CSSTransitionGroup transitionName='nav' transitionEnterTimeout={600} transitionLeaveTimeout={300}>
-      {props.current_text.name && <Text text={props.current_text} dispatch={props.dispatch}/>}
+      {props.current_text.name && <Text text={props.current_text} index={0} dispatch={props.dispatch}/>}
     </CSSTransitionGroup>
       <div className='open fade-in' onClick={() => props.dispatch(openNav())}>﹖</div>
         <CSSTransitionGroup transitionName='nav' transitionEnterTimeout={500} transitionLeaveTimeout={300}>
