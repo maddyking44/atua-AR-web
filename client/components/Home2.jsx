@@ -9,9 +9,10 @@ import Text from './Text'
 import {openNav, closeNav} from '../actions/nav'
 
 
-const Home = (props) => {
+const Home2 = (props) => {
+  console.log({home2props: props})
   return (
-    <div className='home'>
+    <div>
     <div className='head-banner fade-in'>
     <WindInfo />
     </div>
@@ -40,4 +41,4 @@ var mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps)(Home2)

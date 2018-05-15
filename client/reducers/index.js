@@ -7,7 +7,7 @@ import {combineReducers} from 'redux'
 //indoor tools
 import weather from './weather'
 import texts from './texts'
-import navVisible from './nav'
+import {navFlipReducer as navVisible, navMenuReducer as menuVisible} from './nav'
 import current_text from './text'
 import destination from './opening'
 
@@ -15,6 +15,7 @@ export default combineReducers({
   weather,
   texts,
   navVisible,
+  menuVisible,
   current_text,
   destination
 })

@@ -4,16 +4,15 @@
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 import { connect } from 'react-redux'
-import {getTexts} from '../actions/texts'
-import {getWeather} from '../actions/weather'
 
 import Home from './Home'
 import Translation from './Translation'
+import {getTexts} from '../actions/texts'
+import {getWeather} from '../actions/weather'
 import About from './About'
 import Opening from './Opening'
 
 class App extends React.Component {
-
   componentDidMount() {
     this.props.dispatch(getWeather())
     this.props.dispatch(getTexts())
