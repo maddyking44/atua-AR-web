@@ -1,3 +1,4 @@
+//set state to opening when going to production.
 function openingReducer (state = 'opening', action) {
   switch (action.type) {
     case 'ENTER_SITE':
