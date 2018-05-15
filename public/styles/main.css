@@ -27,6 +27,7 @@ body {
   width: 100vw;
   height: 100vh;
   top: 0;
+
   position:absolute;
   background-image: url("/assets/images/sunset.svg");
   background-size: cover;
@@ -317,9 +318,40 @@ Text Box
 */
 
 .text-box{
+  position:absolute;
+  top: 50px;
+  width: 75%;
+  left: 12.5%;
+  right: 12.5%;
   background-color: peachpuff;
   color: indigo;
-  z-index: 2;
+}
+
+.text-box_content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box_close{
+  position: absolute;
+  top: -15px;
+  right: 5px;
+  font-size: 0.75em;
+}
+
+.byline{
+  display: flex;
+  flex-direction: row;
+  font-style: italic;
+  font-size: 0.75em;
+  justify-content: space-between;
+}
+
+.byline span{
+  padding: 0.75em;
 }
 
 .fadeIn-enter {

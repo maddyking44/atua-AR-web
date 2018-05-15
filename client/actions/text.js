@@ -11,6 +11,13 @@ export function getTextByURL (url) {
   }
 }
 
+export function clearText () {
+  return {
+    type: 'CLEAR_TEXT',
+    text: {}
+  }
+}
+
 //action
 export function receiveText (text) {
   return {

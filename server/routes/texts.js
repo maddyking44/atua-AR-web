@@ -29,6 +29,9 @@ router.get('/', (req, res) => {
 router.get('/:url', (req, res) => {
   textsDb.getTextByURL(req.params.url)
     .then(text => {
+      text.short_title = JSON.parse(text.short_title)
+      text.title = JSON.parse(text.title)
+      text.paragraphs= JSON.parse(text.paragraphs)
       return res.json(text)
     })
 })
