@@ -173,8 +173,9 @@ body .opening {
 .navbar .learn-more {
   font-size: 36px;
   text-decoration: none;
-
 }
+
+
 
 .hvr-grow {
     display: inline-block;
@@ -200,7 +201,7 @@ body .opening {
 .text{
   margin-left: 0.25em;
   color: transparent;
-  animation:  fog-settles 4s forwards;
+  animation:  text-settles 4s forwards;
 }
 
 .paragraph .sentence:first-child{
@@ -217,7 +218,7 @@ body .opening {
 
 .text:hover:after .te-reo{
   color: transparent;
-  animation: fog-settles 2s forwards;
+  animation: text-settles 2s forwards;
   text-shadow: 0 0 25px rgba(0,0,0,5);
 }
 
@@ -228,7 +229,7 @@ body .opening {
 .text:hover .english{
   color: transparent;
   display: inline;
-  animation: fog-settles_eng 3s forwards;
+  animation: text-settles_eng 3s forwards;
   text-shadow: 0 0 25px rgba(0,0,0,5);
 }
 
@@ -264,6 +265,10 @@ Navbar Styling
   list-style-type: none;
 }
 
+#navItems span{
+  color: white;
+}
+
 
 .nav-enter {
   opacity: 0.01;
@@ -294,6 +299,7 @@ Text Box
   position:absolute;
   top: 50px;
   width: 75%;
+  height: 75%;
   left: 12.5%;
   right: 12.5%;
   background-color: peachpuff;
@@ -303,9 +309,12 @@ Text Box
 .text-box_content{
   position: relative;
   display: flex;
+  padding-left: 1em;
+  padding-right: 1em;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .text-box_close{
@@ -327,10 +336,24 @@ Text Box
   padding: 0.75em;
 }
 
+.par-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.par-nav p{
+  margin: 0.5em;
+}
+
+
 
 @keyframes fog-settles {
   to {color: white; text-shadow: none;}
 }
-@keyframes fog-settles_eng {
+@keyframes text-settles {
+  to {color: indigo; text-shadow: none;}
+}
+@keyframes text-settles_eng {
   to {color: #4b484d; text-shadow: none;}
 }
