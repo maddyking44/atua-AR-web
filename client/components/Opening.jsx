@@ -31,16 +31,20 @@ revealAll() {
 render(){
   return (
     <div className='opening'>
-      {this.state.isVisible.find(text => text=='ancient') && <div className='ancient fade-in' onClick={()=>this.makeVisible('contemporary')}>ancient</div>}
-      {this.state.isVisible.find(text => text =='contemporary') && <div className='spiritual fade-in' onClick={()=>this.makeVisible('spiritual')}>contemporary</div>}
-      {this.state.isVisible.find(text => text== 'spiritual') && <div className='contemporary fade-in'onClick={()=>this.makeVisible('physical')}>spiritual</div>}
-      {this.state.isVisible.find(text => text == 'physical') && <div className='physical fade-in' onClick={this.revealAll}>physical</div>}
+      {this.state.isVisible.find(text => text=='ancient') && <div className='ancient fade-in' onClick={()=>this.makeVisible('contemporary')}>culture</div>}
+      {this.state.isVisible.find(text => text =='contemporary') && <div className='spiritual fade-in' onClick={()=>this.makeVisible('spiritual')}>technology</div>}
+      {this.state.isVisible.find(text => text== 'spiritual') && <div className='contemporary fade-in'onClick={()=>this.makeVisible('physical')}>past</div>}
+      {this.state.isVisible.find(text => text == 'physical') && <div className='physical fade-in' onClick={()=>this.makeVisible('wairoa')}>future</div>}
+      {this.state.isVisible.find(text => text == 'wairoa') && <div className='physical fade-in' onClick={()=>this.makeVisible('marama')}>Te Ao Wairoa</div>}
+      {this.state.isVisible.find(text => text == 'marama') && <div className='physical fade-in' onClick={this.revealAll}>Te Ao Marama</div>}
         {this.state.isVisible.find(text => text == 'enter') && <a className='enter-site fade-in' onClick={()=>this.props.dispatch(navigate('home'))}>enter</a>}
     {this.state.unified && <div className='together fade-in' onClick={()=>this.makeVisible('enter')}>
-      <div>ancient</div>
-      <div>contemporary</div>
-      <div>spiritual</div>
-      <div>physical</div>
+      <div>culture</div>
+      <div>technology</div>
+      <div>past</div>
+      <div>future</div>
+      <div>Te Ao Wairoa</div>
+      <div>Te Ao Marama</div>
     </div>}
     </div>
 
