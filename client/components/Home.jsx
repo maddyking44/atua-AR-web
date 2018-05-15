@@ -6,58 +6,38 @@ import Nav from './Nav'
 import WindInfo from './WindInfo'
 import Atua from './Atua'
 import Text from './Text'
-
-class Home extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      menuVisible: false,
-      current_text: props.current_text
-        }
-    this.openNav = this.openNav.bind(this)
-    this.closeNav = this.closeNav.bind(this)
-  } 
+import {openNav, closeNav} from '../actions/nav'
 
 
-  openNav() {
-    this.setState({
-      menuVisible: true
-    })
-  }
-
-  closeNav() {
-    this.setState({
-      menuVisible: false
-    })
-  }
-
-  render() {
-    return (
+const Home = (props) => {
+  return (
     <div className='home'>
-      <div className='head-banner fade-in'>
-        <WindInfo />
-      </div>
-      {this.state.current_text.name && <Text />}
-      <div className='container'>
-        <Atua />
-      </div>
-
-      <div className='open fade-in' onClick={this.openNav}>﹖</div>
-      <CSSTransitionGroup transitionName='nav' transitionEnterTimeout={500} transitionLeaveTimeout={300}>
-      {this.state.menuVisible &&
-        <div className="navbar" id="myNavbar" >
-          <Nav closeNav={this.closeNav}/>
-        </div>
-      }
-      </CSSTransitionGroup>
+    <div className='head-banner fade-in'>
+    <WindInfo />
     </div>
-    )
-  }
+    {props.current_text.name && <Text />}
+    <div className='container'>
+    <Atua />
+    </div>
+
+    <div className='open fade-in' onClick={() => props.dispatch(openNav())}>﹖</div>
+    <CSSTransitionGroup transitionName='nav' transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+    {props.menuVisible &&
+      <div className="navbar" id="myNavbar" >
+      <Nav closeNav={() => props.dispatch(closeNav())}/>
+      </div>
+    }
+    </CSSTransitionGroup>
+    </div>
+  )
 }
 
 var mapStateToProps = (state) => {
   return {
-    current_text: state.current_text}
+    navVisible: state.navVisible,
+    menuVisible: state.menuVisible,
+    current_text: state.current_text
+  }
 }
 
 export default connect(mapStateToProps)(Home)

@@ -18,4 +18,3 @@ export function navMenuReducer (state = false, action) {
   }
 }
 
-//export default navReducer
