@@ -4,6 +4,15 @@
   src: url('../assets/fonts/Ikaros-Regular.otf');
 }
 
+@font-face{
+  font-family: slim-joe;
+  src: url('../assets/fonts/Slim-Joe.otf');
+}
+
+@font-face{
+  font-family: big-john;
+  src: url('../assets/fonts/BIG-JOHN.otf');
+}
 
 body {
   margin: 0;
@@ -26,9 +35,6 @@ body .home {
 
 body .opening {
   background-color: black;
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1em;
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -37,22 +43,61 @@ body .opening {
   position: absolute;
 }
 
-.ancient {
-  right: 0;
-  position:absolute;
+.left-things {
+  color: white;
+  position: absolute;
+  right: 51vw;
+  top: 50vh;
+  font-size: 3em;
+  font-family: slim-joe;
+
+}
+
+/* margin-top: -half of the height in px or whatever it is . */
+
+.right-things {
+  color: white;
+  position: absolute;
+  left: 51vw;
+  top: 50vh;
+  font-size: 3em;
+  font-family: big-john;
 }
 
 .together {
-  color: peachpuff;
-  bottom:0;
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-evenly;
+      color: white;
+      width: 10em;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+      left: 50vw;
+      margin-left: -5em;
+      height: 12em;
+      top: 50vh;
+      margin-top: -6em;
+      font-size: 2em;
+}
+
+.tog-thin {
+  font-family: slim-joe;
+}
+.tog-fat {
+  font-family: big-john;
 }
 
 .enter-site {
+  font-family: slim-joe;
+  color: white;
+  width: 8em;
+  position: absolute;
+  text-align: center;
+  left: 50vw;
+  margin-left: -4em;
+  height: 4em;
+  top: 50vh;
+  margin-top: -1em;
   font-size: 4em;
 }
 
