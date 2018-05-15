@@ -1,19 +1,9 @@
 
 @font-face{
-  font-family: slim-joe;
-  src: url('../assets/fonts/Slim-Joe.otf');
-}
-
-@font-face{
   font-family: ikaros-reg;
   src: url('../assets/fonts/Ikaros-Regular.otf');
 }
 
-
-@font-face{
-  font-family: raleway;
-  src: url('../assets/fonts/Raleway-Thin.otf');
-}
 
 body {
   margin: 0;
@@ -22,7 +12,8 @@ body {
 
 body .home {
   color: white;
-  font-family: raleway;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
   font-size: 22px;
   width: 100vw;
   height: 100vh;
@@ -36,7 +27,7 @@ body .home {
 body .opening {
   background-color: black;
   color: white;
-  font-family: slim-joe;
+  font-family: 'Raleway', sans-serif;
   font-size: 1em;
   margin: 0;
   padding: 0;
@@ -64,6 +55,7 @@ body .opening {
 .enter-site {
   font-size: 4em;
 }
+
 #article{
   width: 80%;
   margin-left: auto;
