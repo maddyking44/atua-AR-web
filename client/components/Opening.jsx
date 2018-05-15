@@ -31,12 +31,12 @@ revealAll() {
 render(){
   return (
     <div className='opening'>
-      {this.state.isVisible.find(text => text=='ancient') && <div className='ancient' onClick={()=>this.makeVisible('contemporary')}>ancient</div>}
-      {this.state.isVisible.find(text => text =='contemporary') && <div className='spiritual' onClick={()=>this.makeVisible('spiritual')}>contemporary</div>}
-      {this.state.isVisible.find(text => text== 'spiritual') && <div className='contemporary'onClick={()=>this.makeVisible('physical')}>spiritual</div>}
-      {this.state.isVisible.find(text => text == 'physical') && <div className='physical' onClick={this.revealAll}>physical</div>}
-        {this.state.isVisible.find(text => text == 'enter') && <a className='enter-site' onClick={()=>this.props.dispatch(navigate('home'))}>enter</a>}
-    {this.state.unified && <div className='together' onClick={()=>this.makeVisible('enter')}>
+      {this.state.isVisible.find(text => text=='ancient') && <div className='ancient fade-in' onClick={()=>this.makeVisible('contemporary')}>ancient</div>}
+      {this.state.isVisible.find(text => text =='contemporary') && <div className='spiritual fade-in' onClick={()=>this.makeVisible('spiritual')}>contemporary</div>}
+      {this.state.isVisible.find(text => text== 'spiritual') && <div className='contemporary fade-in'onClick={()=>this.makeVisible('physical')}>spiritual</div>}
+      {this.state.isVisible.find(text => text == 'physical') && <div className='physical fade-in' onClick={this.revealAll}>physical</div>}
+        {this.state.isVisible.find(text => text == 'enter') && <a className='enter-site fade-in' onClick={()=>this.props.dispatch(navigate('home'))}>enter</a>}
+    {this.state.unified && <div className='together fade-in' onClick={()=>this.makeVisible('enter')}>
       <div>ancient</div>
       <div>contemporary</div>
       <div>spiritual</div>
