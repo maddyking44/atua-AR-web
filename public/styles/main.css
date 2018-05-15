@@ -19,7 +19,7 @@ body {
   padding: 0;
 }
 
-body .home {
+ body .home{
   color: white;
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
@@ -28,20 +28,42 @@ body .home {
   height: 100vh;
   top: 0;
   position:absolute;
-  background-image: url("/assets/images/Untitled-1.svg");
+  background-image: url("/assets/images/sunset.svg");
   background-size: cover;
   overflow: hidden;
 }
 
-body .opening {
-  background-color: black;
+.opening {
+  background-image: url("/assets/images/night.svg");
+  background-size: cover;
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
-  top: 0;
+  left: 0;
   position: absolute;
+  overflow:hidden;
 }
+
+.veil {
+  background-color: rgba(0,0,0,0.85);
+  width: 100vw;
+  height:100vh;
+}
+
+.begin {
+animation: pulse2 2s linear infinite;
+width: 32px;
+height: 32px;
+position: absolute;
+left: 50vw;
+margin-left: -16px;
+top: 50vh;
+margin-top: -16px;
+cursor: pointer;
+}
+
+
 
 .left-things {
   color: white;
@@ -50,7 +72,7 @@ body .opening {
   top: 50vh;
   font-size: 3em;
   font-family: slim-joe;
-
+  cursor: pointer;
 }
 
 /* margin-top: -half of the height in px or whatever it is . */
@@ -62,6 +84,7 @@ body .opening {
   top: 50vh;
   font-size: 3em;
   font-family: big-john;
+  cursor: pointer;
 }
 
 .together {
@@ -78,6 +101,7 @@ body .opening {
       top: 50vh;
       margin-top: -6em;
       font-size: 2em;
+      cursor: pointer;
 }
 
 .tog-thin {
@@ -99,6 +123,7 @@ body .opening {
   top: 50vh;
   margin-top: -1em;
   font-size: 4em;
+  cursor: pointer;
 }
 
 #article{
@@ -297,6 +322,18 @@ Text Box
   z-index: 2;
 }
 
+
+@keyframes pulse2 {
+ 0% {
+   	transform: scale(1.1);
+ }
+ 50% {
+   	transform: scale(0.6);
+ }
+ 100% {
+   	transform: scale(1);
+ }
+}
 
 @keyframes fog-settles {
   to {color: white; text-shadow: none;}
