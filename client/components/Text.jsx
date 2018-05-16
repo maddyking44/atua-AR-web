@@ -1,29 +1,21 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { clearText } from '../actions/text'
+import { clearText, increaseIndex, decreaseIndex } from '../actions/text'
 
 class Text extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      index: this.props.index,
-      textLength: this.props.text.paragraphs.length
     }
     this.next = this.next.bind(this)
     this.prev = this.prev.bind(this)
   }
   next() {
-    this.setState({
-      index: this.state.index += 1,
-      par: this.props.text.paragraphs[this.state.index]
-    })
+    this.props.dispatch(increaseIndex())
   }
   prev() {
-    this.setState({
-      index: this.state.index -= 1,
-      par: this.props.text.paragraphs[this.state.index]
-    })
+    this.props.dispatch(decreaseIndex())
   }
 
   render(){
@@ -34,7 +26,7 @@ class Text extends React.Component {
 	<div className='text-box_content'>
 	  <p className='text-box_close' onClick={()=> this.props.dispatch(clearText())}>&times;</p>
 	  <h1 className='text'><span className='te-reo'>{this.props.text.title.tereo}</span><span className='english'>{this.props.text.title.english}</span></h1>
-    <p className='text'><span className='te-reo'>{this.props.text.paragraphs[index].tereo}</span><span className='english'>{this.props.text.paragraphs[index].english}</span></p>
+	  <p className='text'><span className='te-reo'>{this.props.text.paragraphs[this.props.index].tereo}</span><span className='english'>{this.props.text.paragraphs[this.props.index].english}</span></p>
 	  <div>
 	    <div className='byline'>
 	      <p className='text'>
@@ -48,8 +40,8 @@ class Text extends React.Component {
 	      </p>
 	    </div>
 	    <div className='par-nav'>
-	      {(index > 0) && <p onClick={()=>this.prev()}>prev</p>}
-	      {(index < (this.state.textLength - 1)) && <p onClick={()=>this.next()}>next</p>}
+	      {(this.props.index > 0) && <p onClick={()=>this.prev()}>prev</p>}
+	      {(this.props.index < (this.props.text.paragraphs.length - 1)) && <p onClick={()=>this.next()}>next</p>}
 	    </div>
 	  </div>
 	</div>
