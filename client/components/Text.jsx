@@ -1,43 +1,53 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { clearText } from '../actions/text'
+import { clearText, increaseIndex, decreaseIndex } from '../actions/text'
 
 class Text extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+    }
+    this.next = this.next.bind(this)
+    this.prev = this.prev.bind(this)
+  }
+  next() {
+    this.props.dispatch(increaseIndex())
+  }
+  prev() {
+    this.props.dispatch(decreaseIndex())
+  }
 
   render(){
+    let index = this.props.text.paragraphs && this.props.text.paragraphs.length > this.state.index  ? this.state.index : 0
+
     return (
-    <div className='text-box'>
-      <div className='text-box_content'>
-        <p className='text-box_close' onClick={()=> this.props.dispatch(clearText())}>X</p>
-	<h1 className='text'><span className='te-reo'>{this.props.text.title.tereo}</span><span className='english'>{this.props.text.title.english}</span></h1>
-      {this.props.text.paragraphs.map(paragraph => {
-	return <p className='text'><span className='te-reo'>{paragraph.tereo}</span><span className='english'>{paragraph.english}</span></p>
-      })
-      }
-	<div className='byline'>
-	  <p className='text'>
-	    <span className='te-reo'>written by {this.props.text.author}</span>
-	    <span className='english'>written by {this.props.text.author}</span>
-	  </p>
-	  <p>~*~</p>
-	  <p className='text'>
-	    <span className='te-reo'>translated by {this.props.text.translator}</span>
-	    <span className='english'>translated by {this.props.text.translator}</span>
-	  </p>
+      <div className='text-box'>
+	<div className='text-box_content'>
+	  <p className='text-box_close' onClick={()=> this.props.dispatch(clearText())}>&times;</p>
+	  <h1 className='text'><span className='te-reo'>{this.props.text.title.tereo}</span><span className='english'>{this.props.text.title.english}</span></h1>
+	  <p className='text'><span className='te-reo'>{this.props.text.paragraphs[this.props.index].tereo}</span><span className='english'>{this.props.text.paragraphs[this.props.index].english}</span></p>
+	  <div>
+	    <div className='byline'>
+	      <p className='text'>
+		<span className='te-reo'>written by {this.props.text.author}</span>
+		<span className='english'>written by {this.props.text.author}</span>
+	      </p>
+	      <p>~*~</p>
+	      <p className='text'>
+		<span className='te-reo'>translated by {this.props.text.translator}</span>
+		<span className='english'>translated by {this.props.text.translator}</span>
+	      </p>
+	    </div>
+	    <div className='par-nav'>
+	      {(this.props.index > 0) && <p onClick={()=>this.prev()}>prev</p>}
+	      {(this.props.index < (this.props.text.paragraphs.length - 1)) && <p onClick={()=>this.next()}>next</p>}
+	    </div>
+	  </div>
 	</div>
       </div>
-    </div>
-  )
+    )
   }
 }
-
-//var mapStateToProps= (state) => {
- // return {
-  //  text: state.current_text
-  //}
-//}
-
-//export default connect(mapStateToProps)(Text)
 
 export default Text

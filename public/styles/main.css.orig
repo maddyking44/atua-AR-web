@@ -159,13 +159,8 @@ cursor: pointer;
   justify-content: space-evenly;
   position: absolute;
   top: 8px;
-  right: 8px;
 }
 
-.info-title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-}
 
 .fade-in {
   color:transparent;
@@ -187,7 +182,6 @@ cursor: pointer;
   font-size: 2em;
   cursor: pointer;
   position: fixed;
-  left: 0.5em;
   bottom: 0;
 }
 
@@ -196,31 +190,18 @@ cursor: pointer;
   text-align: center;
 }
 .navbar .close {
-  width:100%;
-  right: 1em;
-  text-align: right;
   position: absolute;
-  font-size: 1em;
+  right: 10px;
+  font-size: 36px;
   color: white;
   text-decoration: none;
-  cursor: pointer;
 }
 
-.explanation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-.explanation a p {
-  font-size: 1.5vh;
-}
-
-.learn-more {
+.navbar .learn-more {
+  font-size: 36px;
   text-decoration: none;
 }
+
 
 
 .hvr-grow {
@@ -245,7 +226,6 @@ cursor: pointer;
 }
 
 .text{
-  cursor: default;
   margin-left: 0.25em;
   color: transparent;
   animation:  text-settles 4s forwards;
@@ -257,39 +237,27 @@ cursor: pointer;
 
 .text .te-reo{
   display: inline;
-  animation: text-settles_eng 3s forwards;
 }
 
 .text:hover .te-reo{
   display: none;
 }
 
-/* .text:hover:after .te-reo{
+.text:hover:after .te-reo{
   color: transparent;
   animation: text-settles 2s forwards;
   text-shadow: 0 0 25px rgba(0,0,0,5);
-} */
+}
 
 .text .english{
   display: none;
-  animation: text-settles_eng2 3s forwards;
 }
 
 .text:hover .english{
   color: transparent;
   display: inline;
   animation: text-settles_eng 3s forwards;
-  text-shadow: 0 0 25px rgba(255,255,255,5);
-}
-@keyframes fog-settles {
-  to {color: white; text-shadow: none;}
-}
-@keyframes text-settles {
-  to {color: white; text-shadow: none;}
-}
-@keyframes text-settles_eng {
-  to {color: rgb(255, 255, 255); text-shadow: none;}
-  from{color: transparent; text-shadow: 0 0 25px rgba(255,255,255,5);}
+  text-shadow: 0 0 25px rgba(0,0,0,5);
 }
 
 /*
@@ -297,18 +265,15 @@ Navbar Styling
 */
 
 .navbar {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      width: 100%;
-      height: 110px;
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      bottom: 0;
-      background-color: rgba(0,0,0,0.85);
-      overflow: hidden;
-      transition: 0.5s;
+  width: 100%;
+  min-height: 50px;/*am not placing a fixed height, so it is can be more thin and only as large as it needs.*/
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  background-color: #333;
+  overflow: hidden;
+  transition: 0.5s;
 }
 
 #navItems{
@@ -361,10 +326,10 @@ Text Box
   position:absolute;
   top: 50px;
   width: 75%;
-  height: 50%;
+  height: 75%;
   left: 12.5%;
   right: 12.5%;
-  background-color: rgba(0,0,0,0.85);
+  background-color: peachpuff;
   color: indigo;
 }
 
@@ -380,9 +345,6 @@ Text Box
 }
 
 .text-box_close{
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
   position: absolute;
   top: -15px;
   right: 5px;
@@ -401,6 +363,19 @@ Text Box
   padding: 0.75em;
 }
 
+<<<<<<< HEAD
+.par-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.par-nav p{
+  margin: 0.5em;
+}
+
+
+=======
 .fadeIn-enter {
   opacity: 0;
   transition: 0.5s ease-in-out all;
@@ -421,69 +396,6 @@ Text Box
   /* height: 0px; */
 }
 
-.about-page-row {
-  background-size: cover;
-  overflow: hidden;
-}
-
-.about-page-column-eight {
-  font-family: 'Raleway', sans-serif;
-  color: white;
-  position: relative;
-   overflow: scroll; 
-   overflow-x: hidden;
-   height:90vh;
-   width: 65%;
-   margin-top: 5vh;
-   margin-left: 17.5%;
-   margin-right: 17.5%;
-  margin-bottom: 5vh;
-}
-
-.about-page-image {
-  width: 100%;
-}
-
-.aboutcontainer{
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute; 
-  overflow: hidden; 
-}
-
-.abouttext {
-  width: 70%;
-  margin-left: 15%;
-}
-
-.about-main-title {
-  text-align: center;
-  font-size: 2em;
-  border-bottom-color: white;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-}
-
-.about-secondary-title {
-  font-size: 1.5em;
-}
-
-.sub-title {
-  font-size: 1.3em;
-}
-
-.who-are-we-body {
-  border-bottom-color: white;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  font-size: 1.3em;
-}
-
-.returnbutton {
-  text-align: center;
-  text-decoration: none;
-  color: white;
-}
-
 @keyframes pulse2 {
  0% {
    	transform: scale(1.1);
@@ -494,4 +406,15 @@ Text Box
  100% {
    	transform: scale(1);
  }
+}
+>>>>>>> 43f706f9cd4355c0b69eb812b20bf1dcb7d22c9d
+
+@keyframes fog-settles {
+  to {color: white; text-shadow: none;}
+}
+@keyframes text-settles {
+  to {color: indigo; text-shadow: none;}
+}
+@keyframes text-settles_eng {
+  to {color: #4b484d; text-shadow: none;}
 }

@@ -12,9 +12,8 @@ export function navMenuReducer (state = false, action) {
     case 'OPEN_NAV':
       return action.navOpen
     case 'CLOSE_NAV':
-      return action.navClose
+      return action.navOpen
     default:
       return state
   }
 }
-

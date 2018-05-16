@@ -25,3 +25,15 @@ export function receiveText (text) {
       text
   }
 }
+
+export function increaseIndex() {
+  return {
+    type: 'INCREASE_INDEX'
+  }
+}
+
+export function decreaseIndex() {
+  return {
+    type: 'DECREASE_INDEX'
+  }
+}
