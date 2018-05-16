@@ -364,7 +364,7 @@ Text Box
   display: flex;
   padding-left: 2em;
   padding-right: 2em;
-  font-size: 2vh;
+  font-size: 3vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;

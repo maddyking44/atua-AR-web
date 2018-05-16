@@ -7,11 +7,11 @@ exports.seed = function(knex, Promise) {
 	{name: "about", 
 	 url: "about",
 	 short_title:JSON.stringify(
-	   {tereo:"e pā ana ki",
-	    english:"about"}),
+	   {tereo:"E PĀ ANA KI",
+	    english:"ABOUT"}),
 	 title:JSON.stringify(
-	   {tereo:"e pā ana ki",
-	    english:"about"
+	   {tereo:"E PĀ ANA KI",
+	    english:"ABOUT"
 	   }
 	 ),
 	  paragraphs:JSON.stringify([
@@ -25,8 +25,8 @@ exports.seed = function(knex, Promise) {
 	{name: "legend", 
 	 url: "legend",
 	 short_title:JSON.stringify(
-	   {tereo:"need Te Reo",
-	    english:"the Legend"}),
+	   {tereo:"NEED TE REO",
+	    english:"THE LEGEND"}),
 	 title:JSON.stringify(
 	   {tereo:"te Reo needed for Tāwhirimātea",
 	     english:"The Legend of Tāwhirimātea"
@@ -63,8 +63,8 @@ exports.seed = function(knex, Promise) {
 	{name: "contributing", 
 	 url: "contributing",
 	 short_title:JSON.stringify(
-	   {tereo:"need Te Reo",
-	    english:"Contributing"}),
+	   {tereo:"NEED TE REO",
+	    english:"CONTRIBUTING"}),
 	 title:JSON.stringify(
 	   {tereo:"te Reo needed for Contributing",
 	     english:"How to contribute to this project"
@@ -81,8 +81,8 @@ exports.seed = function(knex, Promise) {
 	  name: "about this page",
 	  url: "about-page",
 	  short_title: JSON.stringify(
-	    {tereo: "TEREO NEEDED for About-this-page",
-	     english: "About This Page."
+	    {tereo: "TE REO NEEDED",
+	     english: "ABOUT THIS PAGE."
 	    }
 	  ),
 	    title: JSON.stringify(

@@ -4,7 +4,10 @@ import {getTextByURL} from '../actions/text'
 import {Link} from 'react-router-dom'
 import {clearText} from '../actions/text'
 
-function About ({weather, dispatch}) {
+function About ({weather
+  , dispatch
+}) {
+  
   function findBackgroundImg(){
     if (weather) {
       var hour = (new Date(Date.parse(weather.local_time_rfc822))).getHours()
@@ -32,7 +35,9 @@ function About ({weather, dispatch}) {
   
   console.log(typeof weather.local_time_rfc822)  
   return (
-      <div style={divStyle} className="about-page-row">
+      <div 
+      style={divStyle} className="about-page-row"
+      >
       <a className='text about-back' href='#' onClick={()=>dispatch(clearText())}><span className='te-reo'>Whakahoki</span><span className='english'>return home</span></a>
         <div className="about-page-column-eight">
           <div className="aboutcontainer">
@@ -120,6 +125,10 @@ Te puna tuwhera me te tuwhera.</span></h2>
     )
 }
 
-const mapStateToProps = ({weather, dispatch}) => ({weather, dispatch})
+const mapStateToProps = ({weather
+  , dispatch
+}) => ({weather
+  , dispatch
+})
 
 export default connect(mapStateToProps)(About)
