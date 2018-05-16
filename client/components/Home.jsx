@@ -9,9 +9,39 @@ import Text from './Text'
 import {openNav, closeNav} from '../actions/nav'
 
 
+
 const Home = (props) => {
+
+  function findBackgroundImg(){
+      if (props.weather) {
+        var hour = (new Date(Date.parse(props.weather.local_time_rfc822))).getHours()
+        console.log(hour)
+        if (hour < 6) {
+          return '/assets/images/night.svg'
+        } 
+        else if (hour == 6){
+          return '/assets/images/sunset.svg'
+        }
+        else if (hour >= 7 && hour <= 16) {
+          return '/assets/images/dayhour.svg'
+          
+        }
+        else if (hour == 17) {
+          return '/assets/images/sunset.svg'
+        }
+        else if (hour >= 18) {
+      console.log(props.weather)
+      return '/assets/images/night.svg'}
+        }   
+    }
+    
+    var divStyle = {
+      backgroundImage: 'url(' + findBackgroundImg() + ')'
+    }
+
+
   return (
-    <div className='home'>
+    <div style={divStyle} className='home'>
     {/* container has to be at the top, else you can't hover over anything else.
      not sure why, it's a good bug to fix later. */}
       <div className='container'>
@@ -42,7 +72,8 @@ var mapStateToProps = (state) => {
     navVisible: state.navVisible,
     menuVisible: state.menuVisible,
     current_text: state.current_text,
-    current_index: state.current_index
+    current_index: state.current_index,
+    weather: state.weather
   }
 }
 

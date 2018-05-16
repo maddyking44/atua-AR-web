@@ -29,7 +29,6 @@ body {
   top: 0;
 
   position:absolute;
-  background-image: url("/assets/images/sunset.svg");
   background-size: cover;
   overflow: hidden;
 }
