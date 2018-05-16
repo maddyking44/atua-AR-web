@@ -7,15 +7,39 @@ import {Link} from 'react-router-dom'
 // needs to be de-bugged. Something to do with the async call potentially?
 function About ({weather}) {
 
-  if (weather) {
-  var hour = (new Date(Date.parse(weather.local_time_rfc822))).getHours()
-  console.log(hour)
+
+  
+
+
+  function findBackgroundImg(){
+    if (weather) {
+      var hour = (new Date(Date.parse(weather.local_time_rfc822))).getHours()
+      console.log(hour)
+      if (hour < 6) {
+        return '/assets/images/background-evening-01.svg'
+      } 
+      else if (hour == 6){
+        return '/assets/images/background-about-sunrise-01.svg'
+      }
+      else if (hour >= 7 && hour <= 16) {
+        return '/assets/images/background-about-daytime-01.svg'
+        
+      }
+      else if (hour == 17) {
+        return '/assets/images/background-about-sunrise-01.svg'
+      }
+      else if (hour >= 18) {return '/assets/images/background-evening-01.svg'}
+      }   
   }
-  // console.log(weather.local_time_rfc822 && hour.getHours())
+
+
+  var divStyle = {
+    backgroundImage: 'url(' + findBackgroundImg() + ')'
+  }
   
   console.log(typeof weather.local_time_rfc822)  
   return (
-      <div className="about-page-row">
+      <div style={divStyle} className="about-page-row">
         <div className="about-page-column-eight">
           <div className="aboutcontainer">
             <div className="abouttext">
