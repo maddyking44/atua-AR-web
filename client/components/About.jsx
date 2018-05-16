@@ -2,15 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {getTextByURL} from '../actions/text'
 import {Link} from 'react-router-dom'
+import {clearText} from '../actions/text'
 
-
-// needs to be de-bugged. Something to do with the async call potentially?
-function About ({weather}) {
-
-
-  
-
-
+function About ({weather, dispatch}) {
   function findBackgroundImg(){
     if (weather) {
       var hour = (new Date(Date.parse(weather.local_time_rfc822))).getHours()
@@ -32,7 +26,6 @@ function About ({weather}) {
       }   
   }
 
-
   var divStyle = {
     backgroundImage: 'url(' + findBackgroundImg() + ')'
   }
@@ -40,6 +33,7 @@ function About ({weather}) {
   console.log(typeof weather.local_time_rfc822)  
   return (
       <div style={divStyle} className="about-page-row">
+      <a className='text about-back' href='#' onClick={()=>dispatch(clearText())}><span className='te-reo'>Whakahoki</span><span className='english'>return home</span></a>
         <div className="about-page-column-eight">
           <div className="aboutcontainer">
             <div className="abouttext">
@@ -126,6 +120,6 @@ Te puna tuwhera me te tuwhera.</span></h2>
     )
 }
 
-const mapStateToProps = ({weather}) => ({weather})
+const mapStateToProps = ({weather, dispatch}) => ({weather, dispatch})
 
 export default connect(mapStateToProps)(About)

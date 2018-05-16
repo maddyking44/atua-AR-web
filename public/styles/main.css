@@ -421,6 +421,15 @@ Text Box
   /* height: 0px; */
 }
 
+.about-back{
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
 .about-page-row {
   background-size: cover;
   overflow: hidden;
@@ -483,6 +492,7 @@ Text Box
   text-decoration: none;
   color: white;
 }
+
 
 @keyframes pulse2 {
  0% {
