@@ -22,7 +22,7 @@ const Home = (props) => {
           return '/assets/images/sunset.svg'
         }
         else if (hour >= 7 && hour <= 16) {
-          return '/assets/images/dayhour.svg'
+          return '/assets/images/daytime.svg'
           
         }
         else if (hour == 17) {
