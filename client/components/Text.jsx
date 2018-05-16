@@ -30,7 +30,7 @@ class Text extends React.Component {
     return (
       <div className='text-box'>
 	<div className='text-box_content'>
-	  <p className='text-box_close' onClick={()=> this.props.dispatch(clearText())}>X</p>
+	  <p className='text-box_close' onClick={()=> this.props.dispatch(clearText())}>&times;</p>
 	  <h1 className='text'><span className='te-reo'>{this.props.text.title.tereo}</span><span className='english'>{this.props.text.title.english}</span></h1>
 	  <p className='text'><span className='te-reo'>{this.props.text.paragraphs[this.state.index].tereo}</span><span className='english'>{this.props.text.paragraphs[this.state.index].english}</span></p>
 	  <div>
@@ -46,8 +46,8 @@ class Text extends React.Component {
 	      </p>
 	    </div>
 	    <div className='par-nav'>
-	      {(this.state.index > 0) && <p onClick={()=>this.prev()}>prev</p>} 
-	      {(this.state.index < (this.state.textLength - 1)) && <p onClick={()=>this.next()}>next</p>} 
+	      {(this.state.index > 0) && <p onClick={()=>this.prev()}>prev</p>}
+	      {(this.state.index < (this.state.textLength - 1)) && <p onClick={()=>this.next()}>next</p>}
 	    </div>
 	  </div>
 	</div>
