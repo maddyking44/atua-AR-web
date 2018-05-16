@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import {flipNav, closeNav} from '../actions/nav'
 import {getTextByURL} from '../actions/text'
 
+
 const Nav = (props)=> {
   return (
     <div>
