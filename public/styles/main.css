@@ -264,7 +264,7 @@ cursor: pointer;
 .text .te-reo{
   display: inline;
   animation: text-settles_eng 3s forwards;
-  transform: rotateZ(360deg)
+  transform: rotateZ(360deg);
 }
 
 .text:hover .te-reo{
@@ -275,7 +275,7 @@ cursor: pointer;
 .text .english{
   display: none;
   animation: text-settles_eng2 3s forwards;
-  transform: rotateZ(360deg)
+  transform: rotateZ(360deg);
 }
 
 .text:hover .english{
