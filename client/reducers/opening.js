@@ -1,5 +1,5 @@
 //set state to opening when going to production.
-function openingReducer (state = 'opening', action) {
+function openingReducer (state = 'home', action) {
   switch (action.type) {
     case 'ENTER_SITE':
     return action.destination

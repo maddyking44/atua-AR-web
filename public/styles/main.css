@@ -382,7 +382,7 @@ Text Box
 
 .about-page-column-eight {
   font-family: 'Raleway', sans-serif;
-  color: #333;
+  color: white;
   position: relative;
    overflow: scroll; 
    overflow-x: hidden;
@@ -399,7 +399,7 @@ Text Box
 }
 
 .aboutcontainer{
-  background-color: peachpuff;
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute; 
   overflow: hidden; 
 }
@@ -412,7 +412,7 @@ Text Box
 .about-main-title {
   text-align: center;
   font-size: 2em;
-  border-bottom-color: black;
+  border-bottom-color: white;
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
@@ -426,7 +426,7 @@ Text Box
 }
 
 .who-are-we-body {
-  border-bottom-color: black;
+  border-bottom-color: white;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   font-size: 1.3em;
@@ -435,7 +435,7 @@ Text Box
 .returnbutton {
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 @keyframes pulse2 {

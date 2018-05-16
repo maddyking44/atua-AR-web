@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {flipNav} from '../actions/nav'
 import {getTextByURL} from '../actions/text'
-import {Link} from 'react-router-dom'
+
 
 const Nav = (props)=> {
   return (
