@@ -3,15 +3,16 @@ exports.seed = function(knex, Promise) {
   return knex('texts').del()
     .then(function () {
       // Inserts seed entries
-      return knex('texts').insert([ 
-	{name: "about", 
+      return knex('texts').insert([
+	{name: "about",
 	 url: "about",
 	 short_title:JSON.stringify(
-	   {tereo:"E PĀ ANA KI",
-	    english:"ABOUT"}),
+
+	   {tereo:"TŌ MĀTOU KAUPAPA",
+	    english:"ABOUT AR_ATUA"}),
 	 title:JSON.stringify(
-	   {tereo:"E PĀ ANA KI",
-	    english:"ABOUT"
+	   {tereo:"TŌ MĀTOU KAUPAPA",
+	    english:"ABOUT AR_ATUA"
 	   }
 	 ),
 	  paragraphs:JSON.stringify([
@@ -22,13 +23,15 @@ exports.seed = function(knex, Promise) {
 	  author: 'Laura',
 	  translator: 'Alex'
 	},
-	{name: "legend", 
+	{name: "legend",
 	 url: "legend",
 	 short_title:JSON.stringify(
-	   {tereo:"NEED TE REO",
+
+	   {tereo:"TĒTAHI PŪRĀKAU",
 	    english:"THE LEGEND"}),
+
 	 title:JSON.stringify(
-	   {tereo:"te Reo needed for Tāwhirimātea",
+	   {tereo:"Tētahi pūrākau e pā ana ki Tāwhirimātea",
 	     english:"The Legend of Tāwhirimātea"
 	   }),
 	  paragraphs:JSON.stringify([
@@ -60,19 +63,21 @@ exports.seed = function(knex, Promise) {
 	  author: 'Laura',
 	  translator: 'Alex'
 	},
-	{name: "contributing", 
+	{name: "contributing",
 	 url: "contributing",
 	 short_title:JSON.stringify(
-	   {tereo:"NEED TE REO",
-	    english:"CONTRIBUTING"}),
+
+	   {tereo:"WHAKAPĀKIA MAI",
+	    english:"CONTACT US"}),
+
 	 title:JSON.stringify(
-	   {tereo:"te Reo needed for Contributing",
-	     english:"How to contribute to this project"
+	   {tereo:"Whakapākia mai",
+	     english:"Contact Us"
 	    }),
 	  paragraphs:JSON.stringify([
-	    {tereo:"lorum ipsum",
-	     english:"english lorum ipsum"
-	    }
+	    {tereo:"īmera mai ki: ben@ioa.co.nz",
+	     english:"email to: ben@ioa.co.nz"
+     }
 	  ]),
 	  author: 'Laura',
 	  translator: 'Alex'
@@ -81,18 +86,20 @@ exports.seed = function(knex, Promise) {
 	  name: "about this page",
 	  url: "about-page",
 	  short_title: JSON.stringify(
-	    {tereo: "TE REO NEEDED",
-	     english: "ABOUT THIS PAGE."
+
+	    {tereo: "HE AHA TĒNEI?",
+	     english: "WHAT IS THIS?"
+
 	    }
 	  ),
 	    title: JSON.stringify(
-	      { tereo: "TE REO NEEDED",
-		english: "About this Page."
+	      { tereo: "He aha tēnei?",
+		english: "What is this?"
 	      }
 	    ),
 	    paragraphs: JSON.stringify([
-	      {tereo: "Te Reo Needed",
-	       english: ",This visualisation is inspired by the legend of Tawhirimatea. Its form changes depending on the wind speed and direction in Te Whanganui-a-Tara Wellington."
+	      {tereo: "I whakaohohotia mātou ki te hanga i tēnei taupānga whakaahua, e te pūrākau o Tāwhirimātea. Ka whakarerekētia te āhua o tēnei whārangi ipurangi e te tere me te aronga o te hau, kei te Whanganui-a-Tara inaianei.",
+	       english: "This visualisation is inspired by the legend of Tawhirimatea. Its form changes depending on the wind speed and direction in Te Whanganui-a-Tara Wellington."
 	      }
 	    ]),
 	    author: "Laura",
