@@ -12,10 +12,8 @@ import {openNav, closeNav} from '../actions/nav'
 const Home = (props) => {
   return (
     <div className='home'>
-    {/* container has to be at the top, else you can't hover over anything else.
-     not sure why, it's a good bug to fix later. */}
       <div className='container'>
-        <Atua />
+      {!props.current_text.name && <Atua />}
       </div>
       <div className='head-banner fade-in'>
       <CSSTransitionGroup transitionName='nav' transitionEnterTimeout={500} transitionLeaveTimeout={300}>
