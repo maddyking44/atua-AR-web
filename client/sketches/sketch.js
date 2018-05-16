@@ -12,11 +12,16 @@ export default function sketch (p) {
   }
 
   p.setup = () => {
+    //p.bg = p.loadImage("assets/images/sunset.svg");
         //set the canvas size
+        console.log(p.windowWidth)
+        console.log(p.width)
+        console.log(p.displayWidth)
       p.createCanvas(p.windowWidth, p.windowHeight)
-
+      var x = p.windowWidth * 0.55
+      var y = p.windowHeight * 0.27
       //initialize our particle system
-      ps = new ParticleSystem(p,0,p.createVector(p.width / 2, p.height / 2),particle_texture);
+      ps = new ParticleSystem(p,0,p.createVector(x, y),particle_texture);
   }
 
   p.windowResized = () => {
@@ -28,7 +33,7 @@ export default function sketch (p) {
       };
 
   p.draw = () => {
-    //p.background('#800000')
+    //p.background(p.bg)
     //console.log({velocity})
     //createVector is translating a set of variables into coordinates that p5 can understand, and can be passed into other functions to affect animation.
     var south = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height-p.height, 0, p.height, -0.2, 0.2))
