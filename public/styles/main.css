@@ -159,8 +159,13 @@ cursor: pointer;
   justify-content: space-evenly;
   position: absolute;
   top: 8px;
+  right: 8px;
 }
 
+.info-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
 
 .fade-in {
   color:transparent;
@@ -182,6 +187,7 @@ cursor: pointer;
   font-size: 2em;
   cursor: pointer;
   position: fixed;
+  left: 0.5em;
   bottom: 0;
 }
 
@@ -190,17 +196,32 @@ cursor: pointer;
   text-align: center;
 }
 .navbar .close {
+  width:100%;
+  right: 1em;
+  text-align: right;
   position: absolute;
-  right: 10px;
-  font-size: 36px;
+  font-size: 1em;
   color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.explanation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.explanation a p {
+  font-size: 1.5vh;
+}
+
+.learn-more {
   text-decoration: none;
 }
 
-.navbar .learn-more {
-  font-size: 36px;
-  text-decoration: none;
-}
 
 .hvr-grow {
     display: inline-block;
@@ -224,6 +245,7 @@ cursor: pointer;
 }
 
 .text{
+  cursor: default;
   margin-left: 0.25em;
   color: transparent;
   animation:  text-settles 4s forwards;
@@ -235,27 +257,39 @@ cursor: pointer;
 
 .text .te-reo{
   display: inline;
+  animation: text-settles_eng 3s forwards;
 }
 
 .text:hover .te-reo{
   display: none;
 }
 
-.text:hover:after .te-reo{
+/* .text:hover:after .te-reo{
   color: transparent;
   animation: text-settles 2s forwards;
   text-shadow: 0 0 25px rgba(0,0,0,5);
-}
+} */
 
 .text .english{
   display: none;
+  animation: text-settles_eng2 3s forwards;
 }
 
 .text:hover .english{
   color: transparent;
   display: inline;
   animation: text-settles_eng 3s forwards;
-  text-shadow: 0 0 25px rgba(0,0,0,5);
+  text-shadow: 0 0 25px rgba(255,255,255,5);
+}
+@keyframes fog-settles {
+  to {color: white; text-shadow: none;}
+}
+@keyframes text-settles {
+  to {color: white; text-shadow: none;}
+}
+@keyframes text-settles_eng {
+  to {color: rgb(255, 255, 255); text-shadow: none;}
+  from{color: transparent; text-shadow: 0 0 25px rgba(255,255,255,5);}
 }
 
 /*
@@ -263,15 +297,18 @@ Navbar Styling
 */
 
 .navbar {
-  width: 100%;
-  min-height: 50px;/*am not placing a fixed height, so it is can be more thin and only as large as it needs.*/
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  bottom: 0;
-  background-color: #333;
-  overflow: hidden;
-  transition: 0.5s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 110px;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.85);
+      overflow: hidden;
+      transition: 0.5s;
 }
 
 #navItems{
@@ -391,14 +428,4 @@ Text Box
  100% {
    	transform: scale(1);
  }
-}
-
-@keyframes fog-settles {
-  to {color: white; text-shadow: none;}
-}
-@keyframes text-settles {
-  to {color: indigo; text-shadow: none;}
-}
-@keyframes text-settles_eng {
-  to {color: #4b484d; text-shadow: none;}
 }
