@@ -76,6 +76,27 @@ exports.seed = function(knex, Promise) {
 	  ]),
 	  author: 'Laura',
 	  translator: 'Alex'
+	},
+	{
+	  name: "about this page",
+	  url: "about-page",
+	  short_title: JSON.stringify(
+	    {tereo: "TEREO NEEDED for About-this-page",
+	     english: "About This Page."
+	    }
+	  ),
+	    title: JSON.stringify(
+	      { tereo: "TE REO NEEDED",
+		english: "About this Page."
+	      }
+	    ),
+	    paragraphs: JSON.stringify([
+	      {tereo: "Te Reo Needed",
+	       english: ",This visualisation is inspired by the legend of Tawhirimatea. Its form changes depending on the wind speed and direction in Te Whanganui-a-Tara Wellington."
+	      }
+	    ]),
+	    author: "Laura",
+	    translator: "Alex"
 	}
       ]);
     });

@@ -24,9 +24,9 @@ class App extends React.Component {
       <Router>
       <div className='app-container section'>
       {this.props.destination == 'opening' && <Route exact path="/" component={Opening}/>}
-      {this.props.destination == 'home' && <Route exact path="/" component={Home} />}
+      {this.props.destination == 'home' ? this.props.text.url == 'about' ? <About /> : <Route exact path='/' component={Home} /> : null} 
       <Route exact path="/translation" component={Translation} />
-      <Route exact path="/about" component={About}/>
+      {this.props.destination == 'home' ? this.props.text.url == 'about' ? <About /> : <Route exact path='/' component={Home} /> : null} 
       </div>
       </Router>
     )
@@ -35,7 +35,8 @@ class App extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    destination: state.destination
+    destination: state.destination,
+    text: state.current_text
   }
 }
 
