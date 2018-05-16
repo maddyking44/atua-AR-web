@@ -33,15 +33,14 @@ export default function sketch (p) {
     //p.background(p.bg)
     //console.log({velocity})
     //createVector is translating a set of variables into coordinates that p5 can understand, and can be passed into other functions to affect animation.
-    var south = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height-p.height, 0, p.height, -0.2, 0.2))
-    var north = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height, 0, p.height, -0.2, 0.2))
-    var west = p.createVector(p.map(p.width, 0, p.width, -0.2, 0.2), p.map(p.height/2, 0, p.height, -0.2, 0.2))
-    var east = p.createVector(p.map(p.width - p.width, 0, p.width, -0.2, 0.2), p.map(p.height/2, 0, p.height, -0.2, 0.2))
-
-    var southWest = p.createVector(p.map(p.width- (p.width/8), 0, p.width, -0.2, 0.2), p.map(p.height/8, 0, p.height, -0.2, 0.2))
-    var northWest = p.createVector(p.map(p.width- (p.width/8), 0, p.width, -0.2, 0.2), p.map(p.height - (p.height/8), 0, p.height, -0.2, 0.2))
-    var southEast = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height/8, 0, p.height, -0.2, 0.2))
-    var northEast = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height - (p.height/8), 0, p.height, -0.2, 0.2))
+    var northWest = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height-p.height, 0, p.height, -0.2, 0.2))
+    var southEast = p.createVector(p.map(p.width/2, 0, p.width, -0.2, 0.2), p.map(p.height, 0, p.height, -0.2, 0.2))
+    var northEast = p.createVector(p.map(p.width, 0, p.width, -0.2, 0.2), p.map(p.height/2, 0, p.height, -0.2, 0.2))
+    var southWest = p.createVector(p.map(p.width - p.width, 0, p.width, -0.2, 0.2), p.map(p.height/2, 0, p.height, -0.2, 0.2))
+    var north = p.createVector(p.map(p.width- (p.width/8), 0, p.width, -0.2, 0.2), p.map(p.height/8, 0, p.height, -0.2, 0.2))
+    var east = p.createVector(p.map(p.width- (p.width/8), 0, p.width, -0.2, 0.2), p.map(p.height - (p.height/8), 0, p.height, -0.2, 0.2))
+    var west = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height/8, 0, p.height, -0.2, 0.2))
+    var south = p.createVector(p.map(p.width/8, 0, p.width, -0.2, 0.2), p.map(p.height - (p.height/8), 0, p.height, -0.2, 0.2))
 
       p.clear()
       //pass the wind as a parameter of applyForce function declared below

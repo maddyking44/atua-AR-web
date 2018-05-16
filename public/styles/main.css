@@ -325,6 +325,7 @@ Navbar Styling
 
 #navItems a{
   text-decoration: none;
+  cursor: pointer;
 }
 
 #navItems li{

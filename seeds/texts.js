@@ -4,24 +4,28 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('texts').insert([
-	{name: "about",
-	 url: "about",
-	 short_title:JSON.stringify(
+	{
+	  name: "about this page",
+	  url: "about-page",
+	  short_title: JSON.stringify(
 
-	   {tereo:"TŌ MĀTOU KAUPAPA",
-	    english:"ABOUT AR_ATUA"}),
-	 title:JSON.stringify(
-	   {tereo:"TŌ MĀTOU KAUPAPA",
-	    english:"ABOUT AR_ATUA"
-	   }
-	 ),
-	  paragraphs:JSON.stringify([
-	    {tereo:"lorum ipsum",
-	     english:"english lorum ipsum"
+	    {tereo: "HE AHA TĒNEI?",
+	     english: "WHAT IS THIS?"
+
 	    }
-	  ]),
-	  author: 'Laura',
-	  translator: 'Alex'
+	  ),
+	    title: JSON.stringify(
+	      { tereo: "He aha tēnei?",
+		english: "What is this?"
+	      }
+	    ),
+	    paragraphs: JSON.stringify([
+	      {tereo: "I whakaohohotia mātou ki te hanga i tēnei taupānga whakaahua, e te pūrākau o Tāwhirimātea. Ka whakarerekētia te āhua o tēnei whārangi ipurangi e te tere me te aronga o te hau, kei te Whanganui-a-Tara inaianei.",
+	       english: "This visualisation is inspired by the legend of Tawhirimatea. Its form changes depending on the wind speed and direction in Te Whanganui-a-Tara Wellington."
+	      }
+	    ]),
+	    author: "Laura",
+	    translator: "Alex"
 	},
 	{name: "legend",
 	 url: "legend",
@@ -58,6 +62,46 @@ exports.seed = function(knex, Promise) {
 	    {
 	      tereo:"'Kua whiua kēhia te pātai ki a rāua kia wehe, kua patipati atu tātau ki a rāua, kia pai ai te kite i te ao mārama, me te kore anō e aro mai? E kāo! Kotahi noa iho te huarahi hei whail!'",
 	      english:"'We have asked them to separate, we have pleaded with them to let us see the light, but do they listen? No, this is the only way!'"
+	    },
+	    {
+	      tereo:"Ka ara ake tana patu ki te hahau i ana pakeke, tere tonu a Tāwhirimātea ki te kuru i a ia, ā, e nōnoke ana rāua i roto i te pōuritanga, mea rawa ake ka umere atu a Tāne Mahuta ki a rāua kia turituri, kia āta tau.",
+	      english:"Tūmātauenga raised his patu to strike at his parents but Tāwhirimātea was on him in a flash. Grappling in the dark they struggled, until finally Tāne Mahuta pleaded for quiet."
+	    },
+	    {
+	      tereo:"'Kāti! Ehara tēnā i te whakautu, kua whakaae katoa tātau, kāre tātau e taea te noho pēnei. Māku e whakamātau ki te wehe i a rāua mā te pēhitanga o aku ringa.'",
+	      english:"'Stop! Fighting will not resolve our problem, we have agreed that we cannot continue to live this way. I'm sorry Tāwhiri but separating our parents has been agreed upon by the majority of us. With the gentle push of my arms, and without hurting them, I will push our parents apart.'"
+	    },
+	    {
+	      tereo:"Ka whakaae atu rātau, heoi ka noho tonu a Tāwhirimātea ki te taha whakahē, kāre ia i tautoko i runga i tāna i tūpono ai. I te tuatahi ka pēhia e Tāne Mahuta ana waewae ki runga i a Papatūānuku, ka pana i a Ranginui mā ōna ringaringa. Ka whakapaungia ana kaha katoa ki tēnei mahi, e kore hoki e taea te wehe i ana pakeke",
+	      english:"The others agreed, but Tāwhirimātea refused to support what he didn't believe was right. Firstly Tāne Mahuta braced his legs on Papatūānuku and pushed Ranginui with his arms. He used all his strength, but without success."
+	    },
+	    {
+	      tereo:"'Kāore e taea e koe,' te kī a Tāwhirimātea. 'Whakamutua, e tika ana, kia noho piri rāua!'",
+	      english:"'You cannot separate them,' said Tāwhirimātea. 'Give it up, they are meant to be together!'"
+	    },
+	    {
+	      tereo:"Heoi anō, kāore anō kia mutu a Tāne Mahuta, ka takoto i runga i tana tuara, ka hikina ana waewae ki tana uma, ka tīmata tana pēhi mai i raro. Ka pēhi ia, kāore i aha. Ka pēhi anō a ia me āna kaha katoa, kāore tonu i aha. Ka hēhē a ia, ka pēhi anō. Ka tukuna e ia tana hā, ka pēhi anō, ka puta he kaha e whakawiri ana i tana tinana. Mea rawa ake ka tīmata te nekeneke, te nukunuku.",
+	      english:"But Tāne Mahuta wasn't finished. He lay on his back, pulled his legs to his chest then pushed from below. Slowly he pushed, but still nothing happened. Again he pushed, using all his strength, but nothing happened. He took a breath and pushed once more. Releasing his breath, and taking another, he pushed again, a new surge of strength pumping through his body. And at last there was movement."
+	    },
+	    {
+	      tereo:"Ka puta te wehi a Tāwhirimātea, 'Kāo!'",
+	      english:"Tāwhirimātea roared with fury, 'No!'"
+	    },
+	    {
+	      tereo:"I tōmuri rawa ia. Kua wehea kēhia a Ranginui rāua ko Papatūānuku, ka puta ake rātau ki te ao mārama. Ka noho ngā tama a Rangi i runga i te ohorere, i runga hoki i te wahangū, me te kaupare i ō rātau kanohi i te māramatanga o Tamanuiterā, e pōkia nei rātau e tōna mahana.",
+	      english:"But it was too late. Ranginui and Papatūānuku were forced apart, and light filled the world. The brothers lay in shocked silence covering their eyes from the brightness of Tamanuiterā shining down on their cowering bodies."
+	    },
+	    {
+	      tereo:"Ko Tāwhirimātea te tuatahi ki te peke ake. Ka wepua e ia ana tuākana, me tana kori i runga i tōna whakatakaririhanga.  'E kore au e tuku i a koutou kia noho pai, tae atu ki ā koutou huānga, e kore hoki koutou e noho pai, ā, mutu noa! Ka noho ko tēnei tōku tūrangawaewae, ka rongo tonu koutou i tōku ihi, i tōku wehi.' Koinei rā te ōhākī o Tāwhirimātea ki ōna tuākana, i a ia e kake ana ki tana matua i te rangi.",
+	      english:"Tāwhirimātea was first to jump to his feet, lashing out at the others in anger. 'I will never let you rest for what you have done, even your children won't be safe from my clutches! This will be my domain forever and you will always feel my wrath,' he called to the other children, and he flew up to join his father."
+	    },
+	    {
+	      tereo:"Ka noho tonu te kōrero a Tāwhirimātea, ā, tae noa mai ki tēnei rā. I ētahi wā ka noho tonu a ia i runga i ngā kōrero a ōna mātua, kia murua ngā hara a ōna tuākana. Nā, ko ēnei rā, ngā rā paki, e whiti mai hoki te rā, he āio hoki.",
+	      english:"As time passed animals, plants and people grew in the light of the sun. The mokopuna of Ranginui and Papatūānuku populated the world. Tāwhirimātea kept his promise living in the realm of his father, the sky. He became the guardian of the winds, Ngā hau e whā, and continues to be so to this day."
+	    },
+	    {
+	      tereo:"Heoi anō, i ētahi wā, kua hoki ake a ia ki te wā i wehea ōna mātua, kua rongo hoki i te mamae, i tō rāua nanao atu ki a rāua anō. I ēnei rā, kua tonoa e ia ōna huānga, arā ngā āwhā me ngā huripari, e korara ai ngā ao a ōna tuākana me ā rātau huānga hoki.",
+	      english:"Sometimes Tāwhirimātea is content to listen to advice from his parents and forgive his siblings. On those days the weather is fine, clear and calm. But sometimes he is reminded of the pain his parents endured when they were separated, and the longing they still have for each other. On those days he sends tornadoes, hurricanes, and cyclones to hound the descendants of those that betrayed him."
 	    }
 	  ]),
 	  author: 'Laura',
@@ -77,33 +121,29 @@ exports.seed = function(knex, Promise) {
 	  paragraphs:JSON.stringify([
 	    {tereo:"īmera mai ki: ben@ioa.co.nz",
 	     english:"email to: ben@ioa.co.nz"
-     }
+     },
 	  ]),
 	  author: 'Laura',
 	  translator: 'Alex'
 	},
-	{
-	  name: "about this page",
-	  url: "about-page",
-	  short_title: JSON.stringify(
+	{name: "about",
+	 url: "about",
+	 short_title:JSON.stringify(
 
-	    {tereo: "HE AHA TĒNEI?",
-	     english: "WHAT IS THIS?"
-
+	   {tereo:"TŌ MĀTOU KAUPAPA",
+	    english:"ABOUT AR_ATUA"}),
+	 title:JSON.stringify(
+	   {tereo:"TŌ MĀTOU KAUPAPA",
+	    english:"ABOUT AR_ATUA"
+	   }
+	 ),
+	  paragraphs:JSON.stringify([
+	    {tereo:"lorum ipsum",
+	     english:"english lorum ipsum"
 	    }
-	  ),
-	    title: JSON.stringify(
-	      { tereo: "He aha tēnei?",
-		english: "What is this?"
-	      }
-	    ),
-	    paragraphs: JSON.stringify([
-	      {tereo: "I whakaohohotia mātou ki te hanga i tēnei taupānga whakaahua, e te pūrākau o Tāwhirimātea. Ka whakarerekētia te āhua o tēnei whārangi ipurangi e te tere me te aronga o te hau, kei te Whanganui-a-Tara inaianei.",
-	       english: "This visualisation is inspired by the legend of Tawhirimatea. Its form changes depending on the wind speed and direction in Te Whanganui-a-Tara Wellington."
-	      }
-	    ]),
-	    author: "Laura",
-	    translator: "Alex"
+	  ]),
+	  author: 'Laura',
+	  translator: 'Alex'
 	}
       ]);
     });

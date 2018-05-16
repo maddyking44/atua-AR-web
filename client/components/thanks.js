@@ -12,7 +12,7 @@ export const thanks = [
   "The members of the Kōkako 2018 cohort at Enspiral Dev Academy",
   "Louis the dog",
   "Archives New Zealand",
-  "Island Bay",
+  "Lyall Bay",
   "Mount Victoria",
   "Black Dog Brewery",
   "Feijoas, Mandarins, and Berocca for all the cold-delaying vitamins",

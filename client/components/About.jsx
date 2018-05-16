@@ -132,7 +132,7 @@ function About ({weather
 
             </div>
             <Link to = '/' className="returnbutton">
-              <a><h2 className="text"><span className="english">Return</span><span className="te-reo">Whakahoki atu kit timatanga</span></h2></a>
+              <a><h2 className="text"><span className="english">Return</span><span className="te-reo">Whakahoki atu ki te timatanga</span></h2></a>
             </Link>
           </div>
         </div>

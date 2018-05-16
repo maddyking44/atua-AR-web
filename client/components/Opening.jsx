@@ -39,8 +39,8 @@ render(){
           {this.state.isVisible.find(text => text =='technology') && <div className='right-things text' onClick={()=>this.makeVisible('past')}><span className='english'>TECHNOLOGY</span><span className='te-reo'>TE HANGARAU</span></div>}
           {this.state.isVisible.find(text => text== 'past' || text == 'future') && <div className='left-things text'onClick={()=>this.makeVisible('future')}><span className='english'>PAST</span><span className='te-reo'>NGA RĀ O MUA</span></div>}
           {this.state.isVisible.find(text => text == 'future') && <div className='right-things text' onClick={()=>this.makeVisible('wairua')}><span className='english'>FUTURE</span><span className='te-reo'>NGA RĀ O MURI</span></div>}
-          {this.state.isVisible.find(text => text == 'wairua' ||text == 'marama') && <div className='left-things text' onClick={()=>this.makeVisible('marama')}><span className='english'>PHYSICAL</span><span className='te-reo'>TE AO MĀRAMA</span></div>}
-          {this.state.isVisible.find(text => text == 'marama') && <div className='right-things text' onClick={this.revealAll}><span className='english'>SPIRITUAL</span><span className='te-reo'>TE AO WAIRUA</span></div>}
+          {this.state.isVisible.find(text => text == 'wairua' ||text == 'marama') && <div className='left-things text' onClick={()=>this.makeVisible('marama')}><span className='english'>PHYSICAL WORLD</span><span className='te-reo'>TE AO MĀRAMA</span></div>}
+          {this.state.isVisible.find(text => text == 'marama') && <div className='right-things text' onClick={this.revealAll}><span className='english'>SPIRITUAL WORLD</span><span className='te-reo'>TE AO WAIRUA</span></div>}
             {this.state.isVisible.find(text => text == 'enter') && <a className='enter-site text' onClick={()=>this.props.dispatch(navigate('home'))}><span className='english'>ENTER</span><span className='te-reo'>HAERE MAI</span></a>}
 
         {this.state.unified && <div className='together' onClick={()=>this.makeVisible('enter')}>
