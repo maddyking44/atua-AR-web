@@ -421,6 +421,69 @@ Text Box
   /* height: 0px; */
 }
 
+.about-page-row {
+  background-size: cover;
+  overflow: hidden;
+}
+
+.about-page-column-eight {
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  position: relative;
+   overflow: scroll; 
+   overflow-x: hidden;
+   height:90vh;
+   width: 65%;
+   margin-top: 5vh;
+   margin-left: 17.5%;
+   margin-right: 17.5%;
+  margin-bottom: 5vh;
+}
+
+.about-page-image {
+  width: 100%;
+}
+
+.aboutcontainer{
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute; 
+  overflow: hidden; 
+}
+
+.abouttext {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.about-main-title {
+  text-align: center;
+  font-size: 2em;
+  border-bottom-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.about-secondary-title {
+  font-size: 1.5em;
+}
+
+.sub-title {
+  font-size: 1.3em;
+}
+
+.who-are-we-body {
+  border-bottom-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  font-size: 1.3em;
+}
+
+.returnbutton {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
 @keyframes pulse2 {
  0% {
    	transform: scale(1.1);
