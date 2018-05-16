@@ -19,8 +19,6 @@ class Text extends React.Component {
   }
 
   render(){
-    let index = this.props.text.paragraphs && this.props.text.paragraphs.length > this.state.index  ? this.state.index : 0
-
     return (
       <div className='text-box'>
 	<div className='text-box_content'>
@@ -28,20 +26,9 @@ class Text extends React.Component {
 	  <h1 className='text'><span className='te-reo'>{this.props.text.title.tereo}</span><span className='english'>{this.props.text.title.english}</span></h1>
 	  <p className='text'><span className='te-reo'>{this.props.text.paragraphs[this.props.index].tereo}</span><span className='english'>{this.props.text.paragraphs[this.props.index].english}</span></p>
 	  <div>
-	    <div className='byline'>
-	      <p className='text'>
-		<span className='te-reo'>written by {this.props.text.author}</span>
-		<span className='english'>written by {this.props.text.author}</span>
-	      </p>
-	      <p>~*~</p>
-	      <p className='text'>
-		<span className='te-reo'>translated by {this.props.text.translator}</span>
-		<span className='english'>translated by {this.props.text.translator}</span>
-	      </p>
-	    </div>
 	    <div className='par-nav'>
-	      {(this.props.index > 0) && <p onClick={()=>this.prev()}>prev</p>}
-	      {(this.props.index < (this.props.text.paragraphs.length - 1)) && <p onClick={()=>this.next()}>next</p>}
+	      {(this.props.index > 0) && <p onClick={()=>this.prev()}>&#60;</p>}
+	      {(this.props.index < (this.props.text.paragraphs.length - 1)) && <p onClick={()=>this.next()}>&#62;</p>}
 	    </div>
 	  </div>
 	</div>

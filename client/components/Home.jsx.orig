@@ -9,6 +9,7 @@ import Text from './Text'
 import {openNav, closeNav} from '../actions/nav'
 
 
+
 const Home = (props) => {
 
   function findBackgroundImg(){
@@ -40,9 +41,13 @@ const Home = (props) => {
 
 
   return (
+<<<<<<< HEAD
+    <div className='home'>
+=======
     <div style={divStyle} className='home'>
     {/* container has to be at the top, else you can't hover over anything else.
      not sure why, it's a good bug to fix later. */}
+>>>>>>> 716a639f82acef91cc6ab33309b51194dacca7a6
       <div className='container'>
       {!props.current_text.name && <Atua />}
       </div>
