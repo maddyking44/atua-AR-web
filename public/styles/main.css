@@ -361,10 +361,10 @@ Text Box
   position:absolute;
   top: 50px;
   width: 75%;
-  height: 75%;
+  height: 50%;
   left: 12.5%;
   right: 12.5%;
-  background-color: peachpuff;
+  background-color: rgba(0,0,0,0.85);
   color: indigo;
 }
 
@@ -380,6 +380,9 @@ Text Box
 }
 
 .text-box_close{
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
   position: absolute;
   top: -15px;
   right: 5px;

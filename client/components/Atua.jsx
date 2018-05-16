@@ -11,7 +11,6 @@ const Atua = ({weather}) => {
     <div className='animation'>
     <P5Wrapper wind={wind} velocity={velocity} sketch={sketch}/>
     </div>
-    <div className='weather-text fade-in'>Kei te pēhea te āhua o te rangi?</div>
     </div>
   )
 }
