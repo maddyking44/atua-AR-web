@@ -5,13 +5,16 @@ import {Link} from 'react-router-dom'
 
 
 // needs to be de-bugged. Something to do with the async call potentially?
-class About extends React.Component {
-  componentWillMount(props){
-    this.props.dispatch(getTextByURL('about'))
-    console.log({props})
+function About ({weather}) {
+
+  if (weather) {
+  var hour = (new Date(Date.parse(weather.local_time_rfc822))).getHours()
+  console.log(hour)
   }
-  render() {
-    return (
+  // console.log(weather.local_time_rfc822 && hour.getHours())
+  
+  console.log(typeof weather.local_time_rfc822)  
+  return (
       <div className="about-page-row">
         <div className="about-page-column-eight">
           <div className="aboutcontainer">
@@ -97,21 +100,8 @@ Te puna tuwhera me te tuwhera.</span></h2>
         </div>
       </div>
     )
-  }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    text: state.current_text
-  }
-}
+const mapStateToProps = ({weather}) => ({weather})
 
-///
-// <h1 className='text'><span className='te-reo'>{text.title.tereo}</span><span className='english'>{text.title.english}</span></h1>
-  //    <section id='content'>
-   //     {text.paragraphs.map(paragraph => {
-    //      return <p className='text'><span className='te-reo'>{paragraph.tereo}</span><span className='english'>{paragraph.english}</span></p>
-     //   })}
-      //  </section>
-//
 export default connect(mapStateToProps)(About)
