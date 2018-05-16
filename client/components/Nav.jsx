@@ -19,7 +19,7 @@ const Nav = (props)=> {
        {props.texts.map(text => {
       return (
 	  <li key={text.id}>
-	       <a className='text' title={`link to ${text.url}`} href='#' onClick={() => props.dispatch(getTextByURL(text.url))}>
+	       <a className='text' title={`link to ${text.url}`} href='#' onClick={() => {props.dispatch(getTextByURL(text.url))}}>
 		 <span className='te-reo'>{text.short_title.tereo}</span>
 		 <span className='english'>{text.short_title.english}</span>
 	       </a>

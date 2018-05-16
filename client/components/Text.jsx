@@ -19,6 +19,8 @@ class Text extends React.Component {
   }
 
   render(){
+    let index = this.props.text.paragraphs && this.props.text.paragraphs.length > this.state.index  ? this.state.index : 0
+
     return (
       <div className='text-box'>
 	<div className='text-box_content'>
