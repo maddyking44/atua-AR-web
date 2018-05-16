@@ -5,9 +5,9 @@ exports.up = function(knex, Promise) {
       table.increments('id')
       table.string('name')
       table.string('url')
-      table.string('short_title')
-      table.string('title')
-      table.string('paragraphs')
+      table.text('short_title')
+      table.text('title')
+      table.text('paragraphs')
       table.string('author')
       table.string('translator')
     }
