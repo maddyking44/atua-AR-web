@@ -5,7 +5,10 @@ import {Link} from 'react-router-dom'
 import {clearText} from '../actions/text'
 import {thanks} from './thanks'
 
-function About ({weather, dispatch}) {
+function About ({weather
+  , dispatch
+}) {
+  
   function findBackgroundImg(){
     if (weather) {
       var hour = (new Date(Date.parse(weather.local_time_rfc822))).getHours()
@@ -35,6 +38,7 @@ function About ({weather, dispatch}) {
   return (
       <div style={divStyle} className="about-page-row">
       <a className='text about-back' href='#' onClick={()=>dispatch(clearText())}><span className='te-reo'>Whakahoki atu ki te timatanga</span><span className='english'>Return Home</span></a>
+
         <div className="about-page-column-eight">
           <div className="aboutcontainer">
             <div className="abouttext">
@@ -136,6 +140,10 @@ function About ({weather, dispatch}) {
     )
 }
 
-const mapStateToProps = ({weather, dispatch}) => ({weather, dispatch})
+const mapStateToProps = ({weather
+  , dispatch
+}) => ({weather
+  , dispatch
+})
 
 export default connect(mapStateToProps)(About)

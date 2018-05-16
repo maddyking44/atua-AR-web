@@ -251,16 +251,10 @@ cursor: pointer;
     transform: scale(1.1);
   }
 
-
-.paragraph {
-  line-height: 1.5em;
-}
-
 .text{
   cursor: default;
   margin-left: 0.25em;
   color: transparent;
-  animation:  text-settles 4s forwards;
 }
 
 .paragraph .sentence:first-child{
@@ -270,21 +264,18 @@ cursor: pointer;
 .text .te-reo{
   display: inline;
   animation: text-settles_eng 3s forwards;
+  transform: rotateZ(360deg)
 }
 
 .text:hover .te-reo{
   display: none;
 }
 
-/* .text:hover:after .te-reo{
-  color: transparent;
-  animation: text-settles 2s forwards;
-  text-shadow: 0 0 25px rgba(0,0,0,5);
-} */
 
 .text .english{
   display: none;
   animation: text-settles_eng2 3s forwards;
+  transform: rotateZ(360deg)
 }
 
 .text:hover .english{
@@ -292,6 +283,7 @@ cursor: pointer;
   display: inline;
   animation: text-settles_eng 3s forwards;
   text-shadow: 0 0 25px rgba(255,255,255,5);
+  transform: rotateZ(360deg);
 }
 @keyframes fog-settles {
   to {color: white; text-shadow: none;}
@@ -383,22 +375,27 @@ Text Box
 .text-box_content{
   position: relative;
   display: flex;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 3vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
 
-.text-box_close{
+.text-box_close {
   color: white;
   text-decoration: none;
   cursor: pointer;
   position: absolute;
-  top: -15px;
-  right: 5px;
-  font-size: 0.75em;
+  top: -0.75em;
+  right: 0.5em;
+  font-size: 1.2em;
+}
+
+.text-box_close:hover {
+  color: peachpuff;
 }
 
 .byline{
@@ -412,6 +409,27 @@ Text Box
 .byline span{
   padding: 0.75em;
 }
+
+.par-nav{
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+.par-nav p {
+  margin: 0.2em;
+}
+
+.par-nav p:hover {
+  color: peachpuff;
+}
+
+/* 
+Animations
+*/
 
 .fadeIn-enter {
   opacity: 0;

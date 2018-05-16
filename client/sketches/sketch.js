@@ -14,9 +14,6 @@ export default function sketch (p) {
   p.setup = () => {
     //p.bg = p.loadImage("assets/images/sunset.svg");
         //set the canvas size
-        console.log(p.windowWidth)
-        console.log(p.width)
-        console.log(p.displayWidth)
       p.createCanvas(p.windowWidth, p.windowHeight)
       var x = p.windowWidth * 0.55
       var y = p.windowHeight * 0.27
