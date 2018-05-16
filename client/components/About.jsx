@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import {getTextByURL} from '../actions/text'
 import {Link} from 'react-router-dom'
 import {clearText} from '../actions/text'
+import {thanks} from './thanks'
 
 function About ({weather, dispatch}) {
   function findBackgroundImg(){
@@ -33,7 +34,7 @@ function About ({weather, dispatch}) {
   console.log(typeof weather.local_time_rfc822)
   return (
       <div style={divStyle} className="about-page-row">
-      <a className='text about-back' href='#' onClick={()=>dispatch(clearText())}><span className='te-reo'>Whakahoki atu kit timatanga</span><span className='english'>Return Home</span></a>
+      <a className='text about-back' href='#' onClick={()=>dispatch(clearText())}><span className='te-reo'>Whakahoki atu ki te timatanga</span><span className='english'>Return Home</span></a>
         <div className="about-page-column-eight">
           <div className="aboutcontainer">
             <div className="abouttext">
@@ -110,6 +111,21 @@ function About ({weather, dispatch}) {
 
                   <br/>
                 </div>
+
+                <div className="about-secondary-title">
+                <h2 className="text"><span className="english">Thank You</span><span className="te-reo">
+                He mihi</span></h2>
+                </div>
+                <div className="who-are-we-body">
+                  <p className="text"><span className="english">AR_ATUA would like to send gratitude towards: </span><span className="te-reo">Ānei he mihi maioha ki:</span>
+                  </p>
+                  <ul>
+                    {thanks.map(person => <li>{person}</li>)}
+                  </ul>
+
+                  <br/>
+                </div>
+
             </div>
             <Link to = '/' className="returnbutton">
               <a><h2 className="text"><span className="english">Return</span><span className="te-reo">Whakahoki atu kit timatanga</span></h2></a>

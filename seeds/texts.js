@@ -26,9 +26,9 @@ exports.seed = function(knex, Promise) {
 	 url: "legend",
 	 short_title:JSON.stringify(
 	   {tereo:"Tētahi pūrākau",
-	    english:"Legend"}),
+	    english:"The Legend"}),
 	 title:JSON.stringify(
-	   {tereo:"Tētahi pūrākau o Tāwhirimātea",
+	   {tereo:"Tētahi pūrākau e pā ana ki Tāwhirimātea",
 	     english:"The Legend of Tāwhirimātea"
 	   }),
 	  paragraphs:JSON.stringify([
@@ -91,8 +91,8 @@ exports.seed = function(knex, Promise) {
 	      }
 	    ),
 	    paragraphs: JSON.stringify([
-	      {tereo: "I whakaohohotia mātou, ki te hanga i tēnei taupānga whakaahua, e te pūrākau o Tāwhirimātea. Ka whakarerekētia te āhua o tēnei whārangi ipurangi e te tere me te aronga o tō te hau pupuhitanga, kei te Whanganui-a-Tara inaianei.",
-	       english: ",This visualisation is inspired by the legend of Tawhirimatea. Its form changes depending on the wind speed and direction in Te Whanganui-a-Tara Wellington."
+	      {tereo: "I whakaohohotia mātou ki te hanga i tēnei taupānga whakaahua, e te pūrākau o Tāwhirimātea. Ka whakarerekētia te āhua o tēnei whārangi ipurangi e te tere me te aronga o te hau, kei te Whanganui-a-Tara inaianei.",
+	       english: "This visualisation is inspired by the legend of Tawhirimatea. Its form changes depending on the wind speed and direction in Te Whanganui-a-Tara Wellington."
 	      }
 	    ]),
 	    author: "Laura",
