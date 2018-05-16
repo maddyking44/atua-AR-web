@@ -33,12 +33,12 @@ function About ({weather, dispatch}) {
   console.log(typeof weather.local_time_rfc822)
   return (
       <div style={divStyle} className="about-page-row">
-      <a className='text about-back' href='#' onClick={()=>dispatch(clearText())}><span className='te-reo'>Whakahoki</span><span className='english'>return home</span></a>
+      <a className='text about-back' href='#' onClick={()=>dispatch(clearText())}><span className='te-reo'>Whakahoki atu kit timatanga</span><span className='english'>Return Home</span></a>
         <div className="about-page-column-eight">
           <div className="aboutcontainer">
             <div className="abouttext">
               <div className="about-main-title">
-                  <h1 className="text"><span className="english">About</span><span className="te-reo">Mō</span></h1>
+                  <h1 className="text"><span className="english">About</span><span className="te-reo">Tō mātou kaupapa</span></h1>
               </div>
               <div className="text-main-section">
                 <div className="about-secondary-title">
@@ -78,7 +78,7 @@ function About ({weather, dispatch}) {
                 </div>
 
                 <div className="about-secondary-title">
-                <h2 className="text"><span className="english">Augmented Reality App.</span><span className="te-reo">Te Whakanuia o te Aapiri Moni.</span></h2>
+                <h2 className="text"><span className="english">Augmented Reality App</span><span className="te-reo">He taupānga whakaahua, e whakarāwai ana i te kitenga</span></h2>
 
                 </div>
                 <div className="who-are-we-body">
@@ -101,7 +101,7 @@ function About ({weather, dispatch}) {
 
                 <div className="about-secondary-title">
                 <h2 className="text"><span className="english">Free and open source.</span><span className="te-reo">
-                Te puna tuwhera me te tuwhera.</span></h2>
+                He kaupapa kore utu, he kaupapa nō te mahi tahi</span></h2>
                 </div>
                 <div className="who-are-we-body">
                   <img className="about-page-image" src="https://thumbs.dreamstime.com/b/happy-group-people-arms-up-isolated-26045167.jpg"/>
@@ -112,7 +112,7 @@ function About ({weather, dispatch}) {
                 </div>
             </div>
             <Link to = '/' className="returnbutton">
-              <a><h2 className="text"><span className="english">Return</span><span className="te-reo">Hoki mai</span></h2></a>
+              <a><h2 className="text"><span className="english">Return</span><span className="te-reo">Whakahoki atu kit timatanga</span></h2></a>
             </Link>
           </div>
         </div>

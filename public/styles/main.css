@@ -71,7 +71,8 @@ cursor: pointer;
   right: 51vw;
   top: 50vh;
   font-size: 3em;
-  font-family: slim-joe;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
   cursor: pointer;
 }
 
@@ -83,7 +84,8 @@ cursor: pointer;
   left: 51vw;
   top: 50vh;
   font-size: 3em;
-  font-family: big-john;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
   cursor: pointer;
 }
 
@@ -104,15 +106,26 @@ cursor: pointer;
       cursor: pointer;
 }
 
+.text .left-things {
+  cursor: pointer;
+}
+
+.text .right-things {
+  cursor: pointer;
+}
+
 .tog-thin {
-  font-family: slim-joe;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
 }
 .tog-fat {
-  font-family: big-john;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
 }
 
 .enter-site {
-  font-family: slim-joe;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
   color: white;
   width: 8em;
   position: absolute;
@@ -438,7 +451,7 @@ Text Box
   font-family: 'Raleway', sans-serif;
   color: white;
   position: relative;
-   overflow: scroll; 
+   overflow: scroll;
    overflow-x: hidden;
    height:90vh;
    width: 65%;
@@ -454,8 +467,8 @@ Text Box
 
 .aboutcontainer{
   background-color: rgba(0, 0, 0, 0.5);
-  position: absolute; 
-  overflow: hidden; 
+  position: absolute;
+  overflow: hidden;
 }
 
 .abouttext {
