@@ -371,22 +371,27 @@ Text Box
 .text-box_content{
   position: relative;
   display: flex;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: 2vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
 
-.text-box_close{
+.text-box_close {
   color: white;
   text-decoration: none;
   cursor: pointer;
   position: absolute;
-  top: -15px;
-  right: 5px;
-  font-size: 0.75em;
+  top: -0.75em;
+  right: 0.5em;
+  font-size: 1.2em;
+}
+
+.text-box_close:hover {
+  color: peachpuff;
 }
 
 .byline{
@@ -400,6 +405,27 @@ Text Box
 .byline span{
   padding: 0.75em;
 }
+
+.par-nav{
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+.par-nav p {
+  margin: 0.2em;
+}
+
+.par-nav p:hover {
+  color: peachpuff;
+}
+
+/* 
+Animations
+*/
 
 .fadeIn-enter {
   opacity: 0;
