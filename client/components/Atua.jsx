@@ -8,9 +8,9 @@ const Atua = ({weather}) => {
   let velocity = weather.wind_kph
   return (
     <div>
-    <div className='animation'>
-    <P5Wrapper wind={wind} velocity={velocity} sketch={sketch}/>
-    </div>
+      <div className='atua-animation'>
+        <P5Wrapper wind={wind} velocity={velocity} sketch={sketch}/>
+      </div>
     </div>
   )
 }
