@@ -50,7 +50,7 @@ function About ({weather
                   <h2 className="text"><span className="english">Who are we?</span><span className="te-reo">Kō wai mātou?</span></h2>
                 </div>
                 <div className="who-are-we-body">
-                  <img className="about-page-image" src="https://images-na.ssl-images-amazon.com/images/I/C1e1hX5I44S._SL1000_.png"/>
+                  <img className="about-page-image" src="/assets/images/group.jpg"/>
                   <p className="text"><span className="english">We are Ben Tairea, Laura Suzuki, Anthony Gordon, Zach Mandeville and Maddy King. Ben came up with the vision to use Augmented Reality across Aotearoa to reveal the history and stories of this land.</span><span className="te-reo">Kō Ben Tairea, Laura Suzuki, Anthony Gordon, Zach Mandeville and Maddy King. I toko ake te whakaaro i roto i a Ben  ki te whakaaara i a Augmented Reality kia whai wāhi ai ngā hītori me ngā kōrero o ngā whenua o Aotearoa ki te iwi whānui.</span>
                   </p>
                   <p className="text"><span className="english">We’re a team of developers studying at Enspiral Dev Academy, a web development school based in Wellington and Auckland that is committed to a mission of social good. We have had help and support from a large range of people, who you can read about here.</span><span className="te-reo">He roopu mātau e ako tonu ana i te wānanga o Enspiral Dev Academy, he wānanga whakatipu tukutuku i runga i te ipurangi i roto o Te Whanganui-ā-Tara me Tamaki Makaurau. E tautokohia ana mātau e te tini tangata, e taea te kitea ko wai ngā rōpu tautoko i roto i nga panui e whai ake nei.</span>
@@ -87,7 +87,7 @@ function About ({weather
 
                 </div>
                 <div className="who-are-we-body">
-                  <img className="about-page-image" src="https://cdn-images-1.medium.com/max/1600/1*F2SJzQidSaPL7dXly_5jmg.jpeg"/>
+                  <img className="about-page-image" src="/assets/images/benmaddy.jpg"/>
                   <p className="text"><span className="english">The idea of the AR app is to place a representation of Tāwhirimātea on top of Tangi-te-keo (Mount Victoria), Wellington, the windiest place in our world. Tāwhirimātea’s behaviours will respond to the wind, so that people can look up to the atua on Mount Vic to see what the weather is doing. In our work towards this goal, we are testing and pushing very new AR technologies to the limit of what they are currently capable of, so the AR app is a continual work in progress, driven by a powerful vision.</span><span className="te-reo">Ko te whāinga o te rauemi nei AR ki te whakatū i te atua nei a Tāwhirimatea ki runga o Tangi-te-keo, Whanganui-ā-Tara, te taumata karawhiuwhiuhia e te hau. Kia āhei te tangata te aro whakarunga atu, kia kite i nga nekehanga o Tawhirimatea e tū mai ana i runga o Tangi-te-keo, e hāngai ana ki te huarere. </span>
                   </p>
 
@@ -98,7 +98,7 @@ function About ({weather
                 <h2 className="text"><span className="english">The web app.</span><span className="te-reo">Ko te taupānga tukutuku.</span></h2>
                 </div>
                 <div className="who-are-we-body">
-                  <img className="about-page-image" src="http://papasemar.com/wp-content/uploads/2017/04/1-4.jpg"/>
+                  <img className="about-page-image" src="/assets/images/zaclaura.jpg"/>
                   <p className="text"><span className="english">This web app provides a blueprint for what we are aiming to achieve in the realm of augmented reality. Here you can access our research, view a visualisation of what we are working towards, and find ways to contribute to the project or connect with our team.</span><span className="te-reo">Ma te rauemi nei e kitea ai e anga pēhea ana mātau, he aha ngā whāinga e whai atu ana mātau, ngā rangahau, ā, ka āhei hoki te hono me te whakapā mai ki a matau.</span>
                   </p>
                   <br/>
@@ -109,7 +109,7 @@ function About ({weather
                 He kaupapa kore utu, he kaupapa nō te mahi tahi</span></h2>
                 </div>
                 <div className="who-are-we-body">
-                  <img className="about-page-image" src="https://thumbs.dreamstime.com/b/happy-group-people-arms-up-isolated-26045167.jpg"/>
+                  <img className="about-page-image" src="/assets/images/ant.jpg"/>
                   <p className="text"><span className="english">AR_ATUA upholds a free/libre and open source ethos, which means the resources should be freely available to those interested in them, and that people can adjust and build upon the work we’ve done. We create things with the intention that they can and will be useful to others, by design. This means we write tools  that are reusable beyond this app, and code that is easy to read. It means we are committed to accessible technology. We welcome feedback and contributions.</span><span className="te-reo">He rauemi kore utu a AR_ATUA e whai wāhi ai ki te tangata e manawanui nei ki ēnei mātauranga, ki ēnei kōrero ahakoa ko wai. Ko te whāinga kia ngāwari noa te whakahaere, te pānui me te whakamahi i te rauemi nei ki te marea. Tēnā whakapā mai mena he whakaaro a koutou hei whakangāwari ake i te whakahaere o te rauemi nei,mena he pātai ranei a koutou.</span>
                   </p>
 
