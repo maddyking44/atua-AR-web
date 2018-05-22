@@ -1,12 +1,35 @@
 import textsReducer from '../../client/reducers/texts'
-import {navMenuReducer, navFlipReducer}from '../../client/reducers/nav'
+import {navMenuReducer, navFlipReducer} from '../../client/reducers/nav'
+import openingReducer from '../../client/reducers/opening'
 
-test('Reducer Initial State', () => {
-  const expected = []
+test ('ENTER_SITE works', () => {
+  const expected = 'home'
+  const destination = 'home'
+  const initialState = 'opening'
+  const action = {
+      type: 'ENTER_SITE',
+      destination
+  }
 
-  const actual = textsReducer(undefined, {})
+  const actual = openingReducer(initialState, action)
 
   expect(actual).toEqual(expected)
+})
+
+test('initial state set to opening', () => {
+  const expected = 'opening'
+  const action = {}
+  const actual = openingReducer(undefined, action)
+
+  expect(actual).toEqual(expected)
+})
+
+test('initial state for navMenuReducer', () => {
+  const expected = false
+  const action = {}
+  const actual = navMenuReducer(undefined, action)
+
+  expect(actual).toBe(expected)
 })
 
 test('OPEN_NAV works', () => {
@@ -39,6 +62,14 @@ test('CLOSE_NAV works', () => {
   expect(actual).toBe(expected)
 })
 
+test('navFlipReducer initial state', ()=> {
+    const expected = false
+    const action = {}
+    const actual = navFlipReducer(undefined, action)
+
+    expect(actual).toBe(expected)
+})
+
 test('FLIP_NAV works', () => {
     const expected = true
     const navVisible = true
@@ -51,6 +82,14 @@ test('FLIP_NAV works', () => {
     const actual = navFlipReducer(initialState, action)
 
     expect(actual).toBe(expected)
+})
+
+test('texts Reducer Initial State', () => {
+  const expected = []
+
+  const actual = textsReducer(undefined, {})
+
+  expect(actual).toEqual(expected)
 })
 
 test('RECEIVE_TEXTS', () => {
