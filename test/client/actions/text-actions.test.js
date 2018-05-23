@@ -1,4 +1,4 @@
-import {getTextByURL, receiveText} from '../../../client/actions/text'
+import {getTextByURL, receiveText, clearText, increaseIndex, decreaseIndex} from '../../../client/actions/text'
 import nock from 'nock'
 
 test('getText will dispatch an action on success', () => {
@@ -21,6 +21,42 @@ test('getText will dispatch an action on success', () => {
       scope.done()
     })
 
-  getTextByURL()(dispatch)
+      getTextByURL()(dispatch)
+})
 
+test('clearText', () => {
+  const expected = {
+    type: 'CLEAR_TEXT',
+    text: {}
+  }
+  const actual = clearText()
+
+  expect(actual).toEqual(expected)
+})
+
+test('receiveText', () => {
+  const text = 'a text'
+  const expected = {
+    type: 'RECEIVE_TEXT',
+    text
+  }
+  const actual = receiveText(text)
+
+  expect(actual).toEqual(expected)
+})
+
+test('increaseIndex', ()=> {
+  const expected = {
+    type:'INCREASE_INDEX'
+  }
+  const actual = increaseIndex()
+  expect(actual).toEqual(expected)
+})
+
+test('decreaseIndex', ()=> {
+  const expected = {
+    type:'DECREASE_INDEX'
+  }
+  const actual = decreaseIndex()
+  expect(actual).toEqual(expected)
 })
