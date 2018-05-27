@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 function WindInfo ({weather}) {
   return (
     <div>
-      <div className='logo'>ATUA AR</div>
+      <div className='logo'>ATUA_AR</div>
       <div>
         <span className='info-title text'>
           <span className='english'>Wind Direction: </span>

@@ -20,9 +20,13 @@ exports.seed = function(knex, Promise) {
 	      }
 	    ),
 	    paragraphs: JSON.stringify([
-	      {tereo: "I whakaohohotia mātou ki te hanga i tēnei taupānga whakaahua, e te pūrākau o Tāwhirimātea. Ka whakarerekētia te āhua o tēnei whārangi ipurangi e te tere me te aronga o te hau, kei te Whanganui-a-Tara inaianei.",
-	       english: "This visualisation is inspired by the legend of Tawhirimatea. Its form changes depending on the wind speed and direction in Te Whanganui-a-Tara Wellington."
+	      {tereo: "Ko te whāinga o te rauemi nei AR ki te whakatū i te atua nei a Tāwhirimatea ki runga o Tangi-te-keo, Whanganui-ā-Tara, te taumata karawhiuwhiuhia e te hau. Kia āhei te tangata te aro whakarunga atu, kia kite i nga nekehanga o Tāwhirimātea e tū mai ana i runga o Tangi-te-keo, e hāngai ana ki te huarere.",
+	       english: "Our project is to place a representation of Tāwhirimātea on top of Tangi-te-keo (Mount Victoria), Wellington, the windiest place in our world. Tāwhirimātea’s behaviours will respond to the wind, so that people can look up to the atua on Mount Vic to see what the weather is doing. In our work towards this goal, we are pushing new AR technologies to the limit of what they are currently capable of, so it is a continual work in progress, driven by a powerful vision."
 				},
+				{english:"Our intentions are to create a tool to educate and inspire people about the deeper aspects of living in Aotearoa, the realms that exist just below the surface or behind the veil of everyday life. Augmented Reality (or AR) is a powerful, almost magical tool for revealing unseen elements. We saw in AR a way to connect the past with the future, to connect the physical world with the spiritual world, and for connecting different facets of Aotearoa. ATUA_AR sees digital technology as a powerful platform for learning about and creating engagement with te ao Māori.",
+				tereo:"Ko te whakakitenga kia tipu te mātauranaga o te tangata, kia whakaawe hoki i te tangata kia mārama ai ki te hōhonutanga o ngā āhuatanga katoa o te noho i Aotearoa nei. Ko te kaupapa nei a Augmented Reality he hononga ki te ao wairua, he hono i te ao ōnanahi ki te ao o ēnei rā, he hononga hoki ki ngā tūmomo āhuatanga katoa i Aotearoa nei."},
+				{english:"Our larger vision is to develop tools to help educate people about the rich history, legends and stories of the land through accessible and inspired augmented reality. Currently this idea is in the prototype stage, so we are seeing what we can technically achieve as a learning project, in order to engage in larger discussion and consultation before taking it further.",
+				tereo:"Hēoi anō, ko te tino whakakitengatanga whānui o te rauemi nei, kia whai wāhi ai te hītori, ngā pūrakau, me ngā kōrero tuku iho o te whenua nei a Aotearoa ki te katoa. I tēnei wā, kei te tipu tonu te kaupapa nei, koia tenei ko tana timatanga noa iho. Kei te waihangatia tonu kia kitea te nui o tōna whānuitanga."},
 				{tereo:"Īmera mai ki: ben@ioa.co.nz",
 			 	english:"Email to: ben@ioa.co.nz"
 				}

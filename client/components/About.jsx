@@ -49,7 +49,7 @@ function About ({weather
             </div>
             <div className="text-main-section">
               <div className="about-secondary-title">
-                <h2 className="text"><span className="english">Tech journey</span><span className="te-reo">Tech journey</span>
+                <h2 className="text"><span className="english">Augmented Reality: The journey</span><span className="te-reo">Augmented Reality: The journey</span>
                 {/* <span className="te-reo">Kō wai mātou?</span> */}
                 </h2>
             </div>
@@ -94,19 +94,6 @@ function About ({weather
                   <br/>
                 </div>
               </div>
-              <div className="about-secondary-title">
-              <h2 className="text"><span className="english">What is this?</span><span className="te-reo">He aha tēnei?</span></h2>
-              </div>
-              <div className="who-are-we-body">
-                <img className="about-page-image" src="https://cheapflights.wpengine.com/wp-content/uploads/2014/07/holiday-spots-from-maori-legends-01.jpg"/>
-                <p className="text"><span className="english">Our intentions are to create a tool to educate and inspire people about the deeper aspects of living in Aotearoa, the realms that exist just below the surface or behind the veil of everyday life. Augmented Reality (or AR) is a powerful, almost magical tool for revealing unseen elements. We saw in AR a way to connect the past with the future, to connect the physical world with the spiritual world, and for connecting different facets of Aotearoa. ATUA_AR sees digital technology as a powerful platform for learning about and creating engagement with te ao Māori.</span><span className="te-reo">Ko te whakakitenga kia tipu te mātauranaga o te tangata, kia whakaawe hoki i te tangata kia mārama ai ki te hōhonutanga o ngā āhuatanga katoa o te noho i Aotearoa nei. Ko te kaupapa nei a Augmented Reality he hononga ki te ao wairua, he hono i te ao ōnanahi ki te ao o ēnei rā, he hononga hoki ki ngā tūmomo āhuatanga katoa i Aotearoa nei.</span>
-                  </p>
-                  <p className="text"><span className="english">Our larger vision is to develop tools to help educate people about the rich history, legends and stories of the land through accessible and inspired augmented reality. Currently this idea is in the prototype stage, so we are seeing what we can technically achieve as a learning project, in order to engage in larger discussion and consultation before taking it further.</span><span className="te-reo">Hēoi anō, ko te tino whakakitengatanga whānui o te rauemi nei, kia whai wāhi ai te hītori, ngā pūrakau, me ngā kōrero tuku iho o te whenua nei a Aotearoa ki te katoa. I tēnei wā, kei te tipu tonu te kaupapa nei, koia tenei ko tana timatanga noa iho. Kei te waihangatia tonu kia kitea te nui o tōna whānuitanga.</span>
-                  </p>
-                  <p className="text"><span className="english">Our first project is inspired by the legend of Tāwhirimātea.</span><span className="te-reo">Ko Tāwhirimatea te kaupapa tuatahi hei whakatuwhera i te rauemi nei.</span>
-                  </p>
-                <br/>
-              </div>
 
                 <div className="about-secondary-title">
                 <h2 className="text"><span className="english">Te Reo first.</span><span className="te-reo">Ko te reo i te tuatahi.</span></h2>
@@ -119,29 +106,7 @@ function About ({weather
                 </div>
 
                 <div className="about-secondary-title">
-                <h2 className="text"><span className="english">Augmented Reality App</span><span className="te-reo">He taupānga whakaahua, e whakarāwai ana i te kitenga</span></h2>
-
-                </div>
-                <div className="who-are-we-body">
-                  <img className="about-page-image" src="/assets/images/benmaddy.jpg"/>
-                  <p className="text"><span className="english">The idea of the AR app is to place a representation of Tāwhirimātea on top of Tangi-te-keo (Mount Victoria), Wellington, the windiest place in our world. Tāwhirimātea’s behaviours will respond to the wind, so that people can look up to the atua on Mount Vic to see what the weather is doing. In our work towards this goal, we are testing and pushing very new AR technologies to the limit of what they are currently capable of, so the AR app is a continual work in progress, driven by a powerful vision.</span><span className="te-reo">Ko te whāinga o te rauemi nei AR ki te whakatū i te atua nei a Tāwhirimatea ki runga o Tangi-te-keo, Whanganui-ā-Tara, te taumata karawhiuwhiuhia e te hau. Kia āhei te tangata te aro whakarunga atu, kia kite i nga nekehanga o Tawhirimatea e tū mai ana i runga o Tangi-te-keo, e hāngai ana ki te huarere. </span>
-                  </p>
-
-                  <br/>
-                </div>
-
-                <div className="about-secondary-title">
-                <h2 className="text"><span className="english">The web app.</span><span className="te-reo">Ko te taupānga tukutuku.</span></h2>
-                </div>
-                <div className="who-are-we-body">
-                  <img className="about-page-image" src="/assets/images/zaclaura.jpg"/>
-                  <p className="text"><span className="english">This web app provides a blueprint for what we are aiming to achieve in the realm of augmented reality. Here you can access our research, view a visualisation of what we are working towards, and find ways to contribute to the project or connect with our team.</span><span className="te-reo">Ma te rauemi nei e kitea ai e anga pēhea ana mātau, he aha ngā whāinga e whai atu ana mātau, ngā rangahau, ā, ka āhei hoki te hono me te whakapā mai ki a matau.</span>
-                  </p>
-                  <br/>
-                </div>
-
-                <div className="about-secondary-title">
-                <h2 className="text"><span className="english">Free and open source.</span><span className="te-reo">
+                <h2 className="text"><span className="english">Our ethos is free and open source.</span><span className="te-reo">
                 He kaupapa kore utu, he kaupapa nō te mahi tahi</span></h2>
                 </div>
                 <div className="who-are-we-body">
