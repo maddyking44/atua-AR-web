@@ -43,24 +43,38 @@ function About ({weather
           <div className="aboutcontainer">
             <div className="abouttext">
             <div className="about-main-title">
-                <h1 className="text"><span className="english">Atua AR</span>
+                <h1 className="text"><span className="english">Atua AR</span><span className="te-reo">Atua AR</span>
                 {/* <span className="te-reo">Tō mātou kaupapa</span> */}
                 </h1>
             </div>
             <div className="text-main-section">
               <div className="about-secondary-title">
-                <h2 className="text"><span className="english">Where we began</span>
+                <h2 className="text"><span className="english">Tech journey</span><span className="te-reo">Tech journey</span>
                 {/* <span className="te-reo">Kō wai mātou?</span> */}
                 </h2>
-              </div>
+            </div>
               <div className="who-are-we-body">
-                {/* <img className="about-page-image" alt="barbarian upngo marker" src="/https://vimeo.com/271780969"/> */}
-                <iframe src="https://player.vimeo.com/video/271780969" alt="barbarian upngo marker" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 {/* <p><a href="https://vimeo.com/271780969">AR marker testing</a> from <a href="https://vimeo.com/user85454645">maddyking44</a> on <a href="https://vimeo.com">Vimeo</a>.</p> */}
-                <p className="text"><span className="english">We are Ben Tairea, Laura Suzuki, Anthony Gordon, Zach Mandeville and Maddy King. Ben came up with the vision to use Augmented Reality across Aotearoa to reveal the history and stories of this land.</span><span className="te-reo">Kō Ben Tairea, Laura Suzuki, Anthony Gordon, Zach Mandeville and Maddy King. I toko ake te whakaaro i roto i a Ben  ki te whakaaara i a Augmented Reality kia whai wāhi ai ngā hītori me ngā kōrero o ngā whenua o Aotearoa ki te iwi whānui.</span>
-                </p>
-                <p className="text"><span className="english">We’re a team of developers studying at Enspiral Dev Academy, a web development school based in Wellington and Auckland that is committed to a mission of social good. We have had help and support from a large range of people, who you can read about here.</span><span className="te-reo">He roopu mātau e ako tonu ana i te wānanga o Enspiral Dev Academy, he wānanga whakatipu tukutuku i runga i te ipurangi i roto o Te Whanganui-ā-Tara me Tamaki Makaurau. E tautokohia ana mātau e te tini tangata, e taea te kitea ko wai ngā rōpu tautoko i roto i nga panui e whai ake nei.</span>
-                </p>
+                {/* <p><span className="english">Skip to Who we Are</span></p> */}
+                <p><span>The idea to use Augmented Reality (AR) to put a 3D representation of Tāwhirimātea on top of Mount Victoria, Wellington, with behaviours that responded to weather data so users could look up at the mountain to see what the wind was doing.</span>
+                <span>We started investigating using AR markers in Unity. A marker means the camera recognises an image and anchors your AR object to that object. So we began by putting a barbarian on a box.</span></p>
+                <iframe src="https://player.vimeo.com/video/271780969" alt="barbarian marker" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p><span>We were drawn to AR's ability to reveal unseen aspects, giving the user exposure to magical and spiritual things. As our next step we looked into developing a portal to another world, using Viro's cross-platform functionality. 
+                </span></p>
+                <iframe src="https://player.vimeo.com/video/271773541" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p><span>To make the portal we had to use occlusion, which is the ability for real world objects to hide or be hidden behind our 3D object, as though it is actually there. 
+                </span></p>
+                <p><span>These tests put the 3D object in place using a marker or a distance from the user's phone. We needed our Tāwhirimātea to be placed on Mount Victoria using geolocation from the phone's GPS. We also needed buildings to block out his image as the user walked through the busy streets of Wellington, so occlusion was a priority too.
+                </span></p>
+                <p><span>We pulled the Mapbox SDK into Unity, so we could use it's mapping software to place Tāwhirimātea in the city centre by GPS coordinates. This also gave us access to maps of the buildings in the city. We applied physics in the Unity gameengine to give these buildings the ability to block objects out. We painted Tāwhirimātea with an occludable material, like in the portal. This meant that parts of his body would disapper when they were rendered behind a Mapbox building. We turned the Mapbox buildings invisible, so that they would simply disappear. The idea was that these invisible buildings would map to the real world buildings around the user, so Tāwhirimātea would start to disappear when a real world building passed between him and the user.</span></p>
+                <p><span> The mapping of the building is slightly off, but you can see the object's body start to disappear in response to the building. </span></p>
+                <iframe src="https://player.vimeo.com/video/271771608" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p><span>We used this work to demo the concept of the Augmented Reality app in a tabletop map.
+                </span></p>
+                <iframe src="https://player.vimeo.com/video/271771193" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p><span> We further refined the occlusion problem by perfecting our geolocation. This tree model demonstrates the enhanced occlusion functionality. </span></p>
+                <iframe src="https://player.vimeo.com/video/271781287" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <p><span> We continue trying to get it perfect so that Tāwhirimātea can be atop Mount Victoria with accuracy. We're committed to making our Augmented Reality as realistic as possible, so it can meet our aims of astounding and inspiring the user.</span></p>
                 <br/>
               </div>
             </div>
