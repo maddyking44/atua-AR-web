@@ -11,6 +11,7 @@ import {getTexts} from '../actions/texts'
 import {getWeather} from '../actions/weather'
 import About from './About'
 import Opening from './Opening'
+// import AR from './AR'
 
 class App extends React.Component {
   componentDidMount() {
