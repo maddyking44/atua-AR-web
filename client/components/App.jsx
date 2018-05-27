@@ -26,9 +26,6 @@ class App extends React.Component {
       <div className='app-container section'>
       {this.props.destination == 'opening' && <Route exact path="/" component={Opening}/>}
       {this.props.destination == 'home' ? this.props.text.url == 'about' ? <About /> : <Route exact path='/' component={Home} /> : null}
-      {/* {<Route exact path='/' component={Home} />} */}
-      {/* {<Route exact path='/about' component={About} />} */}
-      {/* {<Route exact path='/ar' component={AR} />} */}
       <Route exact path="/translation" component={Translation} />
       </div>
       </Router>
