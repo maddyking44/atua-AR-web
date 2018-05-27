@@ -42,6 +42,29 @@ function About ({weather
         <div className="about-page-column-eight">
           <div className="aboutcontainer">
             <div className="abouttext">
+            <div className="about-main-title">
+                <h1 className="text"><span className="english">Atua AR</span>
+                {/* <span className="te-reo">Tō mātou kaupapa</span> */}
+                </h1>
+            </div>
+            <div className="text-main-section">
+              <div className="about-secondary-title">
+                <h2 className="text"><span className="english">Where we began</span>
+                {/* <span className="te-reo">Kō wai mātou?</span> */}
+                </h2>
+              </div>
+              <div className="who-are-we-body">
+                {/* <img className="about-page-image" alt="barbarian upngo marker" src="/https://vimeo.com/271780969"/> */}
+                <iframe src="https://player.vimeo.com/video/271780969" alt="barbarian upngo marker" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                {/* <p><a href="https://vimeo.com/271780969">AR marker testing</a> from <a href="https://vimeo.com/user85454645">maddyking44</a> on <a href="https://vimeo.com">Vimeo</a>.</p> */}
+                <p className="text"><span className="english">We are Ben Tairea, Laura Suzuki, Anthony Gordon, Zach Mandeville and Maddy King. Ben came up with the vision to use Augmented Reality across Aotearoa to reveal the history and stories of this land.</span><span className="te-reo">Kō Ben Tairea, Laura Suzuki, Anthony Gordon, Zach Mandeville and Maddy King. I toko ake te whakaaro i roto i a Ben  ki te whakaaara i a Augmented Reality kia whai wāhi ai ngā hītori me ngā kōrero o ngā whenua o Aotearoa ki te iwi whānui.</span>
+                </p>
+                <p className="text"><span className="english">We’re a team of developers studying at Enspiral Dev Academy, a web development school based in Wellington and Auckland that is committed to a mission of social good. We have had help and support from a large range of people, who you can read about here.</span><span className="te-reo">He roopu mātau e ako tonu ana i te wānanga o Enspiral Dev Academy, he wānanga whakatipu tukutuku i runga i te ipurangi i roto o Te Whanganui-ā-Tara me Tamaki Makaurau. E tautokohia ana mātau e te tini tangata, e taea te kitea ko wai ngā rōpu tautoko i roto i nga panui e whai ake nei.</span>
+                </p>
+                <br/>
+              </div>
+            </div>
+            
               <div className="about-main-title">
                   <h1 className="text"><span className="english">About</span><span className="te-reo">Tō mātou kaupapa</span></h1>
               </div>
@@ -63,7 +86,7 @@ function About ({weather
               </div>
               <div className="who-are-we-body">
                 <img className="about-page-image" src="https://cheapflights.wpengine.com/wp-content/uploads/2014/07/holiday-spots-from-maori-legends-01.jpg"/>
-                <p className="text"><span className="english">Our intentions are to create a tool to educate and inspire people about the deeper aspects of living in Aotearoa, the realms that exist just below the surface or behind the veil of everyday life. Augmented Reality (or AR) is a powerful, almost magical tool for revealing unseen elements. We saw in AR a way to connect the past with the future, to connect the physical world with the spiritual world, and for connecting different facets of Aotearoa. AR_ATUA sees digital technology as a powerful platform for learning about and creating engagement with te ao Māori.</span><span className="te-reo">Ko te whakakitenga kia tipu te mātauranaga o te tangata, kia whakaawe hoki i te tangata kia mārama ai ki te hōhonutanga o ngā āhuatanga katoa o te noho i Aotearoa nei. Ko te kaupapa nei a Augmented Reality he hononga ki te ao wairua, he hono i te ao ōnanahi ki te ao o ēnei rā, he hononga hoki ki ngā tūmomo āhuatanga katoa i Aotearoa nei.</span>
+                <p className="text"><span className="english">Our intentions are to create a tool to educate and inspire people about the deeper aspects of living in Aotearoa, the realms that exist just below the surface or behind the veil of everyday life. Augmented Reality (or AR) is a powerful, almost magical tool for revealing unseen elements. We saw in AR a way to connect the past with the future, to connect the physical world with the spiritual world, and for connecting different facets of Aotearoa. ATUA_AR sees digital technology as a powerful platform for learning about and creating engagement with te ao Māori.</span><span className="te-reo">Ko te whakakitenga kia tipu te mātauranaga o te tangata, kia whakaawe hoki i te tangata kia mārama ai ki te hōhonutanga o ngā āhuatanga katoa o te noho i Aotearoa nei. Ko te kaupapa nei a Augmented Reality he hononga ki te ao wairua, he hono i te ao ōnanahi ki te ao o ēnei rā, he hononga hoki ki ngā tūmomo āhuatanga katoa i Aotearoa nei.</span>
                   </p>
                   <p className="text"><span className="english">Our larger vision is to develop tools to help educate people about the rich history, legends and stories of the land through accessible and inspired augmented reality. Currently this idea is in the prototype stage, so we are seeing what we can technically achieve as a learning project, in order to engage in larger discussion and consultation before taking it further.</span><span className="te-reo">Hēoi anō, ko te tino whakakitengatanga whānui o te rauemi nei, kia whai wāhi ai te hītori, ngā pūrakau, me ngā kōrero tuku iho o te whenua nei a Aotearoa ki te katoa. I tēnei wā, kei te tipu tonu te kaupapa nei, koia tenei ko tana timatanga noa iho. Kei te waihangatia tonu kia kitea te nui o tōna whānuitanga.</span>
                   </p>
@@ -110,7 +133,7 @@ function About ({weather
                 </div>
                 <div className="who-are-we-body">
                   <img className="about-page-image" src="/assets/images/ant.jpg"/>
-                  <p className="text"><span className="english">AR_ATUA upholds a free/libre and open source ethos, which means the resources should be freely available to those interested in them, and that people can adjust and build upon the work we’ve done. We create things with the intention that they can and will be useful to others, by design. This means we write tools  that are reusable beyond this app, and code that is easy to read. It means we are committed to accessible technology. We welcome feedback and contributions.</span><span className="te-reo">He rauemi kore utu a AR_ATUA e whai wāhi ai ki te tangata e manawanui nei ki ēnei mātauranga, ki ēnei kōrero ahakoa ko wai. Ko te whāinga kia ngāwari noa te whakahaere, te pānui me te whakamahi i te rauemi nei ki te marea. Tēnā whakapā mai mena he whakaaro a koutou hei whakangāwari ake i te whakahaere o te rauemi nei,mena he pātai ranei a koutou.</span>
+                  <p className="text"><span className="english">ATUA_AR upholds a free/libre and open source ethos, which means the resources should be freely available to those interested in them, and that people can adjust and build upon the work we’ve done. We create things with the intention that they can and will be useful to others, by design. This means we write tools  that are reusable beyond this app, and code that is easy to read. It means we are committed to accessible technology. We welcome feedback and contributions.</span><span className="te-reo">He rauemi kore utu a ATUA_AR e whai wāhi ai ki te tangata e manawanui nei ki ēnei mātauranga, ki ēnei kōrero ahakoa ko wai. Ko te whāinga kia ngāwari noa te whakahaere, te pānui me te whakamahi i te rauemi nei ki te marea. Tēnā whakapā mai mena he whakaaro a koutou hei whakangāwari ake i te whakahaere o te rauemi nei,mena he pātai ranei a koutou.</span>
                   </p>
 
                   <br/>
@@ -121,7 +144,7 @@ function About ({weather
                 He mihi</span></h2>
                 </div>
                 <div className="who-are-we-body">
-                  <p className="text"><span className="english">AR_ATUA would like to send gratitude towards: </span><span className="te-reo">Ānei he mihi maioha ki:</span>
+                  <p className="text"><span className="english">ATUA_AR would like to send gratitude towards: </span><span className="te-reo">Ānei he mihi maioha ki:</span>
                   </p>
                   <ul>
                     {thanks.map(person => <li>{person}</li>)}

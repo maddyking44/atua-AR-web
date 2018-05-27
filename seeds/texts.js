@@ -22,7 +22,10 @@ exports.seed = function(knex, Promise) {
 	    paragraphs: JSON.stringify([
 	      {tereo: "I whakaohohotia mātou ki te hanga i tēnei taupānga whakaahua, e te pūrākau o Tāwhirimātea. Ka whakarerekētia te āhua o tēnei whārangi ipurangi e te tere me te aronga o te hau, kei te Whanganui-a-Tara inaianei.",
 	       english: "This visualisation is inspired by the legend of Tawhirimatea. Its form changes depending on the wind speed and direction in Te Whanganui-a-Tara Wellington."
-	      }
+				},
+				{tereo:"Īmera mai ki: ben@ioa.co.nz",
+			 	english:"Email to: ben@ioa.co.nz"
+				}
 	    ]),
 	    author: "Laura",
 	    translator: "Alex"
@@ -107,34 +110,34 @@ exports.seed = function(knex, Promise) {
 	  author: 'Laura',
 	  translator: 'Alex'
 	},
-	{name: "contributing",
-	 url: "contributing",
-	 short_title:JSON.stringify(
+	// 	{name: "ar",
+	// 	url: "/ar",
+	// 	short_title:JSON.stringify(
 
-	   {tereo:"WHAKAPĀKIA MAI",
-	    english:"CONTACT US"}),
-
-	 title:JSON.stringify(
-	   {tereo:"Whakapākia mai",
-	     english:"Contact Us"
-	    }),
-	  paragraphs:JSON.stringify([
-	    {tereo:"īmera mai ki: ben@ioa.co.nz",
-	     english:"email to: ben@ioa.co.nz"
-     },
-	  ]),
-	  author: 'Laura',
-	  translator: 'Alex'
-	},
+	// 		{tereo:"ATUA_AR",
+	// 		english:"ATUA_AR"}),
+	// 	title:JSON.stringify(
+	// 		{tereo:"ATUA_AR",
+	// 		english:"ATUA_AR"
+	// 		}
+	// 	),
+	// 	paragraphs:JSON.stringify([
+	// 		{tereo:"lorum ipsum",
+	// 			english:"english lorum ipsum"
+	// 		}
+	// 	]),
+	// 	author: 'Laura',
+	// 	translator: 'Alex'
+	// },
 	{name: "about",
 	 url: "about",
 	 short_title:JSON.stringify(
 
 	   {tereo:"TŌ MĀTOU KAUPAPA",
-	    english:"ABOUT AR_ATUA"}),
+	    english:"ABOUT ATUA_AR"}),
 	 title:JSON.stringify(
 	   {tereo:"TŌ MĀTOU KAUPAPA",
-	    english:"ABOUT AR_ATUA"
+	    english:"ABOUT ATUA_AR"
 	   }
 	 ),
 	  paragraphs:JSON.stringify([
