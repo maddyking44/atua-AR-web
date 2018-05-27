@@ -56,8 +56,8 @@ function About ({weather
               <div className="who-are-we-body">
                 {/* <p><a href="https://vimeo.com/271780969">AR marker testing</a> from <a href="https://vimeo.com/user85454645">maddyking44</a> on <a href="https://vimeo.com">Vimeo</a>.</p> */}
                 {/* <p><span className="english">Skip to Who we Are</span></p> */}
-                <p><span>The idea to use Augmented Reality (AR) to put a 3D representation of Tāwhirimātea on top of Mount Victoria, Wellington, with behaviours that responded to weather data so users could look up at the mountain to see what the wind was doing.</span>
-                <span>We started investigating using AR markers in Unity. A marker means the camera recognises an image and anchors your AR object to that object. So we began by putting a barbarian on a box.</span></p>
+                <p><span>The idea is to use Augmented Reality (AR) to put a 3D representation of Tāwhirimātea on top of Mount Victoria, Wellington, with behaviours that responded to weather data so users could look up at the mountain to see what the wind is doing.</span></p>
+                <p><span>We started our investigation using AR markers in Unity, a game engine. A marker means the camera recognises an image and anchors your AR object to that image. So we began by putting a barbarian on a box.</span></p>
                 <iframe src="https://player.vimeo.com/video/271780969" alt="barbarian marker" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 <p><span>We were drawn to AR's ability to reveal unseen aspects, giving the user exposure to magical and spiritual things. As our next step we looked into developing a portal to another world, using Viro's cross-platform functionality. 
                 </span></p>
@@ -66,15 +66,14 @@ function About ({weather
                 </span></p>
                 <p><span>These tests put the 3D object in place using a marker or a distance from the user's phone. We needed our Tāwhirimātea to be placed on Mount Victoria using geolocation from the phone's GPS. We also needed buildings to block out his image as the user walked through the busy streets of Wellington, so occlusion was a priority too.
                 </span></p>
-                <p><span>We pulled the Mapbox SDK into Unity, so we could use it's mapping software to place Tāwhirimātea in the city centre by GPS coordinates. This also gave us access to maps of the buildings in the city. We applied physics in the Unity gameengine to give these buildings the ability to block objects out. We painted Tāwhirimātea with an occludable material, like in the portal. This meant that parts of his body would disapper when they were rendered behind a Mapbox building. We turned the Mapbox buildings invisible, so that they would simply disappear. The idea was that these invisible buildings would map to the real world buildings around the user, so Tāwhirimātea would start to disappear when a real world building passed between him and the user.</span></p>
+                <p><span>We pulled the Mapbox SDK into Unity, so we could use its mapping software to place Tāwhirimātea in the city centre by GPS coordinates. This also gave us access to maps of the buildings in the city. We applied a material in Unity to give these buildings the ability to block objects out. We painted Tāwhirimātea with an occludable material, like in the portal. This meant that parts of his body would disapper when they were rendered behind a Mapbox building. We turned the Mapbox buildings invisible, so that they would simply disappear. The idea was that these invisible buildings would map to the real world buildings around the user, so Tāwhirimātea would start to disappear when a real world building passed between him and the user.</span></p>
                 <p><span> The mapping of the building is slightly off, but you can see the object's body start to disappear in response to the building. </span></p>
                 <iframe src="https://player.vimeo.com/video/271771608" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                <p><span>We used this work to demo the concept of the Augmented Reality app in a tabletop map.
-                </span></p>
+                <p><span>We used this work to demo the concept of the Augmented Reality app in a tabletop map.</span></p>
                 <iframe src="https://player.vimeo.com/video/271771193" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 <p><span> We further refined the occlusion problem by perfecting our geolocation. This tree model demonstrates the enhanced occlusion functionality. </span></p>
                 <iframe src="https://player.vimeo.com/video/271781287" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                <p><span> We continue trying to get it perfect so that Tāwhirimātea can be atop Mount Victoria with accuracy. We're committed to making our Augmented Reality as realistic as possible, so it can meet our aims of astounding and inspiring the user.</span></p>
+                <p><span> We continue trying to get it perfect so that Tāwhirimātea can be atop Mount Victoria with accuracy. We're committed to making Atua AR as realistic as possible, so it can meet our aims of astounding and inspiring the user.</span></p>
                 <br/>
               </div>
             </div>
