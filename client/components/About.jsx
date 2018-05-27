@@ -33,11 +33,23 @@ function About ({weather
   var divStyle = {
     backgroundImage: 'url(' + findBackgroundImg() + ')'
   }
+  // var vidDiv = {
+  //   position:relative,
+  //   padding:56.25% 0 0 0
+
+  // }
+  // var vidStyle = {
+  //   position:absolute,
+  //   top:0,
+  //   left:0,
+  //   width:100%,
+  //   height:100%
+  // }
 
   console.log(typeof weather.local_time_rfc822)
   return (
       <div style={divStyle} className="about-page-row">
-      <a className='text about-back' href='#' onClick={()=>dispatch(clearText())}><span className='te-reo'>Whakahoki atu ki te timatanga</span><span className='english'>Return Home</span></a>
+      <a className='text about-back' href='#' onClick={()=>dispatch(clearText())}><span className='te-reo'>Whakahoki atu ki te timatanga</span><span className='english'>Return back to Home</span></a>
 
         <div className="about-page-column-eight">
           <div className="aboutcontainer">
@@ -54,9 +66,7 @@ function About ({weather
                 </h2>
             </div>
               <div className="who-are-we-body">
-                {/* <p><a href="https://vimeo.com/271780969">AR marker testing</a> from <a href="https://vimeo.com/user85454645">maddyking44</a> on <a href="https://vimeo.com">Vimeo</a>.</p> */}
-                {/* <p><span className="english">Skip to Who we Are</span></p> */}
-                <p><span>The idea is to use Augmented Reality (AR) to put a 3D representation of Tāwhirimātea on top of Mount Victoria, Wellington, with behaviours that responded to weather data so users could look up at the mountain to see what the wind is doing.</span></p>
+                <p><span>The idea is to use Augmented Reality (AR) to put a 3D representation of Tāwhirimātea on top of Mount Victoria, Wellington, with behaviours that responded to weather data so users can look up at the mountain to see what the wind is doing.</span></p>
                 <p><span>We started our investigation using AR markers in Unity, a game engine. A marker means the camera recognises an image and anchors your AR object to that image. So we began by putting a barbarian on a box.</span></p>
                 <iframe src="https://player.vimeo.com/video/271780969" alt="barbarian marker" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 <p><span>We were drawn to AR's ability to reveal unseen aspects, giving the user exposure to magical and spiritual things. As our next step we looked into developing a portal to another world, using Viro's cross-platform functionality. 
@@ -69,14 +79,17 @@ function About ({weather
                 <p><span>We pulled the Mapbox SDK into Unity, so we could use its mapping software to place Tāwhirimātea in the city centre by GPS coordinates. This also gave us access to maps of the buildings in the city. We applied a material in Unity to give these buildings the ability to block objects out. We painted Tāwhirimātea with an occludable material, like in the portal. This meant that parts of his body would disapper when they were rendered behind a Mapbox building. We turned the Mapbox buildings invisible, so that they would simply disappear. The idea was that these invisible buildings would map to the real world buildings around the user, so Tāwhirimātea would start to disappear when a real world building passed between him and the user.</span></p>
                 <p><span> The mapping of the building is slightly off, but you can see the object's body start to disappear in response to the building. </span></p>
                 <iframe src="https://player.vimeo.com/video/271771608" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                {/* <iframe src="https://player.vimeo.com/video/271771608" style={vidStyle} frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> */}
                 <p><span>We used this work to demo the concept of the Augmented Reality app in a tabletop map.</span></p>
                 <iframe src="https://player.vimeo.com/video/271771193" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 <p><span> We further refined the occlusion problem by perfecting our geolocation. This tree model demonstrates the enhanced occlusion functionality. </span></p>
                 <iframe src="https://player.vimeo.com/video/271781287" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                {/* <div style={vidDiv}><iframe src="https://player.vimeo.com/video/271781287?loop=1&title=0&byline=0&portrait=0" style={vidStyle} frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> */}
                 <p><span> We continue trying to get it perfect so that Tāwhirimātea can be atop Mount Victoria with accuracy. We're committed to making Atua AR as realistic as possible, so it can meet our aims of astounding and inspiring the user.</span></p>
                 <br/>
               </div>
             </div>
+            
             
               <div className="about-main-title">
                   <h1 className="text"><span className="english">About</span><span className="te-reo">Tō mātou kaupapa</span></h1>
@@ -99,18 +112,18 @@ function About ({weather
                 <h2 className="text"><span className="english">Te Reo first.</span><span className="te-reo">Ko te reo i te tuatahi.</span></h2>
                 </div>
                 <div className="who-are-we-body">
-                  <img className="about-page-image" src="https://www.tpk.govt.nz/images/constrain/images-28738/768x1024"/>
+                  {/* <img className="about-page-image" src="/assets/images/benmaddy.jpg"/> */}
                   <p className="text"><span className="english">The connection between language and culture is inherent. Words are a method of creating and recording meaning. In this way, language serves as a means of both documentation and living cultural expression. If our aim is to inspire learning and engagement with te ao Māori, we believe that relationship should be grounded in the use of te reo Māori, the first language of Aotearoa.</span><span className="te-reo">Ka noho pūmau ki te reo me ōna tikanga, ma te kupu (Māori) e whakamana te kaupapa. Ma tēnei e mana ai te oranga tonutanga o ēnei taonga. Mena ko te whāinga ki te whakaawe i te hono mai o te tangata ki ōna mātauranga Māori, ka tika kia kawea i roto i te reo tuatahi o te whenua nei, te reo Māori.</span>
                   </p>
                   <br/>
                 </div>
 
                 <div className="about-secondary-title">
-                <h2 className="text"><span className="english">Our ethos is free and open source.</span><span className="te-reo">
+                <h2 className="text"><span className="english">Our ethos is free and open source code.</span><span className="te-reo">
                 He kaupapa kore utu, he kaupapa nō te mahi tahi</span></h2>
                 </div>
                 <div className="who-are-we-body">
-                  <img className="about-page-image" src="/assets/images/ant.jpg"/>
+                  {/* <img className="about-page-image" src="/assets/images/ant.jpg"/> */}
                   <p className="text"><span className="english">ATUA_AR upholds a free/libre and open source ethos, which means the resources should be freely available to those interested in them, and that people can adjust and build upon the work we’ve done. We create things with the intention that they can and will be useful to others, by design. This means we write tools  that are reusable beyond this app, and code that is easy to read. It means we are committed to accessible technology. We welcome feedback and contributions.</span><span className="te-reo">He rauemi kore utu a ATUA_AR e whai wāhi ai ki te tangata e manawanui nei ki ēnei mātauranga, ki ēnei kōrero ahakoa ko wai. Ko te whāinga kia ngāwari noa te whakahaere, te pānui me te whakamahi i te rauemi nei ki te marea. Tēnā whakapā mai mena he whakaaro a koutou hei whakangāwari ake i te whakahaere o te rauemi nei,mena he pātai ranei a koutou.</span>
                   </p>
 
@@ -118,6 +131,7 @@ function About ({weather
                 </div>
 
                 <div className="about-secondary-title">
+                {/* <img className="about-page-image" src="/assets/images/zaclaura.jpg"/> */}
                 <h2 className="text"><span className="english">Thank You</span><span className="te-reo">
                 He mihi</span></h2>
                 </div>
@@ -130,11 +144,14 @@ function About ({weather
 
                   <br/>
                 </div>
-
             </div>
-            <Link to = '/' className="returnbutton">
+             <div>
+              <a href='#' onClick={()=>dispatch(clearText())}><h2 className='returnbutton'><span className='te-reo'>Whakahoki atu ki te timatanga</span><span className='english'>Return back to Home</span></h2></a>
+              </div>
+            {/* <Link to = '/' className="returnbutton">
               <a><h2 className="text"><span className="english">Return</span><span className="te-reo">Whakahoki atu ki te timatanga</span></h2></a>
-            </Link>
+            </Link> */}
+            
           </div>
         </div>
       </div>

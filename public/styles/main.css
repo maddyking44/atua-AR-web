@@ -523,7 +523,30 @@ Animations
   text-decoration: none;
   color: white;
 }
+.returnbutton .te-reo{
+  display: inline;
+  animation: text-settles_eng 3s forwards;
+  transform: rotateZ(360deg);
+}
 
+.returnbutton:hover .te-reo{
+  display: none;
+}
+
+
+.returnbutton .english{
+  display: none;
+  animation: text-settles_eng2 3s forwards;
+  transform: rotateZ(360deg);
+}
+
+.returnbutton:hover .english{
+  color: transparent;
+  display: inline;
+  animation: text-settles_eng 3s forwards;
+  text-shadow: 0 0 25px rgba(255,255,255,5);
+  transform: rotateZ(360deg);
+}
 
 @keyframes pulse2 {
  0% {
