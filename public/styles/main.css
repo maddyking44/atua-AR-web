@@ -196,10 +196,10 @@ cursor: pointer;
 }
 
 .open {
-  font-size: 2em;
+  font-size: 3.5em;
   cursor: pointer;
   position: fixed;
-  left: 0.5em;
+  right: 0.5em;
   bottom: 0;
 }
 
