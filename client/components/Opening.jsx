@@ -8,18 +8,24 @@ class Opening extends React.Component {
     constructor(props) {
       super(props)
         this.state = {
-            isVisible: ['begin'],
+            isVisible: ['enter'],
             unified: false
             }
             this.makeVisible = this.makeVisible.bind(this)
             this.revealAll = this.revealAll.bind(this)
   }
 
+// componentDidMount() {
+//   this.setState({
+//     isVisible: [text],
+//     unified: false
+//   })
+// }
 makeVisible(text) {
-    this.setState({
-      isVisible: [text],
-      unified: false
-    })
+  this.setState({
+    isVisible: [text],
+    unified: false
+  })
 }
 
 revealAll() {
@@ -34,7 +40,7 @@ render(){
   return (
     <div className='opening'>
       <div className='veil'>
-          {this.makeVisible('enter')}/>}
+          {/* {this.makeVisible('enter')}/>} */}
           {/* {this.state.isVisible.find(text => text=='culture' || text=='technology') && <div className='left-things text' onClick={()=>this.makeVisible('technology')}><span className='english'>CULTURE</span><span className='te-reo'>TE AHUREA</span></div>}
           {this.state.isVisible.find(text => text =='technology') && <div className='right-things text' onClick={()=>this.makeVisible('past')}><span className='english'>TECHNOLOGY</span><span className='te-reo'>TE HANGARAU</span></div>}
           {this.state.isVisible.find(text => text== 'past' || text == 'future') && <div className='left-things text'onClick={()=>this.makeVisible('future')}><span className='english'>PAST</span><span className='te-reo'>NGA RĀ O MUA</span></div>}
