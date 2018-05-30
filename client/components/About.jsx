@@ -73,7 +73,8 @@ function About ({weather
                 <p><span> The mapping of the building is slightly off, but you can see the object's body start to disappear in response to the building. </span></p>
                 <iframe src="https://player.vimeo.com/video/271771608?loop=1&title=0&byline=0&portrait=0" frameBorder="0" allowFullScreen></iframe>
                 <p><span>We used this work to demo the concept of the Augmented Reality app in a tabletop map.</span></p>
-                <iframe src="https://player.vimeo.com/video/271771193?loop=1&title=0&byline=0&portrait=0" frameBorder="0" allowFullScreen></iframe>
+                <iframe src="https://player.vimeo.com/video/272666672?loop=1&title=0&byline=0&portrait=0" frameBorder="0" allowFullScreen></iframe>
+                {/* <iframe src="https://player.vimeo.com/video/271771193?loop=1&title=0&byline=0&portrait=0" frameBorder="0" allowFullScreen></iframe> */}
                 <p><span> We further refined the occlusion problem by perfecting our geolocation. This tree model demonstrates the enhanced occlusion functionality. </span></p>
                 <iframe src="https://player.vimeo.com/video/271781287?loop=1&title=0&byline=0&portrait=0" frameBorder="0" allowFullScreen></iframe>
                 
