@@ -559,3 +559,114 @@ Animations
    	transform: scale(1);
  }
 }
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .enter-site {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      color: white;
+      width: 8em;
+      position: absolute;
+      text-align: center;
+      left: 0vw;
+      margin-left: 0em;
+      height: 3em;
+      top: 50vh;
+      margin-top: -1em;
+      font-size: 3em;
+    }
+    body .home {
+      color: white;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      font-size: 15px;
+    }
+    .text .te-reo {
+      margin-left: 5px;
+      text-align: center;
+    }
+    .about-page-column-eight {
+      font-family: 'Raleway', sans-serif;
+      color: white;
+      position: relative;
+      overflow: scroll;
+      overflow-x: hidden;
+      height: 100vh;
+      width: 100%;
+      margin-top: 0vh;
+      margin-left: 0%;
+      margin-right: 0%;
+      margin-bottom: 0vh;
+  }
+  .abouttext {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  element.style {
+    width: 250px;
+    height: 200px;
+  }
+  
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .enter-site {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      color: white;
+      width: 8em;
+      position: absolute;
+      text-align: left;
+      left: 0vw;
+      margin-left: 0em;
+      height: 3em;
+      top: 50vh;
+      margin-top: -1em;
+      font-size: 3em;
+    }
+    body .home {
+      color: white;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      font-size: 15px;
+    }
+    .text .te-reo {
+      margin-left: 5px;
+      text-align: center;
+    }
+    .about-page-column-eight {
+      font-family: 'Raleway', sans-serif;
+      color: white;
+      position: relative;
+      overflow: scroll;
+      overflow-x: hidden;
+      height: 100vh;
+      width: 100%;
+      margin-top: 0vh;
+      margin-left: 0%;
+      margin-right: 0%;
+      margin-bottom: 0vh;
+  }
+  .abouttext {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .returnbutton {
+    text-align: left;
+  }
+  h2 {
+    font-size: 1em;
+    } 
+  element.style {
+    width: 250px;
+    height: 200px;
+  }
+}
