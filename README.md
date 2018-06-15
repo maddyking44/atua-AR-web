@@ -1,6 +1,6 @@
 # ATUA-AR website
 
-This is a fork of Laura and Zach's React and Redux website that they built for our Atua AR project. https://github.com/l-suzuki/atua-web The intention of the project was to demonstrate the conecepts behind an Augmented Reality app we built.
+This is a fork of Laura and Zach's React and Redux website that they built for our Atua AR project: https://github.com/l-suzuki/atua-web. The intention of the project was to demonstrate the conecepts behind an Augmented Reality app we built.
 
 To push the site out for real world use to people who are intested in the AR app, I've made afew changes. I've restructured the website to make it mobile responsive and added in some descriptions about the AR mechanics in the About Us / Tõ matou kaupapa page. 
 
